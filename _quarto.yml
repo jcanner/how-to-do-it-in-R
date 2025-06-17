@@ -33,10 +33,10 @@ website:
       - section: "Setup R"
         contents:
         - href: index.qmd
-          text: Home
+          text: "Home"
         - href: about.qmd
-          text: About
-     - section: "Exploratory Data Analysis"  
+          text: "About"
+      - section: "Exploratory Data Analysis"  
         contents: 
         - href: visualization.qmd
           text: "Data Visualizations"
