@@ -43,9 +43,6 @@ website:
 
 format:
   html:
-    theme:
-      light: [cosmo]
-      dark: [cosmo]
     mainfont: "Atkinson Hyperlegible"
     code-copy: true
     code-overflow: wrap
