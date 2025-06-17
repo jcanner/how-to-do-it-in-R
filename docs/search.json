@@ -1,0 +1,35 @@
+[
+  {
+    "objectID": "visualization.html",
+    "href": "visualization.html",
+    "title": "Data Visualizations",
+    "section": "",
+    "text": "library(ggformula)\n\n\ngf_histogram(~ Sepal.Length , data = iris)",
+    "crumbs": [
+      "Exploratory Data Analysis",
+      "Data Visualizations"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Setup R",
+      "About"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "How to do it in R",
+    "section": "",
+    "text": "This website provides quick search for the code used in introductory statistics courses at California State University, Monterey Bay. It uses the following packages:\n\nggformula\n\nmosaic\n\ndplyr\n\nreadr\npwr\n\nstats\n\nggplot2\n\nIf you do not have R and R Studio Installed, please check out the instructions here first:\nBefore you use the code provided on this website, first run the following code:\n\ninstall.packages(c(\"ggformula\", \"mosaic\", \"dplyr\", \"readr\", \"pwr\", \"ggplot2\"))\n\nNote that stats is installed by default.",
+    "crumbs": [
+      "Setup R",
+      "Home"
+    ]
+  }
+]
