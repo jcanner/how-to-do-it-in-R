@@ -1,11 +1,27 @@
 ---
-title: "how-to-do-it-in-R"
+title: "How to do it in R"
 ---
 
-This is a Quarto website.
+This website provides quick search for the code used in introductory statistics courses at California State University, Monterey Bay.  It uses the following packages:  
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+1. `ggformula`  
+2. `mosaic`  
+3. `dplyr`  
+4. `readr`
+5. `pwr`  
+6. `stats`  
+7. `ggplot2`
+
+If you do not have R and R Studio Installed, please check out the instructions here first:
+
+
+
+Before you use the code provided on this website, first run the following code:  
 
 ```{r}
-1 + 1
+#| label: packages-install
+#| eval: false
+install.packages(c("ggformula", "mosaic", "dplyr", "readr", "pwr", "ggplot2"))
 ```
+
+Note that `stats` is installed by default.

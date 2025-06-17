@@ -2,18 +2,56 @@ project:
   type: website
 
 website:
-  title: "how-to-do-it-in-R"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  page-navigation: true
+  title: "How to do it in R"
+  description: "A Guide to Introductory Statistics Tools in R"
+  site-url: "https://github.com/jcanner/how-to-do-it-in-R"
+  repo-url: https://github.com/jcanner/how-to-do-it-in-R
+  repo-actions: [issue]
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2025, Judith Canner"
+    background: "#D9E3E4"
+
+  sidebar:
+    background: "#5D737E"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/
+        text: "GitHub organization"
+      - icon: person-fill
+        href: https://csumb.instructure.com/courses/27314
+        text: "Course Canvas Site"
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Setup R"
+        contents:
+        - href: index.qmd
+          text: Home
+        - href: about.qmd
+          text: About
+     - section: "Exploratory Data Analysis"  
+        contents: 
+        - href: visualization.qmd
+          text: "Data Visualizations"
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      light: [cosmo]
+      dark: [cosmo]
+    mainfont: "Atkinson Hyperlegible"
+    code-copy: true
+    code-overflow: wrap
     toc: true
+    linkcolor: "#5D737E"
+#    highlight-style: a11y-dark
 
 editor: visual
 

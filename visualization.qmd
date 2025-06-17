@@ -1,0 +1,19 @@
+---
+title: "Data Visualizations"
+format: html
+execute: 
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(ggformula)
+```
+
+
+```{r}
+#| label: histogram
+gf_histogram(~ Sepal.Length , data = iris)
+```
+
