@@ -35,8 +35,8 @@ website:
         contents:
         - href: index.qmd
           text: "Home"
-        - href: about.qmd
-          text: "About"
+        - href: code-style-guide.qmd
+          text: "R Code Style Guide"
       - section: "Exploratory Data Analysis"  
         contents: 
         - href: visualization.qmd
