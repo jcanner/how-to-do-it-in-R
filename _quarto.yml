@@ -44,7 +44,8 @@ website:
 
 format:
   html:
-    mainfont: "Atkinson Hyperlegible"
+    theme: "minty"
+    mainfont: "sans-serif"
     code-copy: true
     code-overflow: wrap
     toc: true
