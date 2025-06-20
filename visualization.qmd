@@ -6,14 +6,83 @@ execute:
   message: false
 ---
 
+
+# Making Visualizations with `ggformula`
+
+The package `ggformula` is built to overlay the Grammar of Graphics used in package `ggplot2` with a formula based syntax.  The formula based syntax means that all `ggformula` generated graphics will generally take the following form:  
+
 ```{r}
-#| label: setup
-library(ggformula)
+#| label: one-var-structure
+#| eval: false
+gf_goal(y ~ x, data = mydata)
 ```
 
+where the   
+
+- `goal` will be the specific function for the graph type (e.g. `gf_histogram()`), 
+- the `y` and `x` will be the specific variables/columns in the data mapped to the y-axis and x-axis respectively, and  
+- `mydata` is the object name of your data.  
+
+## Getting Started
+
+First, be sure you have installed `ggformula`. Remember, you only need to install the package once on your machine.  
+
+Then, be sure to load the package `ggformula`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.  
+
+```{r}
+#| label: setup
+library(ggformula) #for graphs
+```
+
+```{r}
+#| label: setup-2
+#| include: false
+library(tidyverse) #for other data management
+```
+
+
+## Data Structures
+
+In order to make graphs, your data needs to be "tidy". That means it should have the structure:  
+
+- Every Column is a Variable  
+- Every Row is an Individual/Case  
+- Every Cell is a Single Value  
+
+Here is an example of "tidy" data using data from a package called `palmerpenguins` (remember to install it!). First, load the package.  
+
+```{r}
+#| label: load-penguins
+library(palmerpenguins)
+```
+
+Here is a snippet of the data:  
+
+```{r}
+#| label: data-structure 
+#| echo: false
+slice_sample(penguins, n = 10) |> 
+  gt::gt() |> 
+  gt::tab_header(title = "Palmer Penguins")
+```
+
+We notice that each **column** is a variable, such as  
+
+- `species` is the species of penguin  
+- `island` is the location/island on which the penguin is found  
+- `bill_length_mm` is the length of the penguin's bill in millimeters (mm)  
+
+We also notice that each **row** represents a single penguin and its characteristics.  Each **cell** contains a single value associated with a specific variable measured on a specific penguin.  
+
+
+
+# Graphs with One Quantitative Variable
+
+## Histograms
+
+Histograms
 
 ```{r}
 #| label: histogram
-gf_histogram(~ Sepal.Length , data = iris)
+gf_histogram(~ bill_length_mm , data = penguins)
 ```
-
