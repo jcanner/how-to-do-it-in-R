@@ -1,51 +1,7 @@
 [
   {
-    "objectID": "visualization.html",
-    "href": "visualization.html",
-    "title": "Data Visualizations",
-    "section": "",
-    "text": "The package ggformula is built to overlay the Grammar of Graphics used in package ggplot2 with a formula based syntax. The formula based syntax means that all ggformula generated graphics will generally take the following form:\n\ngf_goal(y ~ x, data = mydata)\n\nwhere the\n\ngoal will be the specific function for the graph type (e.g. gf_histogram()),\nthe y and x will be the specific variables/columns in the data mapped to the y-axis and x-axis respectively, and\n\nmydata is the object name of your data.\n\n\n\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs\n\n\n\n\nIn order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n48.5\n17.5\n191\n3400\nmale\n2007\n\n\nAdelie\nTorgersen\n41.1\n18.6\n189\n3325\nmale\n2009\n\n\nAdelie\nDream\n40.2\n20.1\n200\n3975\nmale\n2009\n\n\nAdelie\nDream\n34.0\n17.1\n185\n3400\nfemale\n2008\n\n\nGentoo\nBiscoe\n43.3\n13.4\n209\n4400\nfemale\n2007\n\n\nChinstrap\nDream\n51.4\n19.0\n201\n3950\nmale\n2009\n\n\nAdelie\nBiscoe\n37.6\n19.1\n194\n3750\nmale\n2008\n\n\nChinstrap\nDream\n50.7\n19.7\n203\n4050\nmale\n2009\n\n\nAdelie\nTorgersen\n38.7\n19.0\n195\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n42.1\n19.1\n195\n4000\nmale\n2008\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
-    "crumbs": [
-      "Exploratory Data Analysis",
-      "Data Visualizations"
-    ]
-  },
-  {
-    "objectID": "visualization.html#getting-started",
-    "href": "visualization.html#getting-started",
-    "title": "Data Visualizations",
-    "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs",
-    "crumbs": [
-      "Exploratory Data Analysis",
-      "Data Visualizations"
-    ]
-  },
-  {
-    "objectID": "visualization.html#data-structures",
-    "href": "visualization.html#data-structures",
-    "title": "Data Visualizations",
-    "section": "",
-    "text": "In order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n48.5\n17.5\n191\n3400\nmale\n2007\n\n\nAdelie\nTorgersen\n41.1\n18.6\n189\n3325\nmale\n2009\n\n\nAdelie\nDream\n40.2\n20.1\n200\n3975\nmale\n2009\n\n\nAdelie\nDream\n34.0\n17.1\n185\n3400\nfemale\n2008\n\n\nGentoo\nBiscoe\n43.3\n13.4\n209\n4400\nfemale\n2007\n\n\nChinstrap\nDream\n51.4\n19.0\n201\n3950\nmale\n2009\n\n\nAdelie\nBiscoe\n37.6\n19.1\n194\n3750\nmale\n2008\n\n\nChinstrap\nDream\n50.7\n19.7\n203\n4050\nmale\n2009\n\n\nAdelie\nTorgersen\n38.7\n19.0\n195\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n42.1\n19.1\n195\n4000\nmale\n2008\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
-    "crumbs": [
-      "Exploratory Data Analysis",
-      "Data Visualizations"
-    ]
-  },
-  {
-    "objectID": "visualization.html#histograms",
-    "href": "visualization.html#histograms",
-    "title": "Data Visualizations",
-    "section": "Histograms",
-    "text": "Histograms\nHistograms\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Exploratory Data Analysis",
-      "Data Visualizations"
-    ]
-  },
-  {
-    "objectID": "code-style-guide.html",
-    "href": "code-style-guide.html",
+    "objectID": "overview/code-style-guide.html",
+    "href": "overview/code-style-guide.html",
     "title": "CSUMB R Style Guide",
     "section": "",
     "text": "Use &lt;-, not =, for assignment for new data, variables, or objects\n\n\n\n\n\nAdding extra spaces is ok if it improves alignment of = within functions or &lt;- for assignments.\nMost infix operators (==, +, -, &lt;-, =, etc.) should always be surrounded by spaces.\nMake sure a function name stays attached to the subsequent parenthesis with no space in between\nAlways put a space after a comma, never before, just like in regular English.\n\n\n\n\n\nIndentation and spacing are used consistently to maximize readability and long lines are broken into appropriate pieces.\nUse proper indentation. Use one line each for the function name, each argument, and the closing ).\n\n\n\n\n\nCode is separated into meaningful code chunks, such as Data Reading/Cleaning, Descriptive Statistics, Graphics/Visualizations, and Analysis",
@@ -55,8 +11,8 @@
     ]
   },
   {
-    "objectID": "code-style-guide.html#formatting",
-    "href": "code-style-guide.html#formatting",
+    "objectID": "overview/code-style-guide.html#formatting",
+    "href": "overview/code-style-guide.html#formatting",
     "title": "CSUMB R Style Guide",
     "section": "",
     "text": "Use &lt;-, not =, for assignment for new data, variables, or objects\n\n\n\n\n\nAdding extra spaces is ok if it improves alignment of = within functions or &lt;- for assignments.\nMost infix operators (==, +, -, &lt;-, =, etc.) should always be surrounded by spaces.\nMake sure a function name stays attached to the subsequent parenthesis with no space in between\nAlways put a space after a comma, never before, just like in regular English.\n\n\n\n\n\nIndentation and spacing are used consistently to maximize readability and long lines are broken into appropriate pieces.\nUse proper indentation. Use one line each for the function name, each argument, and the closing ).\n\n\n\n\n\nCode is separated into meaningful code chunks, such as Data Reading/Cleaning, Descriptive Statistics, Graphics/Visualizations, and Analysis",
@@ -66,8 +22,8 @@
     ]
   },
   {
-    "objectID": "code-style-guide.html#naming",
-    "href": "code-style-guide.html#naming",
+    "objectID": "overview/code-style-guide.html#naming",
+    "href": "overview/code-style-guide.html#naming",
     "title": "CSUMB R Style Guide",
     "section": "Naming",
     "text": "Naming\n\nVariables, files, code chunks, and other objects are named appropriately and add to the scripts readability.\nVariable, file, and function names should use only lowercase letters, numbers, and . Use underscores () (so called snake_case) to separate words within a name.",
@@ -77,8 +33,8 @@
     ]
   },
   {
-    "objectID": "code-style-guide.html#comments",
-    "href": "code-style-guide.html#comments",
+    "objectID": "overview/code-style-guide.html#comments",
+    "href": "overview/code-style-guide.html#comments",
     "title": "CSUMB R Style Guide",
     "section": "Comments",
     "text": "Comments\n\nComments are used appropriately throughout the script to organize the script and clarify what particular (sets of) commands are meant to accomplish. It is not necessary to comment each line, but, at minimum, each code chunk should have a comment of the objective of the code chunk.\nDocumentation and comments that describe the purpose of the code and why it does things, rather than only stating obvious facts about what the code is doing.",
@@ -88,8 +44,8 @@
     ]
   },
   {
-    "objectID": "code-style-guide.html#readability",
-    "href": "code-style-guide.html#readability",
+    "objectID": "overview/code-style-guide.html#readability",
+    "href": "overview/code-style-guide.html#readability",
     "title": "CSUMB R Style Guide",
     "section": "Readability",
     "text": "Readability\n\nLoad packages all at once at the very beginning of the file in the setup code chunk.\nQuarto/RMarkdown is divided into sections using appropriate header sizes and titles.\nR Scripts and output are ordered and labeled as appropriate.\nThere is no unused or unnecessary output or code in the knitted document (e.g. printed data)",
@@ -99,8 +55,8 @@
     ]
   },
   {
-    "objectID": "code-style-guide.html#consistency",
-    "href": "code-style-guide.html#consistency",
+    "objectID": "overview/code-style-guide.html#consistency",
+    "href": "overview/code-style-guide.html#consistency",
     "title": "CSUMB R Style Guide",
     "section": "Consistency",
     "text": "Consistency\n\nStylistic choices are used consistently throughout each script and follow commonly used conventions or agreed upon norms.",
@@ -110,21 +66,97 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "How to do it in R",
     "section": "",
     "text": "This website provides quick search for the code used in introductory statistics courses at California State University, Monterey Bay. It uses the following packages:\n\nggformula\n\nmosaic\n\ndplyr\n\nreadr\npwr\n\nstats\n\nggplot2\n\nIf you do not have R and R Studio Installed, please check out the instructions here first:\nBefore you use the code provided on this website, first run the following code:\n\ninstall.packages(c(\"ggformula\", \"mosaic\", \"dplyr\", \"readr\", \"pwr\", \"ggplot2\"))\n\nNote that stats is installed by default.",
     "crumbs": [
-      "Setup R",
       "Home"
     ]
+  },
+  {
+    "objectID": "data-visualization/histograms.html",
+    "href": "data-visualization/histograms.html",
+    "title": "Histograms",
+    "section": "",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Histograms"
+    ]
+  },
+  {
+    "objectID": "data-visualization/histograms.html#getting-started",
+    "href": "data-visualization/histograms.html#getting-started",
+    "title": "Histograms",
+    "section": "",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Histograms"
+    ]
+  },
+  {
+    "objectID": "data-visualization/histograms.html#histograms-with-one-quantitative-variable",
+    "href": "data-visualization/histograms.html#histograms-with-one-quantitative-variable",
+    "title": "Histograms",
+    "section": "Histograms with One Quantitative Variable",
+    "text": "Histograms with One Quantitative Variable\nHistograms",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Histograms"
+    ]
+  },
+  {
+    "objectID": "data-visualization/visualization-overview.html",
+    "href": "data-visualization/visualization-overview.html",
+    "title": "Data Visualizations",
+    "section": "",
+    "text": "The package ggformula is built to overlay the Grammar of Graphics used in package ggplot2 with a formula based syntax. The formula based syntax means that all ggformula generated graphics will generally take the following form:\n\ngf_goal(y ~ x, data = mydata)\n\nwhere the\n\ngoal will be the specific function for the graph type (e.g. gf_histogram()),\nthe y and x will be the specific variables/columns in the data mapped to the y-axis and x-axis respectively, and\n\nmydata is the object name of your data.\n\n\n\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs\n\n\n\n\nIn order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n42.9\n13.1\n215\n5000\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nDream\n39.8\n19.1\n184\n4650\nmale\n2007\n\n\nGentoo\nBiscoe\n44.9\n13.8\n212\n4750\nfemale\n2009\n\n\nGentoo\nBiscoe\n48.8\n16.2\n222\n6000\nmale\n2009\n\n\nChinstrap\nDream\n50.3\n20.0\n197\n3300\nmale\n2007\n\n\nAdelie\nBiscoe\n41.1\n19.1\n188\n4100\nmale\n2008\n\n\nChinstrap\nDream\n50.2\n18.8\n202\n3800\nmale\n2009\n\n\nAdelie\nDream\n36.0\n17.9\n190\n3450\nfemale\n2007\n\n\nAdelie\nDream\n40.2\n17.1\n193\n3400\nfemale\n2009\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Overview of `ggformula`"
+    ]
+  },
+  {
+    "objectID": "data-visualization/visualization-overview.html#getting-started",
+    "href": "data-visualization/visualization-overview.html#getting-started",
+    "title": "Data Visualizations",
+    "section": "",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Overview of `ggformula`"
+    ]
+  },
+  {
+    "objectID": "data-visualization/visualization-overview.html#data-structures",
+    "href": "data-visualization/visualization-overview.html#data-structures",
+    "title": "Data Visualizations",
+    "section": "",
+    "text": "In order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n42.9\n13.1\n215\n5000\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nDream\n39.8\n19.1\n184\n4650\nmale\n2007\n\n\nGentoo\nBiscoe\n44.9\n13.8\n212\n4750\nfemale\n2009\n\n\nGentoo\nBiscoe\n48.8\n16.2\n222\n6000\nmale\n2009\n\n\nChinstrap\nDream\n50.3\n20.0\n197\n3300\nmale\n2007\n\n\nAdelie\nBiscoe\n41.1\n19.1\n188\n4100\nmale\n2008\n\n\nChinstrap\nDream\n50.2\n18.8\n202\n3800\nmale\n2009\n\n\nAdelie\nDream\n36.0\n17.9\n190\n3450\nfemale\n2007\n\n\nAdelie\nDream\n40.2\n17.1\n193\n3400\nfemale\n2009\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Overview of `ggformula`"
+    ]
+  },
+  {
+    "objectID": "data-visualization/visualization-overview.html#histograms",
+    "href": "data-visualization/visualization-overview.html#histograms",
+    "title": "Data Visualizations",
+    "section": "Histograms",
+    "text": "Histograms\nHistograms\n#| label: histogram\ngf_histogram(~ bill_length_mm , data = penguins)",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Overview of `ggformula`"
+    ]
+  },
+  {
+    "objectID": "overview/about.html",
+    "href": "overview/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
 ]

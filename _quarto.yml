@@ -31,16 +31,16 @@ website:
     contents:
     - href: index.qmd
       text: "Home"
-      - section: "Setup R"
-        contents:
-        - href: overview/code-style-guide.qmd
-          text: "R Code Style Guide"
-      - section: "Data Visualizations with `ggformula`"  
-        contents: 
-        - href: data-visualization/visualization-overview.qmd
-          text: "Overview of `ggformula`"
-        - href: data-visualization/histograms.qmd
-          text: "Histograms"
+    - section: "Setup R"
+      contents:
+      - href: overview/code-style-guide.qmd
+        text: "R Code Style Guide"
+    - section: "Data Visualizations with `ggformula`"  
+      contents: 
+      - href: data-visualization/visualization-overview.qmd
+        text: "Overview of `ggformula`"
+      - href: data-visualization/histograms.qmd
+        text: "Histograms"
 
 format:
   html:

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/jcanner/how-to-do-it-in-R/visualization.html</loc>
-    <lastmod>2025-06-20T23:54:23.777Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/jcanner/how-to-do-it-in-R/code-style-guide.html</loc>
+    <loc>https://jcanner.github.io/how-to-do-it-in-R/overview/code-style-guide.html</loc>
     <lastmod>2025-06-20T20:06:15.239Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/jcanner/how-to-do-it-in-R/about.html</loc>
-    <lastmod>2025-06-20T20:06:15.239Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/jcanner/how-to-do-it-in-R/index.html</loc>
+    <loc>https://jcanner.github.io/how-to-do-it-in-R/index.html</loc>
     <lastmod>2025-06-20T20:06:15.316Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/histograms.html</loc>
+    <lastmod>2025-06-21T00:17:15.058Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/visualization-overview.html</loc>
+    <lastmod>2025-06-21T00:00:25.288Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcanner.github.io/how-to-do-it-in-R/overview/about.html</loc>
+    <lastmod>2025-06-20T20:06:15.239Z</lastmod>
   </url>
 </urlset>

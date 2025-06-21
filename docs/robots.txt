@@ -1,1 +1,1 @@
-Sitemap: https://github.com/jcanner/how-to-do-it-in-R/sitemap.xml
+Sitemap: https://jcanner.github.io/how-to-do-it-in-R/sitemap.xml
