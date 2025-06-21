@@ -2,8 +2,6 @@
 title: "Data Visualizations"
 format: html
 engine: knitr
-filters:
-  - webr
 webr:
   packages: ['ggformula', 'palmerpenguins']
 execute: 

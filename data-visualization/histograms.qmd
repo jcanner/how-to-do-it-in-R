@@ -1,0 +1,41 @@
+---
+title: "Histograms"
+format: live-html
+engine: knitr
+webr:
+  packages: ['ggformula', 'palmerpenguins']
+execute: 
+  warning: false
+  message: false
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+
+## Getting Started
+
+First, be sure you have installed `ggformula`. Remember, you only need to install the package once on your machine.
+
+Then, be sure to load the package `ggformula`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.
+
+```{r}
+#| label: setup
+library(ggformula) #for graphs
+```
+
+```{r}
+#| label: setup-2
+#| include: false
+library(tidyverse) #for other data management
+```
+
+
+
+## Histograms with One Quantitative Variable
+
+Histograms
+
+```{webr-r}
+#| label: histogram
+gf_histogram(~ bill_length_mm , data = penguins)
+```

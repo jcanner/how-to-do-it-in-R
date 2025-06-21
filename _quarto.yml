@@ -6,7 +6,7 @@ website:
   page-navigation: true
   title: "How to do it in R"
   description: "A Guide to Introductory Statistics Tools in R"
-  site-url: "https://github.com/jcanner/how-to-do-it-in-R"
+  site-url: "https://jcanner.github.io/how-to-do-it-in-R"
   repo-url: https://github.com/jcanner/how-to-do-it-in-R
   repo-actions: [issue]
 
@@ -16,31 +16,31 @@ website:
     background: "#D9E3E4"
 
   sidebar:
-    background: "#5D737E"
+#    background: "#5D737E"
     pinned: true
     align: center
     tools:
       - icon: github
-        href: https://github.com/
+        href: https://github.com/jcanner/how-to-do-it-in-R
         text: "GitHub organization"
-      - icon: person-fill
-        href: https://csumb.instructure.com/courses/27314
-        text: "Course Canvas Site"
+
 
     style: "docked"
     search: true
     collapse-level: 1
     contents:
+    - href: index.qmd
+      text: "Home"
       - section: "Setup R"
         contents:
-        - href: index.qmd
-          text: "Home"
-        - href: code-style-guide.qmd
+        - href: overview/code-style-guide.qmd
           text: "R Code Style Guide"
-      - section: "Exploratory Data Analysis"  
+      - section: "Data Visualizations with `ggformula`"  
         contents: 
-        - href: visualization.qmd
-          text: "Data Visualizations"
+        - href: data-visualization/visualization-overview.qmd
+          text: "Overview of `ggformula`"
+        - href: data-visualization/histograms.qmd
+          text: "Histograms"
 
 format:
   html:
@@ -49,7 +49,7 @@ format:
     code-copy: true
     code-overflow: wrap
     toc: true
-    linkcolor: "#5D737E"
+#    linkcolor: "#5D737E"
 #    highlight-style: a11y-dark
 
 editor: visual
