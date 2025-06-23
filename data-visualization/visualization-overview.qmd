@@ -1,9 +1,6 @@
 ---
-title: "Data Visualizations"
+title: "Overview for Data Visualization"
 format: html
-engine: knitr
-webr:
-  packages: ['ggformula', 'palmerpenguins']
 execute: 
   warning: false
   message: false
@@ -11,18 +8,34 @@ execute:
 
 # Making Visualizations with `ggformula`
 
-The package `ggformula` is built to overlay the Grammar of Graphics used in package `ggplot2` with a formula based syntax. The formula based syntax means that all `ggformula` generated graphics will generally take the following form:
+The package `ggformula` is built to overlay the Grammar of Graphics used in package `ggplot2` with a formula based syntax. The formula based syntax means that all `ggformula` generated graphics will generally take one of the following forms:
 
+**One Variable**
 ```{r}
-#| label: one-var-structure
+#| label: two-var-structure
+#| eval: false
+gf_goal(~ x, data = mydata)
+```
+
+**Two Variable - Relationships**
+```{r}
+#| label: two-var-structure
 #| eval: false
 gf_goal(y ~ x, data = mydata)
+```
+
+**Two or More Variables - Groups**
+```{r}
+#| label: two-var-structure
+#| eval: false
+gf_goal(~ x | z, data = mydata)
+gf_goal(y ~ x | z, data = mydata)
 ```
 
 where the
 
 -   `goal` will be the specific function for the graph type (e.g. `gf_histogram()`),
--   the `y` and `x` will be the specific variables/columns in the data mapped to the y-axis and x-axis respectively, and\
+-   the `y` and `x` will be the specific **variables/columns** in the data mapped to the y-axis and x-axis respectively, with `| z` the feature that facets into different graphs for group values of `z`, and
 -   `mydata` is the object name of your data.
 
 ## Getting Started

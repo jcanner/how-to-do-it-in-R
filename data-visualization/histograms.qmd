@@ -22,13 +22,74 @@ Then, be sure to load the package `ggformula`. Remember, you need to do this wit
 library(ggformula) #for graphs
 ```
 
+
+### Data for Examples
+
+As a reminder (see [Overview of Data Visualization](visualization-overview.qmd), we will be using the `penguins` data from the `palmerpenguins` package: 
+
+```{r}
+#| label: load-penguins
+library(palmerpenguins)
+```
+
+Here is a snippet of the data:
+
+```{r}
+#| label: data-structure 
+#| echo: false
+library(dplyr)
+library(gt)
+slice_sample(penguins, n = 5) |> 
+  gt::gt() |> 
+  gt::tab_header(title = "Palmer Penguins")
+```
+
 ## Histograms with One Quantitative Variable
 
-Histograms
+### Basic Code
+
+For a single quantitative variable, `x`, here is the general structure. 
+
+```{r}
+#| label: one-var-structure
+#| eval: false
+gf_histogram(~x, 
+             data = mydata)
+```
+
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data.  
 
 ```{webr}
-#| label: histogram
-#| warnings: false
-
-gf_histogram(~ bill_length_mm , data = penguins)
+#| label: histogram-one
+gf_histogram(~bill_length_mm, 
+             data = penguins)
 ```
+
+Notice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data.  
+
+
+### Bin Widths
+
+One of the features of a histogram is the **bin width**. The bin width is something that is automatically generated for most histogram functions, but it is not always ideal. You can add an *argument* to the R function `gf_histogram()` to modify the bin width.
+
+```{r}
+#| label: one-var-structure-bin
+#| eval: false
+gf_histogram(~ x, 
+             data = mydata, 
+             binwidth = 10)  #adjust this number
+```
+
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data with a bin width of 5 (mm). Modify the bin width and see how it affects the histogram.  
+
+```{webr}
+#| label: histogram-one-bins
+gf_histogram(~bill_length_mm, 
+             data = penguins, 
+             binwidth = 5)
+```
+
+### Adding Labels
+
+
+### Other Modifications
