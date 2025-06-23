@@ -25,10 +25,9 @@ Then, be sure to load the package `ggformula`. Remember, you need to do this wit
 library(ggformula) #for graphs
 ```
 
-
 ### Data for Examples
 
-As a reminder (see [Overview of Data Visualization](visualization-overview.qmd), we will be using the `penguins` data from the `palmerpenguins` package: 
+As a reminder (see [Overview of Data Visualization](visualization-overview.qmd), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -51,7 +50,7 @@ slice_sample(penguins, n = 5) |>
 
 ### Basic Code
 
-For a single quantitative variable, `x`, here is the general structure. 
+For a single quantitative variable, `x`, here is the general structure.
 
 ```{r}
 #| label: one-var-structure
@@ -60,7 +59,7 @@ gf_histogram(~x,
              data = mydata)
 ```
 
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data.  Then replace `bill_length_mm` with another quantitative variable from the `penuins` data (e.g. `bill_depth_mm`)
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penuins` data (e.g. `bill_depth_mm`)
 
 ```{webr}
 #| label: histogram-one
@@ -68,8 +67,7 @@ gf_histogram(~bill_length_mm,
              data = penguins)
 ```
 
-Notice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data.  
-
+Notice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data.
 
 ### Bin Widths
 
@@ -83,7 +81,7 @@ gf_histogram(~ x,
              binwidth = 10)  #adjust this number
 ```
 
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data with a bin width of 5 (mm). Modify the bin width and see how it affects the histogram.  
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data with a bin width of 5 (mm). Modify the bin width and see how it affects the histogram.
 
 ```{webr}
 #| label: histogram-one-bins
@@ -94,10 +92,10 @@ gf_histogram(~bill_length_mm,
 
 ### Adding Labels
 
-Descriptive labels are important for any visualization. We can always add them to any visualization by adding `xlab = ` and `ylab = ` to your function.  
+Descriptive labels are important for any visualization. We can always add them to any visualization by adding `xlab =` and `ylab =` to your function.
 
 ```{r}
-#| label: one-var-structure
+#| label: one-var-structure-labels
 #| eval: false
 gf_histogram(~x, 
              data = mydata,
@@ -106,7 +104,7 @@ gf_histogram(~x,
              title = "Descriptive Title")
 ```
 
-Add labels and a title to the histogram for `bill_length_mm`.  
+Add labels and a title to the histogram for `bill_length_mm`.
 
 ```{webr}
 #| label: histogram-one-bins-add-labels
@@ -115,15 +113,13 @@ gf_histogram(~bill_length_mm,
              binwidth = 5)
 ```
 
-
 ### Other Modifications
 
-We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read. 
-
+We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.
 
 #### Outlining the Bars
 
-We can add a color that outlines the bars by telling R to outline the color of the bars in black.  
+We can add a color that outlines the bars by telling R to outline the color of the bars in black.
 
 ```{r}
 #| label: one-var-structure-bars-color
@@ -138,10 +134,10 @@ gf_histogram(~x,
 
 #### Filling the Bars with Color
 
-We can add a color to fill the bars by telling R to fill the bars with a specified color either using a [built in color from R](https://r-charts.com/colors/) or using a [hex code for colors](https://htmlcolorcodes.com/color-picker/) .  
+We can add a color to fill the bars by telling R to fill the bars with a specified color either using a [built in color from R](https://r-charts.com/colors/) or using a [hex code for colors](https://htmlcolorcodes.com/color-picker/) .
 
 ```{r}
-#| label: one-var-structure-bars-color
+#| label: one-var-structure-bars-fill
 #| eval: false
 gf_histogram(~x, 
              data = mydata,
@@ -151,12 +147,11 @@ gf_histogram(~x,
              fill = "darkcyan")
 ```
 
-
 #### Changing the Theme
 
-The package `ggformula` is built on top of another package called `ggplot2` and so any `ggplot2` function can be added to a `ggformula` generated graphic. For example, we can change the theme to a [built-in theme](https://ggplot2.tidyverse.org/reference/ggtheme.html). 
+The package `ggformula` is built on top of another package called `ggplot2` and so any `ggplot2` function can be added to a `ggformula` generated graphic. For example, we can change the theme to a [built-in theme](https://ggplot2.tidyverse.org/reference/ggtheme.html).
 
-Try changing the theme to the following graph:  
+Try changing the theme to the following graph:
 
 ```{webr}
 #| label: histogram-one-theme
@@ -167,8 +162,7 @@ gf_histogram(~bill_length_mm,
 
 #### Changing Color Options
 
-
-Try adding some modifications for the histogram of `bill_length_mm`.  
+Try adding some modifications for the histogram of `bill_length_mm`.
 
 ```{webr}
 #| label: histogram-one-modify
@@ -176,7 +170,4 @@ gf_histogram(~bill_length_mm,
              data = penguins)
 ```
 
-
 ## Histograms for Comparisons Across Groups
-
-
