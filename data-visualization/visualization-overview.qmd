@@ -26,7 +26,7 @@ gf_goal(~ x, data = mydata)
 gf_goal(y ~ x, data = mydata)
 ```
 
-**Two or More Variables - Groups**
+**Two or More Variables Split by Groups**
 
 ```{r}
 #| label: facet-var-structure
@@ -40,6 +40,7 @@ where the
 -   `goal` will be the specific function for the graph type (e.g. `gf_histogram()`),
 -   the `y` and `x` will be the specific **variables/columns** in the data mapped to the y-axis and x-axis respectively, with `| z` the feature that facets into different graphs for group values of `z`, and
 -   `mydata` is the object name of your data.
+
 
 ## Getting Started
 
@@ -58,7 +59,35 @@ library(ggformula) #for graphs
 library(tidyverse) #for other data management
 ```
 
-## Data Structures
+
+## Common Modifications/Arguments  
+
+Every visualization type has some modifications that are specific to that type, but there are some universal modifications that should be added to every graph.
+
+### Axis Labels 
+
+Every visualization should have its axes labelled according to the context of the data.  Axis labels should always include  
+
+- The variables or cases they represent  
+  + Always include units (e.g. inches, %) for variables  
+- The individual/sample/population represented by data   
+- A descriptive title - this should not be "X vs Y", but something like "As X increases we see that Y decreases"  
+
+Here is how that is added to our `gf_goal()` function:
+
+```{r}
+#| label: two-var-structure-labels
+#| eval: false
+gf_goal(formula, #takes many different forms 
+        data = mydata,
+        xlab = "X Variable, Units, and/or Sample",
+        ylab = "Y Variable, Units, and/or Sample",
+        title = "Title describing relationship")
+```
+  
+
+
+# Data Structures
 
 In order to make graphs, your data needs to be "tidy". That means it should have the structure:
 
