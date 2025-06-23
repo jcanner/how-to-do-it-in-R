@@ -80,7 +80,7 @@
     "href": "data-visualization/histograms.html",
     "title": "Histograms",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.2\n14.8\n212\n5200\nfemale\n2009\n\n\nAdelie\nDream\n37.5\n18.5\n199\n4475\nmale\n2009\n\n\nAdelie\nDream\n41.5\n18.5\n201\n4000\nmale\n2009\n\n\nAdelie\nBiscoe\n38.6\n17.2\n199\n3750\nfemale\n2009\n\n\nGentoo\nBiscoe\n47.8\n15.0\n215\n5650\nmale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
@@ -91,7 +91,7 @@
     "href": "data-visualization/histograms.html#getting-started",
     "title": "Histograms",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.2\n14.8\n212\n5200\nfemale\n2009\n\n\nAdelie\nDream\n37.5\n18.5\n199\n4475\nmale\n2009\n\n\nAdelie\nDream\n41.5\n18.5\n201\n4000\nmale\n2009\n\n\nAdelie\nBiscoe\n38.6\n17.2\n199\n3750\nfemale\n2009\n\n\nGentoo\nBiscoe\n47.8\n15.0\n215\n5650\nmale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
@@ -102,7 +102,7 @@
     "href": "data-visualization/histograms.html#histograms-with-one-quantitative-variable",
     "title": "Histograms",
     "section": "Histograms with One Quantitative Variable",
-    "text": "Histograms with One Quantitative Variable\nHistograms",
+    "text": "Histograms with One Quantitative Variable\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure.\n\ngf_histogram(~x, \n             data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data.\n\n\n\n\n\n\n\n\nNotice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data.\n\n\nBin Widths\nOne of the features of a histogram is the bin width. The bin width is something that is automatically generated for most histogram functions, but it is not always ideal. You can add an argument to the R function gf_histogram() to modify the bin width.\n\ngf_histogram(~ x, \n             data = mydata, \n             binwidth = 10)  #adjust this number\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data with a bin width of 5 (mm). Modify the bin width and see how it affects the histogram.\n\n\n\n\n\n\n\n\n\n\nAdding Labels\n\n\nOther Modifications",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
@@ -111,9 +111,9 @@
   {
     "objectID": "data-visualization/visualization-overview.html",
     "href": "data-visualization/visualization-overview.html",
-    "title": "Data Visualizations",
+    "title": "Overview for Data Visualization",
     "section": "",
-    "text": "The package ggformula is built to overlay the Grammar of Graphics used in package ggplot2 with a formula based syntax. The formula based syntax means that all ggformula generated graphics will generally take the following form:\n\ngf_goal(y ~ x, data = mydata)\n\nwhere the\n\ngoal will be the specific function for the graph type (e.g. gf_histogram()),\nthe y and x will be the specific variables/columns in the data mapped to the y-axis and x-axis respectively, and\n\nmydata is the object name of your data.\n\n\n\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs\n\n\n\n\nIn order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n42.9\n13.1\n215\n5000\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nDream\n39.8\n19.1\n184\n4650\nmale\n2007\n\n\nGentoo\nBiscoe\n44.9\n13.8\n212\n4750\nfemale\n2009\n\n\nGentoo\nBiscoe\n48.8\n16.2\n222\n6000\nmale\n2009\n\n\nChinstrap\nDream\n50.3\n20.0\n197\n3300\nmale\n2007\n\n\nAdelie\nBiscoe\n41.1\n19.1\n188\n4100\nmale\n2008\n\n\nChinstrap\nDream\n50.2\n18.8\n202\n3800\nmale\n2009\n\n\nAdelie\nDream\n36.0\n17.9\n190\n3450\nfemale\n2007\n\n\nAdelie\nDream\n40.2\n17.1\n193\n3400\nfemale\n2009\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
+    "text": "The package ggformula is built to overlay the Grammar of Graphics used in package ggplot2 with a formula based syntax. The formula based syntax means that all ggformula generated graphics will generally take one of the following forms:\nOne Variable\n\ngf_goal(~ x, data = mydata)\n\nTwo Variable - Relationships\n\ngf_goal(y ~ x, data = mydata)\n\nTwo or More Variables - Groups\n\ngf_goal(~ x | z, data = mydata)\ngf_goal(y ~ x | z, data = mydata)\n\nwhere the\n\ngoal will be the specific function for the graph type (e.g. gf_histogram()),\nthe y and x will be the specific variables/columns in the data mapped to the y-axis and x-axis respectively, with | z the feature that facets into different graphs for group values of z, and\nmydata is the object name of your data.\n\n\n\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs\n\n\n\n\nIn order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n45.2\n16.6\n191\n3250\nfemale\n2009\n\n\nAdelie\nBiscoe\n37.8\n20.0\n190\n4250\nmale\n2009\n\n\nGentoo\nBiscoe\n42.0\n13.5\n210\n4150\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nGentoo\nBiscoe\n50.4\n15.7\n222\n5750\nmale\n2009\n\n\nGentoo\nBiscoe\n46.1\n15.1\n215\n5100\nmale\n2007\n\n\nGentoo\nBiscoe\n45.7\n13.9\n214\n4400\nfemale\n2008\n\n\nAdelie\nDream\n40.7\n17.0\n190\n3725\nmale\n2009\n\n\nGentoo\nBiscoe\n42.7\n13.7\n208\n3950\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.0\n15.2\n218\n5700\nmale\n2007\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Overview of `ggformula`"
@@ -122,7 +122,7 @@
   {
     "objectID": "data-visualization/visualization-overview.html#getting-started",
     "href": "data-visualization/visualization-overview.html#getting-started",
-    "title": "Data Visualizations",
+    "title": "Overview for Data Visualization",
     "section": "",
     "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs",
     "crumbs": [
@@ -133,20 +133,9 @@
   {
     "objectID": "data-visualization/visualization-overview.html#data-structures",
     "href": "data-visualization/visualization-overview.html#data-structures",
-    "title": "Data Visualizations",
+    "title": "Overview for Data Visualization",
     "section": "",
-    "text": "In order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n42.9\n13.1\n215\n5000\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nDream\n39.8\n19.1\n184\n4650\nmale\n2007\n\n\nGentoo\nBiscoe\n44.9\n13.8\n212\n4750\nfemale\n2009\n\n\nGentoo\nBiscoe\n48.8\n16.2\n222\n6000\nmale\n2009\n\n\nChinstrap\nDream\n50.3\n20.0\n197\n3300\nmale\n2007\n\n\nAdelie\nBiscoe\n41.1\n19.1\n188\n4100\nmale\n2008\n\n\nChinstrap\nDream\n50.2\n18.8\n202\n3800\nmale\n2009\n\n\nAdelie\nDream\n36.0\n17.9\n190\n3450\nfemale\n2007\n\n\nAdelie\nDream\n40.2\n17.1\n193\n3400\nfemale\n2009\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
-    "crumbs": [
-      "Data Visualizations with `ggformula`",
-      "Overview of `ggformula`"
-    ]
-  },
-  {
-    "objectID": "data-visualization/visualization-overview.html#histograms",
-    "href": "data-visualization/visualization-overview.html#histograms",
-    "title": "Data Visualizations",
-    "section": "Histograms",
-    "text": "Histograms\nHistograms\n#| label: histogram\ngf_histogram(~ bill_length_mm , data = penguins)",
+    "text": "In order to make graphs, your data needs to be “tidy”. That means it should have the structure:\n\nEvery Column is a Variable\n\nEvery Row is an Individual/Case\n\nEvery Cell is a Single Value\n\nHere is an example of “tidy” data using data from a package called palmerpenguins (remember to install it!). First, load the package.\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n45.2\n16.6\n191\n3250\nfemale\n2009\n\n\nAdelie\nBiscoe\n37.8\n20.0\n190\n4250\nmale\n2009\n\n\nGentoo\nBiscoe\n42.0\n13.5\n210\n4150\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nGentoo\nBiscoe\n50.4\n15.7\n222\n5750\nmale\n2009\n\n\nGentoo\nBiscoe\n46.1\n15.1\n215\n5100\nmale\n2007\n\n\nGentoo\nBiscoe\n45.7\n13.9\n214\n4400\nfemale\n2008\n\n\nAdelie\nDream\n40.7\n17.0\n190\n3725\nmale\n2009\n\n\nGentoo\nBiscoe\n42.7\n13.7\n208\n3950\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.0\n15.2\n218\n5700\nmale\n2007\n\n\n\n\n\n\n\nWe notice that each column is a variable, such as\n\nspecies is the species of penguin\n\nisland is the location/island on which the penguin is found\n\nbill_length_mm is the length of the penguin’s bill in millimeters (mm)\n\nWe also notice that each row represents a single penguin and its characteristics. Each cell contains a single value associated with a specific variable measured on a specific penguin.",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Overview of `ggformula`"

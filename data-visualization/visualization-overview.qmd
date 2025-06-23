@@ -11,13 +11,15 @@ execute:
 The package `ggformula` is built to overlay the Grammar of Graphics used in package `ggplot2` with a formula based syntax. The formula based syntax means that all `ggformula` generated graphics will generally take one of the following forms:
 
 **One Variable**
+
 ```{r}
-#| label: two-var-structure
+#| label: one-var-structure
 #| eval: false
 gf_goal(~ x, data = mydata)
 ```
 
 **Two Variable - Relationships**
+
 ```{r}
 #| label: two-var-structure
 #| eval: false
@@ -25,8 +27,9 @@ gf_goal(y ~ x, data = mydata)
 ```
 
 **Two or More Variables - Groups**
+
 ```{r}
-#| label: two-var-structure
+#| label: facet-var-structure
 #| eval: false
 gf_goal(~ x | z, data = mydata)
 gf_goal(y ~ x | z, data = mydata)
@@ -88,13 +91,3 @@ We notice that each **column** is a variable, such as
 
 We also notice that each **row** represents a single penguin and its characteristics. Each **cell** contains a single value associated with a specific variable measured on a specific penguin.
 
-# Graphs with One Quantitative Variable
-
-## Histograms
-
-Histograms
-
-```{webr-r}
-#| label: histogram
-gf_histogram(~ bill_length_mm , data = penguins)
-```
