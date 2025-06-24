@@ -50,7 +50,7 @@ slice_sample(penguins, n = 5) |>
 
 ### Basic Code
 
-For a single quantitative variable, `x`, here is the general structure.
+For a single quantitative variable, `x`, here is the general structure for a histogram.
 
 ```{r}
 #| label: one-var-structure
@@ -67,7 +67,8 @@ gf_histogram(~bill_length_mm,
              data = penguins)
 ```
 
-Notice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data.
+**Notice** the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.
+
 
 ### Bin Widths
 
@@ -160,7 +161,7 @@ gf_histogram(~bill_length_mm,
   theme_light()
 ```
 
-#### Changing Color Options
+#### Try It Out: Modifications
 
 Try adding some modifications for the histogram of `bill_length_mm`.
 
@@ -171,3 +172,62 @@ gf_histogram(~bill_length_mm,
 ```
 
 ## Histograms for Comparisons Across Groups
+
+When we have a **quantitative** variable that has been measured across multiple groups, we may be interested in comparing histograms across the values/groups of a **categorical** variable. We can do this using two different features of data visualization:  
+
+- Color Differences  
+- Facets  
+
+### Adding Color to Groups  
+
+Similar to changing the color of bars to a single color, we can use the `fill = ` argument but instead specify our **categorical** variable `z`. 
+
+```{r}
+#| label: one-var-color-var
+#| eval: false
+gf_histogram(~x, 
+             data = mydata,
+             fill = ~z) #don't forget the ~ before the variable name
+```
+
+Here is the histogram of `bill_length_mm` with color varied by `species` a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the fill color to another categorical variable such as `island` or `sex` and see what happens.  
+
+```{webr}
+#| label: histogram-color-var
+gf_histogram(~bill_length_mm, 
+             fill = ~species,
+             data = penguins)
+```
+
+
+### Faceting by Groups
+
+Faceting in visualization is a tool that allows you to easily split up data across multiple panels of the same type. To do this in `ggformula` you add `| z` after the formula which conditions the graph on the **categorical** variable `z` and splits the graph by the groups/values of `z`.  
+
+```{r}
+#| label: one-var-facet-var
+#| eval: false
+gf_histogram(~x | z, 
+             data = mydata)
+```
+
+Here is the histogram of `bill_length_mm` with facets based on `species`, a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the facets to another categorical variable such as `island` or `sex` and see what happens. Try adding fill by the facet variable as well.    
+
+```{webr}
+#| label: histogram-facet-var
+gf_histogram(~bill_length_mm | species,
+             data = penguins)
+```
+
+
+#### Using `ggplot2` to Control Facets  
+
+Unfortunately, the `ggformula` option for facets does not give you much control on how to organize the facets, so it might be useful to instead of a `ggplot2` option such as `facet_wrap()` or `facet_grid`.  For example, here is an example using `facet_wrap()` that allows us to stack our facets into one column (`ncol = 1`).  Look up the options for different facet functions and try other modification.  
+
+```{webr}
+#| label: histogram-facet-var-ggplot2
+gf_histogram(~bill_length_mm,
+             data = penguins) +
+  facet_wrap(~species, ncol = 1)
+```
+

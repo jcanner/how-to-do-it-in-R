@@ -52,5 +52,5 @@ format:
 #    linkcolor: "#5D737E"
 #    highlight-style: a11y-dark
 
-editor: visual
+editor: source
 
