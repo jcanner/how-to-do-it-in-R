@@ -35,13 +35,51 @@ website:
       contents:
       - href: overview/code-style-guide.qmd
         text: "R Code Style Guide"
+      - href: 
+        text: "Intalling R and RStudio"
+      - href: 
+        text: "Connecting to GitHub"
     - section: "Data Visualizations with `ggformula`"  
       contents: 
       - href: data-visualization/visualization-overview.qmd
         text: "Overview of `ggformula`"
       - href: data-visualization/histograms.qmd
         text: "Histograms"
+      - href: data-visualization/boxplots.qmd
+        text: "Boxplots"
+      - href: data-visualization/scatterplots.qmd
+        text: "Scatterplots"
+      - href: data-visualization/barplots.qmd
+        text: "Bar Plots"
 
+    - section: "Summary Statistics with `mosaic`"  
+      contents: 
+      - href: 
+        text: "Overview of `mosaic`"
+      - href: 
+        text: "Measures of Center"
+      - href: 
+        text: "Measures of Spread"
+      - href: 
+        text: "Measure of Relationship"
+      - href: 
+        text: "Generating Multiple Statistics (`df_stats`)"
+
+    - section: "Inference and Conditions"  
+      contents: 
+      - href: 
+        text: "Confidence Interval - One Mean"
+      - href: 
+        text: "Independent Two Sample Inference"
+      - href: 
+        text: "Matched Pairs Inference"
+      - href: 
+        text: "Analysis of Variance"
+      - href: 
+        text: "Simple Linear Regression"
+      - href: 
+        text: "Chi-Square Goodness of Fit"
+      
 format:
   html:
     theme: "minty"
