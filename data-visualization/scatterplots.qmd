@@ -140,20 +140,20 @@ When we have a **quantitative** variable that has been measured across multiple 
 #| eval: false
 gf_point(y ~ x, 
          color = ~z,  #color is the best way
-         shape = ~z, #shape is another way, you can do both
+         shape = ~z, #shape is another way, you can also do both
          data = mydata)  
 ```
 
 
-Here is the scatterplot of `bill_length_mm` and `bill_depth_mm` with the color varied by `species`, a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the fill color to another categorical variable such as `island` or `sex` and see what happens.  
+Here is the scatterplot of `bill_length_mm` and `bill_depth_mm` with the color varied by `species`, a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the point color to another categorical variable such as `island` or `sex` and see what happens.  Try adding another categorical variable as the `shape`.  
 
 ```{webr}
 #| label: three-var-scatterplot-color
-gf_boxplot(bill_length_mm ~ bill_depth_mm. 
-           color = ~species,
-           data = penguins,
-           xlab = "Add Variable X Information",
-           ylab = "Add Variable Y Information")
+gf_point(bill_length_mm ~ bill_depth_mm, 
+         color = ~species,
+         data = penguins,
+         xlab = "Add Variable X Information",
+         ylab = "Add Variable Y Information")
 ```
 
 
@@ -179,6 +179,7 @@ Run the code below to see an example using the **quantitative** variables `bill_
 
 ```{webr}
 #| label: scatter-penguins-lm
+#| warning: false
 gf_point(bill_depth_mm ~ bill_length_mm, 
          data = penguins,
          xlab = "X Variable",
@@ -191,8 +192,18 @@ gf_point(bill_depth_mm ~ bill_length_mm,
 
 ```{webr}
 #| label: scatter-penguins-lm-species
+#| warning: false
 gf_point(bill_depth_mm ~ bill_length_mm, 
          color = ~species,
          data = penguins) |> 
   gf_lm()
 ```
+
+How did the linear model change when we accounted for species?
+
+::: {.callout-tip}
+## Simpson's Paradox
+
+Simpson's Paradox is a type of "Amalgamation Paradox" where the behavior of the whole is different than the behavior of the subgroups.  We see this in the field of Statistics when the trend of a linear model for a group changes when you look at the same relationship among subgroups. In our example above, for all penguins, the relationship looks negative between Bill Length and Depth, but when you split by species you see a positive relationship (which makes more sense).  This is why it is so important to consider all the possible variables that might influence a relationship!
+
+:::

@@ -276,7 +276,7 @@ check_question(answer = c("Number of Individuals in a B"),
                button_label = "Check Your Answer")
 ```
 
-
+####
 
 ```{r}
 #| label: histogram-characteristics-q2-hint
