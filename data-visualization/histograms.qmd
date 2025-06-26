@@ -70,7 +70,6 @@ gf_histogram(~bill_length_mm,
 
 **Notice** the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.
 
-
 ### Bin Widths
 
 One of the features of a histogram is the **bin width**. The bin width is something that is automatically generated for most histogram functions, but it is not always ideal. You can add an *argument* to the R function `gf_histogram()` to modify the bin width.
@@ -174,14 +173,14 @@ gf_histogram(~bill_length_mm,
 
 ## Histograms for Comparisons Across Groups
 
-When we have a **quantitative** variable that has been measured across multiple groups, we may be interested in comparing histograms across the values/groups of a **categorical** variable. We can do this using two different features of data visualization:  
+When we have a **quantitative** variable that has been measured across multiple groups, we may be interested in comparing histograms across the values/groups of a **categorical** variable. We can do this using two different features of data visualization:
 
-- Color Differences  
-- Facets  
+-   Color Differences\
+-   Facets
 
-### Adding Color to Groups  
+### Adding Color to Groups
 
-Similar to changing the color of bars to a single color, we can use the `fill = ` argument but instead specify our **categorical** variable `z`. 
+Similar to changing the color of bars to a single color, we can use the `fill =` argument but instead specify our **categorical** variable `z`.
 
 ```{r}
 #| label: one-var-color-var
@@ -191,7 +190,7 @@ gf_histogram(~x,
              fill = ~z) #don't forget the ~ before the variable name
 ```
 
-Here is the histogram of `bill_length_mm` with color varied by `species` a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the fill color to another categorical variable such as `island` or `sex` and see what happens.  
+Here is the histogram of `bill_length_mm` with color varied by `species` a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as `island` or `sex` and see what happens.
 
 ```{webr}
 #| label: histogram-color-var
@@ -200,10 +199,9 @@ gf_histogram(~bill_length_mm,
              data = penguins)
 ```
 
-
 ### Faceting by Groups
 
-Faceting in visualization is a tool that allows you to easily split up data across multiple panels of the same type. To do this in `ggformula` you add `| z` after the formula which conditions the graph on the **categorical** variable `z` and splits the graph by the groups/values of `z`.  
+Faceting in visualization is a tool that allows you to easily split up data across multiple panels of the same type. To do this in `ggformula` you add `| z` after the formula which conditions the graph on the **categorical** variable `z` and splits the graph by the groups/values of `z`.
 
 ```{r}
 #| label: one-var-facet-var
@@ -212,7 +210,7 @@ gf_histogram(~x | z,
              data = mydata)
 ```
 
-Here is the histogram of `bill_length_mm` with facets based on `species`, a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the facets to another categorical variable such as `island` or `sex` and see what happens. Try adding fill by the facet variable as well.    
+Here is the histogram of `bill_length_mm` with facets based on `species`, a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the facets to another categorical variable such as `island` or `sex` and see what happens. Try adding fill by the facet variable as well.
 
 ```{webr}
 #| label: histogram-facet-var
@@ -220,10 +218,9 @@ gf_histogram(~bill_length_mm | species,
              data = penguins)
 ```
 
+#### Using `ggplot2` to Control Facets
 
-#### Using `ggplot2` to Control Facets  
-
-Unfortunately, the `ggformula` option for facets does not give you much control on how to organize the facets, so it might be useful to instead of a `ggplot2` option such as `facet_wrap()` or `facet_grid`.  For example, here is an example using `facet_wrap()` that allows us to stack our facets into one column (`ncol = 1`).  Look up the options for different facet functions and try other modification.  
+Unfortunately, the `ggformula` option for facets does not give you much control on how to organize the facets, so it might be useful to instead of a `ggplot2` option such as `facet_wrap()` or `facet_grid`. For example, here is an example using `facet_wrap()` that allows us to stack our facets into one column (`ncol = 1`). Look up the options for different facet functions and try other modification.
 
 ```{webr}
 #| label: histogram-facet-var-ggplot2
@@ -232,27 +229,60 @@ gf_histogram(~bill_length_mm,
   facet_wrap(~species, ncol = 1)
 ```
 
-
-
-::: {.callout-note}
+::: callout-note
 ## Check Your Understading: Histograms
 
-**Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?**  
+#### Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?
 
 ```{r}
 #| label: histogram-characteristics-q1
 #| echo: false
-check_question(answer = c("center", "symmetry/skew", "spread", "modality", "outliers"), 
-               options = c("center", "symmetry/skew", "spread", "modality", "outliers"),
-               right = "Great Job! Histograms allow us to observe all of these features of a distribution",
+check_question(answer = c("center", 
+                          "symmetry/skew", 
+                          "spread", 
+                          "modality", 
+                          "outliers"), 
+               options = c("center", 
+                           "symmetry/skew", 
+                           "spread", 
+                           "modality", 
+                           "outliers"),
+               right = "Great Job! Histograms allow us to observe all of these features",
                wrong = "Are you missing a feature of a distribution we can evaluate?",
                type = "checkbox", 
                button_label = "Check Your Answer")
+```
 
+#### 
 
-check_hint(hint_text = "Take a look at a histogram, is there any feature you could not say something about?",
+```{r}
+#| label: histogram-characteristics-q1-hint
+#| echo: false
+check_hint(hint_text = "Take a look at a histogram, is there any distribution feature you could not say something about?",
            hint_title = "Click Here for Hint",
            type = "onclick")
 ```
 
+#### Question 2: Which of the following can we determine from the **y-axis** of a histogram?
+
+```{r}
+#| label: histogram-characteristics-q2
+#| echo: false
+check_question(answer = c("Number of Individuals in a B"), 
+               options = c("Number of Individuals in a B"),
+               right = "Great Job!",
+               wrong = "Does the y-axis",
+               type = "checkbox", 
+               button_label = "Check Your Answer")
+```
+
+
+
+```{r}
+#| label: histogram-characteristics-q2-hint
+#| echo: false
+check_hint(hint_text = "Does the y-axis represent a variable or a statistic", 
+           hint_title = "Click Here for Hint",
+           type = "onclick")
+```
 :::
