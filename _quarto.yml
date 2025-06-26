@@ -63,6 +63,8 @@ website:
       - href: 
         text: "Measure of Relationship"
       - href: 
+        text: "Measures of Frequency"
+      - href: 
         text: "Generating Multiple Statistics (`df_stats`)"
 
     - section: "Inference and Conditions"  

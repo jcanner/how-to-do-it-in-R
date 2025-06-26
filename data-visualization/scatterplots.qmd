@@ -27,7 +27,7 @@ library(ggformula) #for graphs
 
 ### Data for Examples
 
-As a reminder (see [Overview of Data Visualization](visualization-overview.qmd), we will be using the `penguins` data from the `palmerpenguins` package:
+As a reminder (see [Overview of Data Visualization](visualization-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -46,42 +46,28 @@ slice_sample(penguins, n = 5) |>
   gt::tab_header(title = "Palmer Penguins")
 ```
 
-## Boxplots with One Quantitative Variable
+## Scatterplots with Two Quantitative Variables
 
 ### Basic Code
 
-For a single quantitative variable, `x`, here is the general structure for a boxplot.
+To visualize the relationship between two **quantitative** variables `x` and `y`, here is the general structure for a scatterplot.
 
 ```{r}
-#| label: one-var-structure
+#| label: scatter-structure
 #| eval: false
-gf_boxplot(~x, 
-           data = mydata)
+gf_point(y ~ x, 
+         data = mydata)
 ```
 
-
-Notice that a y-axis is added, but it does not have any meaning. We can remove it using the function `gf_theme()`
-
-```{r}
-#| label: one-var-structure-no-y
-#| eval: false
-gf_boxplot(~x, 
-           data = mydata) |> #this is a pipe, another option is %>%
-  gf_theme(axis.ticks.y = element_blank(),  #removes y-axis ticks
-           axis.text.y = element_blank())   #removes y-axis labels
-```
-
-Notice the use of the native pipe `|>` to connect the two functions from `ggformula`. Another version of a pipe in R is `%>%`. Both will work, it is just that `%>%` relies on another pacakge and `|>` is built into base R.  
+The `y` position will map to the y-axis, and the `x` position will map to the x-axis. 
 
 
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penuins` data (e.g. `bill_depth_mm`)
+Run the code below to see an example using the **quantitative** variables `bill_length_mm` and `bill_depth_mm` from the `penguins` data. Then flip the placement of the variables in the `y` and `x` positions. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `flipper_length_mm`)
 
 ```{webr}
-#| label: boxplot-one
-gf_boxplot(~bill_length_mm, 
-           data = penguins) |> 
-  gf_theme(axis.ticks.y = element_blank(), 
-           axis.text.y = element_blank())
+#| label: scatter-penguins
+gf_point(bill_depth_mm ~ bill_length_mm, 
+         data = penguins) 
 ```
 
 **Notice** the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.
@@ -90,27 +76,24 @@ gf_boxplot(~bill_length_mm,
 
 ### Adding Labels
 
-Descriptive labels are important for any visualization. We can always add them to any visualization by adding `xlab =` to your function. Notice, for a single variable we do not add a y-axis label.  
+Descriptive labels are important for any visualization. We can always add them to any visualization by adding `xlab =` and `ylab =` to your function. 
 
 ```{r}
 #| label: one-var-structure-labels
 #| eval: false
-gf_boxplot(~x, 
-           data = mydata,
-           xlab = "X Axis Label",
-           title = "Descriptive Title") |> 
-  gf_theme(axis.ticks.y = element_blank(), 
-           axis.text.y = element_blank())
+gf_point(y ~ x, 
+         data = mydata,
+         xlab = "X Axis Label",
+         ylab = "Y Axis Label",
+         title = "Descriptive Title") 
 ```
 
 Add labels and a title to the histogram for `bill_length_mm`.
 
 ```{webr}
-#| label: boxplot-add-labels
-gf_boxplot(~bill_length_mm, 
-           data = penguins) |> 
-  gf_theme(axis.ticks.y = element_blank(), 
-           axis.text.y = element_blank())
+#| label: scatter-add-labels
+gf_point(bill_depth_mm ~ bill_length_mm, 
+         data = penguins)
 ```
 
 ### Other Modifications

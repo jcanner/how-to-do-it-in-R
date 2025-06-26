@@ -27,7 +27,7 @@ library(ggformula) #for graphs
 
 ### Data for Examples
 
-As a reminder (see [Overview of Data Visualization](visualization-overview.qmd), we will be using the `penguins` data from the `palmerpenguins` package:
+As a reminder (see [Overview of Data Visualization](visualization-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -39,8 +39,9 @@ Here is a snippet of the data:
 ```{r}
 #| label: data-structure 
 #| echo: false
-library(dplyr)
-library(gt)
+library(checkdown)  #for questions
+library(dplyr) #for slice_sample function
+library(gt) #for table formatting
 slice_sample(penguins, n = 5) |> 
   gt::gt() |> 
   gt::tab_header(title = "Palmer Penguins")
@@ -59,7 +60,7 @@ gf_histogram(~x,
              data = mydata)
 ```
 
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penuins` data (e.g. `bill_depth_mm`)
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
 
 ```{webr}
 #| label: histogram-one
@@ -231,3 +232,27 @@ gf_histogram(~bill_length_mm,
   facet_wrap(~species, ncol = 1)
 ```
 
+
+
+::: {.callout-note}
+## Check Your Understading: Histograms
+
+**Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?**  
+
+```{r}
+#| label: histogram-characteristics-q1
+#| echo: false
+check_question(answer = c("center", "symmetry/skew", "spread", "modality", "outliers"), 
+               options = c("center", "symmetry/skew", "spread", "modality", "outliers"),
+               right = "Great Job! Histograms allow us to observe all of these features of a distribution",
+               wrong = "Are you missing a feature of a distribution we can evaluate?",
+               type = "checkbox", 
+               button_label = "Check Your Answer")
+
+
+check_hint(hint_text = "Take a look at a histogram, is there any feature you could not say something about?",
+           hint_title = "Click Here for Hint",
+           type = "onclick")
+```
+
+:::

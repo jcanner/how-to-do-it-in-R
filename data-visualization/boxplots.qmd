@@ -27,7 +27,7 @@ library(ggformula) #for graphs
 
 ### Data for Examples
 
-As a reminder (see [Overview of Data Visualization](visualization-overview.qmd), we will be using the `penguins` data from the `palmerpenguins` package:
+As a reminder (see [Overview of Data Visualization](visualization-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -74,7 +74,7 @@ gf_boxplot(~x,
 Notice the use of the native pipe `|>` to connect the two functions from `ggformula`. Another version of a pipe in R is `%>%`. Both will work, it is just that `%>%` relies on another pacakge and `|>` is built into base R.  
 
 
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penuins` data (e.g. `bill_depth_mm`)
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
 
 ```{webr}
 #| label: boxplot-one
@@ -103,7 +103,7 @@ gf_boxplot(~x,
            axis.text.y = element_blank())
 ```
 
-Add labels and a title to the histogram for `bill_length_mm`.
+Add labels and a title to the boxplot for `bill_length_mm`.
 
 ```{webr}
 #| label: boxplot-add-labels
