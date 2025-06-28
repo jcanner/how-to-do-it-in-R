@@ -1,18 +1,40 @@
 ---
 title: "Histograms"
-format: live-html
-engine: knitr
-webr:
-  packages: ['ggformula', 'palmerpenguins']
+format: 
+  live-html:
+    webr:
+      packages: 
+        - ggformula
+        - palmerpenguins
+      cell-options:
+        warning: false
+        completion: false
 execute: 
   warning: false
   message: false
 code-copy: true
 code-overflow: wrap
 toc: true
+css: ../styles.css
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+{{< include ../_extensions/r-wasm/live/_gradethis.qmd >}}
+
+
+```{webr}
+#| label: theme
+#| include: false
+#| edit: false
+library(ggplot2)
+library(gradethis)
+theme_set(theme_light())
+options(ggplot2.continuous.color = scale_color_viridis_c, 
+        ggplot2.continuous.fill = scale_fill_viridis_c,
+        ggplot2.discrete.color = scale_color_viridis_d,
+        ggplot2.discrete.fill = scale_fill_viridis_d)
+```
+
 
 ## Getting Started
 
@@ -24,6 +46,15 @@ Then, be sure to load the package `ggformula`. Remember, you need to do this wit
 #| label: setup
 library(ggformula) #for graphs
 ```
+
+
+Please note that all images were created with modifications to the defaults to make them digitally accessible.  To make these modifications to your own plots, add the following to your plot code:  
+
+- `+ theme_light()`  
+- `+ scale_fill_viridis_d()`  
+- `+ scale_color_viridis_d()`
+
+
 
 ### Data for Examples
 
@@ -229,7 +260,14 @@ gf_histogram(~bill_length_mm,
   facet_wrap(~species, ncol = 1)
 ```
 
-::: callout-note
+```{webr}
+#| label: histogram-facet-var-fill
+gf_histogram(~_____________,
+             data = penguins) +
+  facet_wrap(~species, ncol = 1)
+```
+
+::: {callout-note}
 ## Check Your Understading: Histograms
 
 #### Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?
@@ -276,7 +314,8 @@ check_question(answer = c("Number of Individuals in a B"),
                button_label = "Check Your Answer")
 ```
 
-####
+
+#### 
 
 ```{r}
 #| label: histogram-characteristics-q2-hint
@@ -286,3 +325,40 @@ check_hint(hint_text = "Does the y-axis represent a variable or a statistic",
            type = "onclick")
 ```
 :::
+
+
+
+
+
+
+```{webr}
+#| exercise: ex_1
+#| setup: true
+library(dplyr)
+```
+
+```{webr}
+#| caption: Sample Exercise
+#| exercise: ex_1
+starwars |> ______
+```
+
+::: {.solution exercise="ex_1"}
+
+#### Solution
+
+Use the `distinct()` function from the `{dplyr}` package.
+
+```{webr}
+#| exercise: ex_1
+#| solution: true
+starwars |> distinct(hair_color)
+```
+
+:::
+
+```{webr}
+#| exercise: ex_1
+#| check: true
+gradethis::grade_this_code()
+```

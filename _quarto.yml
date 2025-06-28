@@ -39,6 +39,8 @@ website:
         text: "Intalling R and RStudio"
       - href: 
         text: "Connecting to GitHub"
+      - href: 
+        text: "Importing Data"
     - section: "Data Visualizations with `ggformula`"  
       contents: 
       - href: data-visualization/visualization-overview.qmd
@@ -89,6 +91,7 @@ format:
     code-copy: true
     code-overflow: wrap
     toc: true
+    css: styles.css  
 #    linkcolor: "#5D737E"
 #    highlight-style: a11y-dark
 
