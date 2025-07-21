@@ -340,6 +340,7 @@ Create a histogram of the **flipper length** for the penguins.
 #| exercise: ex_1
 #| setup: true
 library(dplyr)
+exercise.reveal_solution
 ```
 
 ```{webr}
@@ -356,7 +357,7 @@ Use the `gf_histogram()` function from the `{ggformula}` package.
 
 ```{webr}
 #| exercise: ex_1
-#| solution: true
+#| solution: false
 gf_histogram(~flipper_length_mm, data = penguins,
              xlab = "Flipper Length (mm) of Penguins",
              ylab = "Number of Penguins")

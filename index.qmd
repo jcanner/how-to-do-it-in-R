@@ -2,13 +2,13 @@
 title: "How to do it in R"
 ---
 
-This website provides quick search for the code used in introductory statistics courses at California State University, Monterey Bay.  It uses the following packages:  
+This website provides quick search and practice for the code used in introductory statistics courses at California State University, Monterey Bay.  It uses the following packages:  
 
 1. `ggformula`  
 2. `mosaic`  
 3. `dplyr`  
 4. `readr`
-5. `pwr`  
+5. `pwr`
 6. `stats`  
 7. `ggplot2`
 
@@ -16,7 +16,7 @@ If you do not have R and R Studio Installed, please check out the instructions h
 
 
 
-Before you use the code provided on this website, first run the following code:  
+Before you use the code provided on this website, first run the following code in your R environment:  
 
 ```{r}
 #| label: packages-install
@@ -24,4 +24,4 @@ Before you use the code provided on this website, first run the following code:
 install.packages(c("ggformula", "mosaic", "dplyr", "readr", "pwr", "ggplot2"))
 ```
 
-Note that `stats` is installed by default.
+Note that the package `stats` is installed by default with the base R installation.

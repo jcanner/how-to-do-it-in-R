@@ -56,32 +56,34 @@ website:
 
     - section: "Summary Statistics with `mosaic`"  
       contents: 
-      - href: 
+      - href: summary-statistics/summary-stats-overview.qmd
         text: "Overview of `mosaic`"
-      - href: 
+      - href: summary-statistics/measures-of-center.qmd
         text: "Measures of Center"
-      - href: 
+      - href: summary-statistics/measures-of-spread.qmd
         text: "Measures of Spread"
-      - href: 
-        text: "Measure of Relationship"
-      - href: 
+      - href: summary-statistics/measures-of-relationship.qmd
+        text: "Measures of Relationship"
+      - href: summary-statistics/measures-of-frequency.qmd
         text: "Measures of Frequency"
-      - href: 
+      - href: summary-statistics/generating-multiple-stats.qmd
         text: "Generating Multiple Statistics (`df_stats`)"
 
     - section: "Inference and Conditions"  
       contents: 
-      - href: 
+      - href: inference/inference-overview.qmd
+        text: "Overview of `mosaic`"
+      - href: inference/one-mean.qmd
         text: "Confidence Interval - One Mean"
-      - href: 
+      - href: inference/two-means.qmd
         text: "Independent Two Sample Inference"
-      - href: 
+      - href: inference/paired-mean.qmd
         text: "Matched Pairs Inference"
-      - href: 
+      - href: inference/multiple-means.qmd
         text: "Analysis of Variance"
-      - href: 
+      - href: inference/slope.qmd
         text: "Simple Linear Regression"
-      - href: 
+      - href: inference/multiple-proportions.qmd
         text: "Chi-Square Goodness of Fit"
       
 format:
