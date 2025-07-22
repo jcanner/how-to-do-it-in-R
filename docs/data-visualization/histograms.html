@@ -332,20 +332,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting Started</a>
   <ul class="collapse">
-  <li><a href="#data-for-examples" id="toc-data-for-examples" class="nav-link" data-scroll-target="#data-for-examples">Data for Examples</a></li>
+  <li><a href="#data-for-examples-show" id="toc-data-for-examples-show" class="nav-link" data-scroll-target="#data-for-examples-show">Data for Examples </a><a class="btn btn-primary nav-link" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples" data-scroll-target="#data-for-examples">Show</a></li>
   </ul></li>
   <li><a href="#histograms-with-one-quantitative-variable" id="toc-histograms-with-one-quantitative-variable" class="nav-link" data-scroll-target="#histograms-with-one-quantitative-variable">Histograms with One Quantitative Variable</a>
   <ul class="collapse">
   <li><a href="#basic-code" id="toc-basic-code" class="nav-link" data-scroll-target="#basic-code">Basic Code</a></li>
   <li><a href="#bin-widths" id="toc-bin-widths" class="nav-link" data-scroll-target="#bin-widths">Bin Widths</a></li>
   <li><a href="#adding-labels" id="toc-adding-labels" class="nav-link" data-scroll-target="#adding-labels">Adding Labels</a></li>
-  <li><a href="#other-modifications" id="toc-other-modifications" class="nav-link" data-scroll-target="#other-modifications">Other Modifications</a></li>
   </ul></li>
-  <li><a href="#histograms-for-comparisons-across-groups" id="toc-histograms-for-comparisons-across-groups" class="nav-link" data-scroll-target="#histograms-for-comparisons-across-groups">Histograms for Comparisons Across Groups</a>
-  <ul class="collapse">
-  <li><a href="#adding-color-to-groups" id="toc-adding-color-to-groups" class="nav-link" data-scroll-target="#adding-color-to-groups">Adding Color to Groups</a></li>
-  <li><a href="#faceting-by-groups" id="toc-faceting-by-groups" class="nav-link" data-scroll-target="#faceting-by-groups">Faceting by Groups</a></li>
-  </ul></li>
+  <li><a href="#other-modifications-show" id="toc-other-modifications-show" class="nav-link" data-scroll-target="#other-modifications-show">Other Modifications </a><a class="btn btn-primary nav-link" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" aria-controls="other-modifications" data-scroll-target="#other-modifications">Show</a></li>
+  <li><a href="#histograms-for-comparisons-across-groups-show" id="toc-histograms-for-comparisons-across-groups-show" class="nav-link" data-scroll-target="#histograms-for-comparisons-across-groups-show">Histograms for Comparisons Across Groups </a><a class="btn btn-primary nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="comparisons-across-groups" data-scroll-target="undefined">Show</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -405,16 +401,31 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </script>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Digital Accessibility
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Please note that all images were created with modifications to the defaults to make them digitally accessible. To make these modifications to your own plots, add the following to your plot code:</p>
 <ul>
-<li><code>+ theme_light()</code><br>
-</li>
+<li><code>+ theme_light()</code></li>
 <li><code>+ scale_fill_viridis_d()</code><br>
 </li>
 <li><code>+ scale_color_viridis_d()</code></li>
 </ul>
-<section id="data-for-examples" class="level3 collapse multi-collapse">
-<h3 class="anchored" data-anchor-id="data-for-examples">Data for Examples</h3>
+</div>
+</div>
+</div>
+<section id="data-for-examples-show" class="level3">
+<h3 class="anchored" data-anchor-id="data-for-examples-show">Data for Examples <a class="btn btn-primary" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples">Show</a></h3>
+<div id="data-for-examples" class="collapse multi-collapse">
 <p>As a reminder (see <a href="../data-visualization/visualization-overview.html">Overview of Data Visualization</a>), we will be using the <code>penguins</code> data from the <code>palmerpenguins</code> package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -422,23 +433,23 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 <p>Here is a snippet of the data:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="omrajfzuth" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#omrajfzuth table {
+<div id="hibnpzrkhy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hibnpzrkhy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#omrajfzuth thead, #omrajfzuth tbody, #omrajfzuth tfoot, #omrajfzuth tr, #omrajfzuth td, #omrajfzuth th {
+#hibnpzrkhy thead, #hibnpzrkhy tbody, #hibnpzrkhy tfoot, #hibnpzrkhy tr, #hibnpzrkhy td, #hibnpzrkhy th {
   border-style: none;
 }
 
-#omrajfzuth p {
+#hibnpzrkhy p {
   margin: 0;
   padding: 0;
 }
 
-#omrajfzuth .gt_table {
+#hibnpzrkhy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -464,12 +475,12 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-left-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_caption {
+#hibnpzrkhy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#omrajfzuth .gt_title {
+#hibnpzrkhy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -481,7 +492,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-bottom-width: 0;
 }
 
-#omrajfzuth .gt_subtitle {
+#hibnpzrkhy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -493,7 +504,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-top-width: 0;
 }
 
-#omrajfzuth .gt_heading {
+#hibnpzrkhy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -505,13 +516,13 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-right-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_bottom_border {
+#hibnpzrkhy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_col_headings {
+#hibnpzrkhy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -526,7 +537,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-right-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_col_heading {
+#hibnpzrkhy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -546,7 +557,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   overflow-x: hidden;
 }
 
-#omrajfzuth .gt_column_spanner_outer {
+#hibnpzrkhy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -558,15 +569,15 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   padding-right: 4px;
 }
 
-#omrajfzuth .gt_column_spanner_outer:first-child {
+#hibnpzrkhy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#omrajfzuth .gt_column_spanner_outer:last-child {
+#hibnpzrkhy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#omrajfzuth .gt_column_spanner {
+#hibnpzrkhy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -578,11 +589,11 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   width: 100%;
 }
 
-#omrajfzuth .gt_spanner_row {
+#hibnpzrkhy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#omrajfzuth .gt_group_heading {
+#hibnpzrkhy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -608,7 +619,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   text-align: left;
 }
 
-#omrajfzuth .gt_empty_group_heading {
+#hibnpzrkhy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -623,15 +634,15 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   vertical-align: middle;
 }
 
-#omrajfzuth .gt_from_md > :first-child {
+#hibnpzrkhy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#omrajfzuth .gt_from_md > :last-child {
+#hibnpzrkhy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#omrajfzuth .gt_row {
+#hibnpzrkhy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -650,7 +661,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   overflow-x: hidden;
 }
 
-#omrajfzuth .gt_stub {
+#hibnpzrkhy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -663,7 +674,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   padding-right: 5px;
 }
 
-#omrajfzuth .gt_stub_row_group {
+#hibnpzrkhy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -677,15 +688,15 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   vertical-align: top;
 }
 
-#omrajfzuth .gt_row_group_first td {
+#hibnpzrkhy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#omrajfzuth .gt_row_group_first th {
+#hibnpzrkhy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#omrajfzuth .gt_summary_row {
+#hibnpzrkhy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -695,16 +706,16 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   padding-right: 5px;
 }
 
-#omrajfzuth .gt_first_summary_row {
+#hibnpzrkhy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_first_summary_row.thick {
+#hibnpzrkhy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#omrajfzuth .gt_last_summary_row {
+#hibnpzrkhy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -714,7 +725,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-bottom-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_grand_summary_row {
+#hibnpzrkhy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -724,7 +735,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   padding-right: 5px;
 }
 
-#omrajfzuth .gt_first_grand_summary_row {
+#hibnpzrkhy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -734,7 +745,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-top-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_last_grand_summary_row_top {
+#hibnpzrkhy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -744,11 +755,11 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-bottom-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_striped {
+#hibnpzrkhy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#omrajfzuth .gt_table_body {
+#hibnpzrkhy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -757,7 +768,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-bottom-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_footnotes {
+#hibnpzrkhy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -771,7 +782,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-right-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_footnote {
+#hibnpzrkhy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -780,7 +791,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   padding-right: 5px;
 }
 
-#omrajfzuth .gt_sourcenotes {
+#hibnpzrkhy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -794,7 +805,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   border-right-color: #D3D3D3;
 }
 
-#omrajfzuth .gt_sourcenote {
+#hibnpzrkhy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -802,72 +813,72 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
   padding-right: 5px;
 }
 
-#omrajfzuth .gt_left {
+#hibnpzrkhy .gt_left {
   text-align: left;
 }
 
-#omrajfzuth .gt_center {
+#hibnpzrkhy .gt_center {
   text-align: center;
 }
 
-#omrajfzuth .gt_right {
+#hibnpzrkhy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#omrajfzuth .gt_font_normal {
+#hibnpzrkhy .gt_font_normal {
   font-weight: normal;
 }
 
-#omrajfzuth .gt_font_bold {
+#hibnpzrkhy .gt_font_bold {
   font-weight: bold;
 }
 
-#omrajfzuth .gt_font_italic {
+#hibnpzrkhy .gt_font_italic {
   font-style: italic;
 }
 
-#omrajfzuth .gt_super {
+#hibnpzrkhy .gt_super {
   font-size: 65%;
 }
 
-#omrajfzuth .gt_footnote_marks {
+#hibnpzrkhy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#omrajfzuth .gt_asterisk {
+#hibnpzrkhy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#omrajfzuth .gt_indent_1 {
+#hibnpzrkhy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#omrajfzuth .gt_indent_2 {
+#hibnpzrkhy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#omrajfzuth .gt_indent_3 {
+#hibnpzrkhy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#omrajfzuth .gt_indent_4 {
+#hibnpzrkhy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#omrajfzuth .gt_indent_5 {
+#hibnpzrkhy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#omrajfzuth .katex-display {
+#hibnpzrkhy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#omrajfzuth div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hibnpzrkhy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -890,58 +901,59 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">47.8</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">15.0</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">215</td>
-<td class="gt_row gt_right" headers="body_mass_g">5650</td>
-<td class="gt_row gt_center" headers="sex">male</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Dream</td>
-<td class="gt_row gt_right" headers="bill_length_mm">35.6</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">17.5</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">191</td>
-<td class="gt_row gt_right" headers="body_mass_g">3175</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">50.0</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">15.2</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">218</td>
-<td class="gt_row gt_right" headers="body_mass_g">5700</td>
-<td class="gt_row gt_center" headers="sex">male</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">48.2</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">14.3</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">210</td>
-<td class="gt_row gt_right" headers="body_mass_g">4600</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
 <td class="gt_row gt_right" headers="bill_length_mm">35.5</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">16.2</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">195</td>
-<td class="gt_row gt_right" headers="body_mass_g">3350</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">17.5</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">190</td>
+<td class="gt_row gt_right" headers="body_mass_g">3700</td>
 <td class="gt_row gt_center" headers="sex">female</td>
 <td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">41.8</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">19.4</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">198</td>
+<td class="gt_row gt_right" headers="body_mass_g">4450</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Gentoo</td>
+<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_right" headers="bill_length_mm">50.7</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">15.0</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">223</td>
+<td class="gt_row gt_right" headers="body_mass_g">5550</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_right" headers="bill_length_mm">40.5</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">17.9</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">187</td>
+<td class="gt_row gt_right" headers="body_mass_g">3200</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">34.1</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.1</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">193</td>
+<td class="gt_row gt_right" headers="body_mass_g">3475</td>
+<td class="gt_row gt_center" headers="sex">NA</td>
+<td class="gt_row gt_right" headers="year">2007</td>
 </tr>
 </tbody>
 </table>
 
+</div>
 </div>
 </div>
 </div>
@@ -1011,11 +1023,15 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </div>
 </div>
 </section>
-<section id="other-modifications" class="level3">
-<h3 class="anchored" data-anchor-id="other-modifications">Other Modifications</h3>
+</section>
+<section id="other-modifications-show" class="level2">
+<h2 class="anchored" data-anchor-id="other-modifications-show">Other Modifications <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" aria-controls="other-modifications">Show</a></h2>
+<div id="other-modifications" class="collapse multi-collapse">
 <p>We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.</p>
-<section id="outlining-the-bars" class="level4">
-<h4 class="anchored" data-anchor-id="outlining-the-bars">Outlining the Bars</h4>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Outlining the Bars</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Filling the Bars with Color</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Changing the Theme</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Try It Out: Modifications</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>We can add a color that outlines the bars by telling R to outline the color of the bars in black.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>x, </span>
@@ -1025,9 +1041,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">title =</span> <span class="st">"Descriptive Title"</span>,</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="filling-the-bars-with-color" class="level4">
-<h4 class="anchored" data-anchor-id="filling-the-bars-with-color">Filling the Bars with Color</h4>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>We can add a color to fill the bars by telling R to fill the bars with a specified color either using a <a href="https://r-charts.com/colors/">built in color from R</a> or using a <a href="https://htmlcolorcodes.com/color-picker/">hex code for colors</a> .</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>x, </span>
@@ -1037,9 +1052,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">title =</span> <span class="st">"Descriptive Title"</span>,</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> <span class="st">"darkcyan"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="changing-the-theme" class="level4">
-<h4 class="anchored" data-anchor-id="changing-the-theme">Changing the Theme</h4>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>The package <code>ggformula</code> is built on top of another package called <code>ggplot2</code> and so any <code>ggplot2</code> function can be added to a <code>ggformula</code> generated graphic. For example, we can change the theme to a <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">built-in theme</a>.</p>
 <p>Try changing the theme to the following graph:</p>
 <div class="cell">
@@ -1052,9 +1066,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </script>
 </div>
 </div>
-</section>
-<section id="try-it-out-modifications" class="level4">
-<h4 class="anchored" data-anchor-id="try-it-out-modifications">Try It Out: Modifications</h4>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <p>Try adding some modifications for the histogram of <code>bill_length_mm</code>.</p>
 <div class="cell">
 <div>
@@ -1066,19 +1079,23 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </script>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 </section>
-</section>
-</section>
-<section id="histograms-for-comparisons-across-groups" class="level2">
-<h2 class="anchored" data-anchor-id="histograms-for-comparisons-across-groups">Histograms for Comparisons Across Groups</h2>
+<section id="histograms-for-comparisons-across-groups-show" class="level2">
+<h2 class="anchored" data-anchor-id="histograms-for-comparisons-across-groups-show">Histograms for Comparisons Across Groups <a class="btn btn-primary" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="comparisons-across-groups">Show</a></h2>
+<div class="collapse multi-collapse">
 <p>When we have a <strong>quantitative</strong> variable that has been measured across multiple groups, we may be interested in comparing histograms across the values/groups of a <strong>categorical</strong> variable. We can do this using two different features of data visualization:</p>
 <ul>
-<li>Color Differences<br>
-</li>
+<li>Color Differences</li>
 <li>Facets</li>
 </ul>
-<section id="adding-color-to-groups" class="level3">
-<h3 class="anchored" data-anchor-id="adding-color-to-groups">Adding Color to Groups</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Adding Color to Groups</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Faceting by Groups</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Using <code>ggplot2</code> to Control Facets</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Similar to changing the color of bars to a single color, we can use the <code>fill =</code> argument but instead specify our <strong>categorical</strong> variable <code>z</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>x, </span>
@@ -1096,9 +1113,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </script>
 </div>
 </div>
-</section>
-<section id="faceting-by-groups" class="level3">
-<h3 class="anchored" data-anchor-id="faceting-by-groups">Faceting by Groups</h3>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p>Faceting in visualization is a tool that allows you to easily split up data across multiple panels of the same type. To do this in <code>ggformula</code> you add <code>| z</code> after the formula which conditions the graph on the <strong>categorical</strong> variable <code>z</code> and splits the graph by the groups/values of <code>z</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>x <span class="sc">|</span> z, </span>
@@ -1115,8 +1131,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </script>
 </div>
 </div>
-<section id="using-ggplot2-to-control-facets" class="level4">
-<h4 class="anchored" data-anchor-id="using-ggplot2-to-control-facets">Using <code>ggplot2</code> to Control Facets</h4>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <p>Unfortunately, the <code>ggformula</code> option for facets does not give you much control on how to organize the facets, so it might be useful to instead of a <code>ggplot2</code> option such as <code>facet_wrap()</code> or <code>facet_grid</code>. For example, here is an example using <code>facet_wrap()</code> that allows us to stack our facets into one column (<code>ncol = 1</code>). Look up the options for different facet functions and try other modification.</p>
 <div class="cell">
 <div>
@@ -1138,6 +1154,10 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJsYWJlbCI6
 </script>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 
 
 <script type="webr-data">
@@ -1157,8 +1177,6 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xMiIsImlubGluZSI6ZmFsc2UsIm1l
 <script type="vfs-file">
 W10=
 </script>
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

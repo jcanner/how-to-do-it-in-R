@@ -48,17 +48,20 @@ Then, be sure to load the package `ggformula`. Remember, you need to do this wit
 library(ggformula) #for graphs
 ```
 
-
+::: {.callout-note collapse="true"}
+## Digital Accessibility
 Please note that all images were created with modifications to the defaults to make them digitally accessible.  To make these modifications to your own plots, add the following to your plot code:  
 
-- `+ theme_light()`  
+- `+ theme_light()`
 - `+ scale_fill_viridis_d()`  
 - `+ scale_color_viridis_d()`
 
+:::
 
-::: {.collapse .multi-collapse}
 
-### Data for Examples
+### Data for Examples <a class="btn btn-primary" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples">Show</a>
+
+::: {#data-for-examples .collapse .multi-collapse}
 
 As a reminder (see [Overview of Data Visualization](visualization-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
@@ -150,11 +153,16 @@ gf_histogram(~bill_length_mm,
              binwidth = 5)
 ```
 
-### Other Modifications
+## Other Modifications <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" aria-controls="other-modifications">Show</a>
+
+::: {#other-modifications .collapse .multi-collapse}
 
 We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.
 
-#### Outlining the Bars
+
+::: {.panel-tabset}
+
+### Outlining the Bars
 
 We can add a color that outlines the bars by telling R to outline the color of the bars in black.
 
@@ -169,7 +177,7 @@ gf_histogram(~x,
              color = "black")
 ```
 
-#### Filling the Bars with Color
+### Filling the Bars with Color
 
 We can add a color to fill the bars by telling R to fill the bars with a specified color either using a [built in color from R](https://r-charts.com/colors/) or using a [hex code for colors](https://htmlcolorcodes.com/color-picker/) .
 
@@ -184,7 +192,7 @@ gf_histogram(~x,
              fill = "darkcyan")
 ```
 
-#### Changing the Theme
+### Changing the Theme
 
 The package `ggformula` is built on top of another package called `ggplot2` and so any `ggplot2` function can be added to a `ggformula` generated graphic. For example, we can change the theme to a [built-in theme](https://ggplot2.tidyverse.org/reference/ggtheme.html).
 
@@ -197,7 +205,7 @@ gf_histogram(~bill_length_mm,
   theme_light()
 ```
 
-#### Try It Out: Modifications
+### Try It Out: Modifications
 
 Try adding some modifications for the histogram of `bill_length_mm`.
 
@@ -207,12 +215,19 @@ gf_histogram(~bill_length_mm,
              data = penguins)
 ```
 
-## Histograms for Comparisons Across Groups
+:::
+:::
+
+## Histograms for Comparisons Across Groups <a class="btn btn-primary" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="comparisons-across-groups">Show</a>
+
+::: {.collapse .multi-collapse}
 
 When we have a **quantitative** variable that has been measured across multiple groups, we may be interested in comparing histograms across the values/groups of a **categorical** variable. We can do this using two different features of data visualization:
 
--   Color Differences\
+-   Color Differences
 -   Facets
+
+::: {.panel-tabset}
 
 ### Adding Color to Groups
 
@@ -254,7 +269,7 @@ gf_histogram(~bill_length_mm | species,
              data = penguins)
 ```
 
-#### Using `ggplot2` to Control Facets
+### Using `ggplot2` to Control Facets
 
 Unfortunately, the `ggformula` option for facets does not give you much control on how to organize the facets, so it might be useful to instead of a `ggplot2` option such as `facet_wrap()` or `facet_grid`. For example, here is an example using `facet_wrap()` that allows us to stack our facets into one column (`ncol = 1`). Look up the options for different facet functions and try other modification.
 
@@ -272,3 +287,5 @@ gf_histogram(~_____________,
   facet_wrap(~species, ncol = 1)
 ```
 
+:::
+:::
