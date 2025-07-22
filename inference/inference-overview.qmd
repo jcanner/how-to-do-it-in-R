@@ -53,7 +53,7 @@ library(mosaic) #for summary stats
 
 ### Data for Examples
 
-As a reminder (see [Overview of Data Visualization](visualization-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
+As a reminder (see [Overview of Data Visualization]), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -88,7 +88,7 @@ $$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \frac{1}{n}\sum_{i = 1}^{n}{
 For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
 
 ```{r}
-#| label: one-var-structure
+#| label: one-var-structure-mean
 #| eval: false
 mean(~x, data = mydata)
 ```
@@ -136,7 +136,7 @@ Also known as the 50th percentile, the 2nd quantile, is the value within the dat
 For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
 
 ```{r}
-#| label: one-var-structure
+#| label: one-var-structure-median
 #| eval: false
 mean(~x, data = mydata)
 ```
@@ -144,7 +144,7 @@ mean(~x, data = mydata)
 Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
 
 ```{r}
-#| label: mean-one
+#| label: median-one
 mean(~bill_length_mm, data = penguins)
 ```
 
@@ -153,7 +153,7 @@ mean(~bill_length_mm, data = penguins)
 Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
 
 ```{r}
-#| label: one-var-structure-na
+#| label: one-var-structure-na-median
 #| eval: false
 mean(~x, data = mydata, na.rm = TRUE)
 ```
@@ -177,107 +177,3 @@ When we want to calculate the mean of a **quantitative** variable (`y`) measured
 
 
 
-::: {callout-note}
-
-## Check Your Understading: Histograms
-
-#### Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?
-
-```{r}
-#| label: histogram-characteristics-q1
-#| echo: false
-check_question(answer = c("center", 
-                          "symmetry/skew", 
-                          "spread", 
-                          "modality", 
-                          "outliers"), 
-               options = c("center", 
-                           "symmetry/skew", 
-                           "spread", 
-                           "modality", 
-                           "outliers"),
-               right = "Great Job! Histograms allow us to observe all of these features",
-               wrong = "Are you missing a feature of a distribution we can evaluate?",
-               type = "checkbox", 
-               button_label = "Check Your Answer")
-```
-
-#### 
-
-```{r}
-#| label: histogram-characteristics-q1-hint
-#| echo: false
-check_hint(hint_text = "Take a look at a histogram, is there any distribution feature you could not say something about?",
-           hint_title = "Click Here for Hint",
-           type = "onclick")
-```
-
-#### Question 2: Which of the following can we determine from the **y-axis** of a histogram?
-
-```{r}
-#| label: histogram-characteristics-q2
-#| echo: false
-check_question(answer = c("Number of individuals in a bin"), 
-               options = c("Number of individuals in a bin",
-                           "Variance of the variable",
-                           ""),
-               right = "Great Job!",
-               wrong = "Does the y-axis",
-               type = "checkbox", 
-               button_label = "Check Your Answer")
-```
-
-
-#### 
-
-```{r}
-#| label: histogram-characteristics-q2-hint
-#| echo: false
-check_hint(hint_text = "Does the y-axis represent a variable or a statistic", 
-           hint_title = "Click Here for Hint",
-           type = "onclick")
-```
-
-:::
-
-
-
-
-
-### Test your Knowledge
-
-Create a histogram of the **flipper length** for the penguins.
-```{webr}
-#| exercise: ex_1
-#| setup: true
-library(dplyr)
-exercise.reveal_solution
-```
-
-```{webr}
-#| caption: Sample Exercise
-#| exercise: ex_1
-
-```
-
-::: {.solution exercise="ex_1"}
-
-#### Solution
-
-Use the `gf_histogram()` function from the `{ggformula}` package.
-
-```{webr}
-#| exercise: ex_1
-#| solution: false
-gf_histogram(~flipper_length_mm, data = penguins,
-             xlab = "Flipper Length (mm) of Penguins",
-             ylab = "Number of Penguins")
-```
-
-:::
-
-```{webr}
-#| exercise: ex_1
-#| check: true
-gradethis::grade_this_code()
-```

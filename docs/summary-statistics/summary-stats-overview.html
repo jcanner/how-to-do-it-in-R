@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – How to do it in R</title>
+<title>Overview for Data Visualization – How to do it in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,6 +63,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../summary-statistics/measures-of-center.html" rel="next">
+<link href="../data-visualization/barplots.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -113,9 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      How to do it in R
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../summary-statistics/summary-stats-overview.html">Summary Statistics with <code>mosaic</code></a></li><li class="breadcrumb-item"><a href="../summary-statistics/summary-stats-overview.html">Overview of <code>mosaic</code></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -218,16 +218,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Summary Statistics with <code>mosaic</code></span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../summary-statistics/summary-stats-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../summary-statistics/summary-stats-overview.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Overview of <code>mosaic</code></span></a>
   </div>
 </li>
@@ -321,15 +321,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#making-visualizations-with-ggformula" id="toc-making-visualizations-with-ggformula" class="nav-link active" data-scroll-target="#making-visualizations-with-ggformula">Making Visualizations with <code>ggformula</code></a>
+  <ul class="collapse">
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#common-modificationsarguments" id="toc-common-modificationsarguments" class="nav-link" data-scroll-target="#common-modificationsarguments">Common Modifications/Arguments</a>
+  <ul class="collapse">
+  <li><a href="#axis-labels" id="toc-axis-labels" class="nav-link" data-scroll-target="#axis-labels">Axis Labels</a></li>
+  <li><a href="#adding-ggplot2-layers" id="toc-adding-ggplot2-layers" class="nav-link" data-scroll-target="#adding-ggplot2-layers">Adding <code>ggplot2</code> Layers</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures">Data Structures</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../summary-statistics/summary-stats-overview.html">Summary Statistics with <code>mosaic</code></a></li><li class="breadcrumb-item"><a href="../summary-statistics/summary-stats-overview.html">Overview of <code>mosaic</code></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Overview for Data Visualization</h1>
 </div>
 
 
@@ -346,15 +361,678 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>About this site</p>
+<section id="making-visualizations-with-ggformula" class="level1">
+<h1>Making Visualizations with <code>ggformula</code></h1>
+<p>The package <code>ggformula</code> is built to overlay the Grammar of Graphics used in package <code>ggplot2</code> with a formula based syntax. The formula based syntax means that all <code>ggformula</code> generated graphics will generally take one of the following forms:</p>
+<p><strong>One Variable</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(<span class="sc">~</span> x, <span class="at">data =</span> mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Two Variable - Relationships</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(y <span class="sc">~</span> x, <span class="at">data =</span> mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Two or More Variables Split by Groups</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(<span class="sc">~</span> x <span class="sc">|</span> z, <span class="at">data =</span> mydata)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(y <span class="sc">~</span> x <span class="sc">|</span> z, <span class="at">data =</span> mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>where the</p>
+<ul>
+<li><code>goal</code> will be the specific function for the graph type (e.g.&nbsp;<code>gf_histogram()</code>),</li>
+<li>the <code>y</code> and <code>x</code> will be the specific <strong>variables/columns</strong> in the data mapped to the y-axis and x-axis respectively, with <code>| z</code> the feature that facets into different graphs for group values of <code>z</code>, and</li>
+<li><code>mydata</code> is the object name of your data.</li>
+</ul>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<p>First, be sure you have installed <code>ggformula</code>. Remember, you only need to install the package once on your machine.</p>
+<p>Then, be sure to load the package <code>ggformula</code>. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggformula) <span class="co">#for graphs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="common-modificationsarguments" class="level2">
+<h2 class="anchored" data-anchor-id="common-modificationsarguments">Common Modifications/Arguments</h2>
+<p>Every visualization type has some modifications that are specific to that type, but there are some universal modifications that should be added to every graph.</p>
+<section id="axis-labels" class="level3">
+<h3 class="anchored" data-anchor-id="axis-labels">Axis Labels</h3>
+<p>Every visualization should have its axes labelled according to the context of the data. Axis labels should always include</p>
+<ul>
+<li>The variables or cases they represent
+<ul>
+<li>Always include units (e.g.&nbsp;inches, %) for variables<br>
+</li>
+</ul></li>
+<li>The individual/sample/population represented by data<br>
+</li>
+<li>A descriptive title - this should not be “X vs Y”, but something like “As X increases we see that Y decreases”</li>
+</ul>
+<p>Here is how that is added to our <code>gf_goal()</code> function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(formula, <span class="co">#takes many different forms </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> mydata,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"X Variable, Units, and/or Sample"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Y Variable, Units, and/or Sample"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Title describing relationship"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="adding-ggplot2-layers" class="level3">
+<h3 class="anchored" data-anchor-id="adding-ggplot2-layers">Adding <code>ggplot2</code> Layers</h3>
+<p>The package <code>ggformula</code> is built on top of another package called <code>ggplot2</code> and so any <code>ggplot2</code> function can be added to a <code>ggformula</code> generated graphic.</p>
+<p>For example, we can change the theme to a <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">built-in theme</a> or modify other features using <code>+</code> after the <code>ggformula</code> function to add the <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code> layers</a> to the graph.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(formula, <span class="co">#takes many different forms </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> mydata,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"X Variable, Units, and/or Sample"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Y Variable, Units, and/or Sample"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Title describing relationship"</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="data-structures" class="level1">
+<h1>Data Structures</h1>
+<p>In order to make graphs, your data needs to be “tidy”. That means it should have the structure:</p>
+<ul>
+<li>Every Column is a Variable<br>
+</li>
+<li>Every Row is an Individual/Case<br>
+</li>
+<li>Every Cell is a Single Value</li>
+</ul>
+<p>Here is an example of “tidy” data using data from a package called <code>palmerpenguins</code> (remember to install it!). First, load the package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here is a snippet of the data:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="gnskbetnud" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gnskbetnud table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gnskbetnud thead, #gnskbetnud tbody, #gnskbetnud tfoot, #gnskbetnud tr, #gnskbetnud td, #gnskbetnud th {
+  border-style: none;
+}
+
+#gnskbetnud p {
+  margin: 0;
+  padding: 0;
+}
+
+#gnskbetnud .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gnskbetnud .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gnskbetnud .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gnskbetnud .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gnskbetnud .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gnskbetnud .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gnskbetnud .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gnskbetnud .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gnskbetnud .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gnskbetnud .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gnskbetnud .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gnskbetnud .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gnskbetnud .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gnskbetnud .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gnskbetnud .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gnskbetnud .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gnskbetnud .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gnskbetnud .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gnskbetnud .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gnskbetnud .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gnskbetnud .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gnskbetnud .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gnskbetnud .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gnskbetnud .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gnskbetnud .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gnskbetnud .gt_left {
+  text-align: left;
+}
+
+#gnskbetnud .gt_center {
+  text-align: center;
+}
+
+#gnskbetnud .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gnskbetnud .gt_font_normal {
+  font-weight: normal;
+}
+
+#gnskbetnud .gt_font_bold {
+  font-weight: bold;
+}
+
+#gnskbetnud .gt_font_italic {
+  font-style: italic;
+}
+
+#gnskbetnud .gt_super {
+  font-size: 65%;
+}
+
+#gnskbetnud .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gnskbetnud .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gnskbetnud .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gnskbetnud .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gnskbetnud .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gnskbetnud .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gnskbetnud .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#gnskbetnud .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gnskbetnud div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="8" class="gt_heading gt_title gt_font_normal gt_bottom_border">Palmer Penguins</th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="species" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">species</th>
+<th id="island" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">island</th>
+<th id="bill_length_mm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">bill_length_mm</th>
+<th id="bill_depth_mm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">bill_depth_mm</th>
+<th id="flipper_length_mm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">flipper_length_mm</th>
+<th id="body_mass_g" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">body_mass_g</th>
+<th id="sex" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">sex</th>
+<th id="year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">year</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Gentoo</td>
+<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_right" headers="bill_length_mm">49.2</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">15.2</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">221</td>
+<td class="gt_row gt_right" headers="body_mass_g">6300</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">39.6</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.1</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">186</td>
+<td class="gt_row gt_right" headers="body_mass_g">4450</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Gentoo</td>
+<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_right" headers="bill_length_mm">48.7</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">14.1</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">210</td>
+<td class="gt_row gt_right" headers="body_mass_g">4450</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">49.5</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">19.0</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">200</td>
+<td class="gt_row gt_right" headers="body_mass_g">3800</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">52.7</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">19.8</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">197</td>
+<td class="gt_row gt_right" headers="body_mass_g">3725</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">40.6</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">17.2</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">187</td>
+<td class="gt_row gt_right" headers="body_mass_g">3475</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2009</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">36.2</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.1</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">187</td>
+<td class="gt_row gt_right" headers="body_mass_g">3550</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">40.8</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.4</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">195</td>
+<td class="gt_row gt_right" headers="body_mass_g">3900</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">46.9</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.6</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">192</td>
+<td class="gt_row gt_right" headers="body_mass_g">2700</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">42.9</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">17.6</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">196</td>
+<td class="gt_row gt_right" headers="body_mass_g">4700</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
+</div>
+<p>We notice that each <strong>column</strong> is a variable, such as</p>
+<ul>
+<li><code>species</code> is the species of penguin<br>
+</li>
+<li><code>island</code> is the location/island on which the penguin is found<br>
+</li>
+<li><code>bill_length_mm</code> is the length of the penguin’s bill in millimeters (mm)</li>
+</ul>
+<p>We also notice that each <strong>row</strong> represents a single penguin and its characteristics. Each <strong>cell</strong> contains a single value associated with a specific variable measured on a specific penguin.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -774,6 +1452,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../data-visualization/barplots.html" class="pagination-link" aria-label="Bar Plots">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bar Plots</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../summary-statistics/measures-of-center.html" class="pagination-link" aria-label="Measures of Center">
+        <span class="nav-page-text">Measures of Center</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -782,7 +1472,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

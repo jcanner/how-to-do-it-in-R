@@ -225,23 +225,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">Overview of `mosaic`</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./summary-statistics/summary-stats-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview of <code>mosaic</code></span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Measures of Center</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./summary-statistics/measures-of-center.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measures of Center</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Measures of Spread</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./summary-statistics/measures-of-spread.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measures of Spread</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Measure of Relationship</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./summary-statistics/measures-of-relationship.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measures of Relationship</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Measures of Frequency</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./summary-statistics/measures-of-frequency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measures of Frequency</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Generating Multiple Statistics (`df_stats`)</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./summary-statistics/generating-multiple-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generating Multiple Statistics (<code>df_stats</code>)</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -254,23 +272,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">Confidence Interval - One Mean</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./inference/inference-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview of <code>mosaic</code></span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Independent Two Sample Inference</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./inference/one-mean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence Interval - One Mean</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Matched Pairs Inference</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./inference/two-means.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Independent Two Sample Inference</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Analysis of Variance</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./inference/paired-mean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matched Pairs Inference</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Simple Linear Regression</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./inference/multiple-means.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analysis of Variance</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Chi-Square Goodness of Fit</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./inference/slope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simple Linear Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inference/multiple-proportions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chi-Square Goodness of Fit</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -303,7 +345,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This website provides quick search for the code used in introductory statistics courses at California State University, Monterey Bay. It uses the following packages:</p>
+<p>This website provides quick search and practice for the code used in introductory statistics courses at California State University, Monterey Bay. It uses the following packages:</p>
 <ol type="1">
 <li><code>ggformula</code><br>
 </li>
@@ -312,18 +354,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>dplyr</code><br>
 </li>
 <li><code>readr</code></li>
-<li><code>pwr</code><br>
-</li>
+<li><code>pwr</code></li>
 <li><code>stats</code><br>
 </li>
 <li><code>ggplot2</code></li>
 </ol>
 <p>If you do not have R and R Studio Installed, please check out the instructions here first:</p>
-<p>Before you use the code provided on this website, first run the following code:</p>
+<p>Before you use the code provided on this website, first run the following code in your R environment:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggformula"</span>, <span class="st">"mosaic"</span>, <span class="st">"dplyr"</span>, <span class="st">"readr"</span>, <span class="st">"pwr"</span>, <span class="st">"ggplot2"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Note that <code>stats</code> is installed by default.</p>
+<p>Note that the package <code>stats</code> is installed by default with the base R installation.</p>
 
 
 

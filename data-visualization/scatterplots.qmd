@@ -1,29 +1,55 @@
 ---
-title: "Scatterplots"
-format: live-html
-engine: knitr
-webr:
-  packages: ['ggformula', 'palmerpenguins']
+title: "Measures of Center"
+format: 
+  live-html:
+    webr:
+      packages: 
+        - mosaic
+        - ggformula
+        - palmerpenguins
+      cell-options:
+        warning: false
+        completion: false
 execute: 
   warning: false
   message: false
 code-copy: true
 code-overflow: wrap
 toc: true
+css: ../styles.css
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+{{< include ../_extensions/r-wasm/live/_gradethis.qmd >}}
+
+
+```{r}
+#| label: theme
+#| include: false
+#| edit: false
+library(ggplot2)
+library(gradethis)
+library(checkdown)
+theme_set(theme_light())
+options(ggplot2.continuous.color = scale_color_viridis_c, 
+        ggplot2.continuous.fill = scale_fill_viridis_c,
+        ggplot2.discrete.color = scale_color_viridis_d,
+        ggplot2.discrete.fill = scale_fill_viridis_d)
+```
+
 
 ## Getting Started
 
-First, be sure you have installed `ggformula`. Remember, you only need to install the package once on your machine.
+First, be sure you have installed `mosaic` and `ggformula`. Remember, you only need to install each package once on your machine.
 
-Then, be sure to load the package `ggformula`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.
+Then, be sure to load the packages `mosaic` and `ggformula`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.
 
 ```{webr}
 #| label: setup
 library(ggformula) #for graphs
+library(mosaic) #for summary stats
 ```
+
 
 ### Data for Examples
 
@@ -39,171 +65,219 @@ Here is a snippet of the data:
 ```{r}
 #| label: data-structure 
 #| echo: false
-library(dplyr)
-library(gt)
+library(dplyr) #for slice_sample function
+library(gt) #for table formatting
 slice_sample(penguins, n = 5) |> 
   gt::gt() |> 
   gt::tab_header(title = "Palmer Penguins")
 ```
 
-## Scatterplots with Two Quantitative Variables
+## Mean
+
+::: {.callout-information}
+## Definition: MEAN
+Sometimes called "the average" it is a summary of **quantitative** variables that measures 
+
+$$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \frac{1}{n}\sum_{i = 1}^{n}{x_i} $$
+
+:::
+
 
 ### Basic Code
 
-To visualize the relationship between two **quantitative** variables `x` and `y`, here is the general structure for a scatterplot.
+For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
 
 ```{r}
-#| label: scatter-structure
+#| label: one-var-structure-mean
 #| eval: false
-gf_point(y ~ x, 
-         data = mydata)
+mean(~x, data = mydata)
 ```
 
-The `y` position will map to the y-axis, and the `x` position will map to the x-axis. 
-
-
-Run the code below to see an example using the **quantitative** variables `bill_length_mm` and `bill_depth_mm` from the `penguins` data. Then flip the placement of the variables in the `y` and `x` positions. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `flipper_length_mm`)
-
-```{webr}
-#| label: scatter-penguins
-gf_point(bill_depth_mm ~ bill_length_mm, 
-         data = penguins) 
-```
-
-**Notice** the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.
-
-
-
-### Adding Labels
-
-Descriptive labels are important for any visualization. We can always add them to any visualization by adding `xlab =` and `ylab =` to your function. 
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
 
 ```{r}
-#| label: one-var-structure-labels
-#| eval: false
-gf_point(y ~ x, 
-         data = mydata,
-         xlab = "X Axis Label",
-         ylab = "Y Axis Label",
-         title = "Descriptive Title") 
+#| label: mean-one
+mean(~bill_length_mm, data = penguins)
 ```
 
-Add labels and a title to the histogram for `bill_length_mm`.
-
-```{webr}
-#| label: scatter-add-labels
-gf_point(bill_depth_mm ~ bill_length_mm, 
-         data = penguins)
-```
-
-### Other Modifications
-
-We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.
-
-
-#### Changing the Color of the Points
-
-We can add a color to the points by telling R to color each point with a specified color either using a [built in color from R](https://r-charts.com/colors/) or using a [hex code for colors](https://htmlcolorcodes.com/color-picker/) .
+::: {.callout-warning}
+## Handling Missing Values
+Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
 
 ```{r}
-#| label: one-var-structure-point-color
+#| label: one-var-structure-na-mean
 #| eval: false
-gf_boxplot(y ~ x, 
-           data = mydata,
-           xlab = "X Axis Label",
-           ylab = "Y Axis Label",
-           title = "Descriptive Title",
-           color = "darkcyan") 
+mean(~x, data = mydata, na.rm = TRUE)
 ```
-
-#### Changing the Theme
-
-The package `ggformula` is built on top of another package called `ggplot2` and so any `ggplot2` function can be added to a `ggformula` generated graphic. For example, we can change the theme to a [built-in theme](https://ggplot2.tidyverse.org/reference/ggtheme.html). To connect `ggplot2` functions, we will use a `+` at the end of the line precedding the function.  
-
-Try changing the theme to the following graph:
-
-```{webr}
-#| label: boxplot-one-theme
-gf_point(bill_depth_mm ~ bill_length_mm,  
-         data = penguins,
-         color = "darkcyan") + #notice the plus +
-  theme_light() #ggplot2 function
-```
-
-
-## Scatterplots for Comparisons Across Groups
-
-When we have a **quantitative** variable that has been measured across multiple groups, we may be interested in comparing relationships across the values/groups of a **categorical** variable. We can do this by changing either the **color** and/or **shape** of our points based on the values/groups of the *categorical* variable, `z`.  
-
-```{r}
-#| label: three-var-scatter
-#| eval: false
-gf_point(y ~ x, 
-         color = ~z,  #color is the best way
-         shape = ~z, #shape is another way, you can also do both
-         data = mydata)  
-```
-
-
-Here is the scatterplot of `bill_length_mm` and `bill_depth_mm` with the color varied by `species`, a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the point color to another categorical variable such as `island` or `sex` and see what happens.  Try adding another categorical variable as the `shape`.  
-
-```{webr}
-#| label: three-var-scatterplot-color
-gf_point(bill_length_mm ~ bill_depth_mm, 
-         color = ~species,
-         data = penguins,
-         xlab = "Add Variable X Information",
-         ylab = "Add Variable Y Information")
-```
-
-
-
-## Overlaying a Linear Model  
-
-
-$$\hat{y} = b_0 + b_1x$$
-
-
-```{r}
-#| label: scatter-structure-lm
-#| eval: false
-gf_point(y ~ x, 
-         data = mydata) |> 
-  gf_lm()
-```
-
-
-
-
-Run the code below to see an example using the **quantitative** variables `bill_length_mm` and `bill_depth_mm` from the `penguins` data with a linear model overlaid. How does the model change when you replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `flipper_length_mm`). Add the appropriate labels to the graph (note you only need to do this within the `gf_point()` function). 
-
-```{webr}
-#| label: scatter-penguins-lm
-#| warning: false
-gf_point(bill_depth_mm ~ bill_length_mm, 
-         data = penguins,
-         xlab = "X Variable",
-         ylab = "Y Variable") |> 
-  gf_lm()
-```
-
-
-
-
-```{webr}
-#| label: scatter-penguins-lm-species
-#| warning: false
-gf_point(bill_depth_mm ~ bill_length_mm, 
-         color = ~species,
-         data = penguins) |> 
-  gf_lm()
-```
-
-How did the linear model change when we accounted for species?
-
-::: {.callout-tip}
-## Simpson's Paradox
-
-Simpson's Paradox is a type of "Amalgamation Paradox" where the behavior of the whole is different than the behavior of the subgroups.  We see this in the field of Statistics when the trend of a linear model for a group changes when you look at the same relationship among subgroups. In our example above, for all penguins, the relationship looks negative between Bill Length and Depth, but when you split by species you see a positive relationship (which makes more sense).  This is why it is so important to consider all the possible variables that might influence a relationship!
 
 :::
+
+
+### Multiple Means Across Groups
+
+When we want to calculate the mean of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
+
+
+
+## Median
+
+:::{.callout-information}
+## Definition: MEDIAN
+Also known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.
+
+1. Order the data from smallest to largest
+2. 
+
+:::
+
+
+### Basic Code
+
+For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
+
+```{r}
+#| label: one-var-structure-median
+#| eval: false
+mean(~x, data = mydata)
+```
+
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
+
+```{r}
+#| label: median-one
+mean(~bill_length_mm, data = penguins)
+```
+
+::: {.callout-warning}
+## Handling Missing Values
+Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
+
+```{r}
+#| label: one-var-structure-na-median
+#| eval: false
+mean(~x, data = mydata, na.rm = TRUE)
+```
+
+:::
+
+
+### Multiple Means Across Groups
+
+When we want to calculate the mean of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
+
+
+
+
+
+
+## Comparing the Mean and Median
+
+
+
+
+
+
+::: {callout-note}
+
+## Check Your Understading: Histograms
+
+#### Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?
+
+```{r}
+#| label: histogram-characteristics-q1
+#| echo: false
+check_question(answer = c("center", 
+                          "symmetry/skew", 
+                          "spread", 
+                          "modality", 
+                          "outliers"), 
+               options = c("center", 
+                           "symmetry/skew", 
+                           "spread", 
+                           "modality", 
+                           "outliers"),
+               right = "Great Job! Histograms allow us to observe all of these features",
+               wrong = "Are you missing a feature of a distribution we can evaluate?",
+               type = "checkbox", 
+               button_label = "Check Your Answer")
+```
+
+#### 
+
+```{r}
+#| label: histogram-characteristics-q1-hint
+#| echo: false
+check_hint(hint_text = "Take a look at a histogram, is there any distribution feature you could not say something about?",
+           hint_title = "Click Here for Hint",
+           type = "onclick")
+```
+
+#### Question 2: Which of the following can we determine from the **y-axis** of a histogram?
+
+```{r}
+#| label: histogram-characteristics-q2
+#| echo: false
+check_question(answer = c("Number of individuals in a bin"), 
+               options = c("Number of individuals in a bin",
+                           "Variance of the variable",
+                           ""),
+               right = "Great Job!",
+               wrong = "Does the y-axis",
+               type = "checkbox", 
+               button_label = "Check Your Answer")
+```
+
+
+#### 
+
+```{r}
+#| label: histogram-characteristics-q2-hint
+#| echo: false
+check_hint(hint_text = "Does the y-axis represent a variable or a statistic", 
+           hint_title = "Click Here for Hint",
+           type = "onclick")
+```
+
+:::
+
+
+
+
+
+### Test your Knowledge
+
+Create a histogram of the **flipper length** for the penguins.
+```{webr}
+#| exercise: ex_1
+#| setup: true
+library(dplyr)
+exercise.reveal_solution
+```
+
+```{webr}
+#| caption: Sample Exercise
+#| exercise: ex_1
+
+```
+
+::: {.solution exercise="ex_1"}
+
+#### Solution
+
+Use the `gf_histogram()` function from the `{ggformula}` package.
+
+```{webr}
+#| exercise: ex_1
+#| solution: false
+gf_histogram(~flipper_length_mm, data = penguins,
+             xlab = "Flipper Length (mm) of Penguins",
+             ylab = "Number of Penguins")
+```
+
+:::
+
+```{webr}
+#| exercise: ex_1
+#| check: true
+gradethis::grade_this_code()
+```

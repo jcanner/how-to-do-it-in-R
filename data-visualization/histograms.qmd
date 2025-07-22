@@ -56,6 +56,7 @@ Please note that all images were created with modifications to the defaults to m
 - `+ scale_color_viridis_d()`
 
 
+::: {.collapse .multi-collapse}
 
 ### Data for Examples
 
@@ -78,6 +79,9 @@ slice_sample(penguins, n = 5) |>
   gt::gt() |> 
   gt::tab_header(title = "Palmer Penguins")
 ```
+
+:::
+
 
 ## Histograms with One Quantitative Variable
 
@@ -268,105 +272,3 @@ gf_histogram(~_____________,
   facet_wrap(~species, ncol = 1)
 ```
 
-::: {callout-note}
-## Check Your Understading: Histograms
-
-#### Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?
-
-```{r}
-#| label: histogram-characteristics-q1
-#| echo: false
-check_question(answer = c("center", 
-                          "symmetry/skew", 
-                          "spread", 
-                          "modality", 
-                          "outliers"), 
-               options = c("center", 
-                           "symmetry/skew", 
-                           "spread", 
-                           "modality", 
-                           "outliers"),
-               right = "Great Job! Histograms allow us to observe all of these features",
-               wrong = "Are you missing a feature of a distribution we can evaluate?",
-               type = "checkbox", 
-               button_label = "Check Your Answer")
-```
-
-#### 
-
-```{r}
-#| label: histogram-characteristics-q1-hint
-#| echo: false
-check_hint(hint_text = "Take a look at a histogram, is there any distribution feature you could not say something about?",
-           hint_title = "Click Here for Hint",
-           type = "onclick")
-```
-
-#### Question 2: Which of the following can we determine from the **y-axis** of a histogram?
-
-```{r}
-#| label: histogram-characteristics-q2
-#| echo: false
-check_question(answer = c("Number of individuals in a bin"), 
-               options = c("Number of individuals in a bin",
-                           "Variance of the variable",
-                           ""),
-               right = "Great Job!",
-               wrong = "Does the y-axis",
-               type = "checkbox", 
-               button_label = "Check Your Answer")
-```
-
-
-#### 
-
-```{r}
-#| label: histogram-characteristics-q2-hint
-#| echo: false
-check_hint(hint_text = "Does the y-axis represent a variable or a statistic", 
-           hint_title = "Click Here for Hint",
-           type = "onclick")
-```
-:::
-
-
-
-
-
-### Test your Knowledge
-
-Create a histogram of the **flipper length** for the penguins.
-```{webr}
-#| exercise: ex_1
-#| setup: true
-library(dplyr)
-exercise.reveal_solution
-```
-
-```{webr}
-#| caption: Sample Exercise
-#| exercise: ex_1
-
-```
-
-::: {.solution exercise="ex_1"}
-
-#### Solution
-
-Use the `gf_histogram()` function from the `{ggformula}` package.
-
-```{webr}
-#| exercise: ex_1
-#| solution: false
-gf_histogram(~flipper_length_mm, data = penguins,
-             xlab = "Flipper Length (mm) of Penguins",
-             ylab = "Number of Penguins")
-```
-
-:::
-
-```{webr}
-#| exercise: ex_1
-#| check: true
-gradethis::grade_this_code()
-```
