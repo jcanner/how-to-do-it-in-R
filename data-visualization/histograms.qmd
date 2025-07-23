@@ -103,11 +103,18 @@ Run the code below to see an example using the **quantitative** variable `bill_l
 
 ```{webr}
 #| label: histogram-one
+#| warning: true
 gf_histogram(~bill_length_mm, 
              data = penguins)
 ```
 
-**Notice** the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.
+::: {.callout-important}
+
+## Warnings in R
+
+Notice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized. A **Warning** is simply R communicating a decision it made without your consent. The code still works.
+
+:::
 
 ### Bin Widths
 
@@ -153,7 +160,9 @@ gf_histogram(~bill_length_mm,
              binwidth = 5)
 ```
 
-## Other Modifications <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" aria-controls="other-modifications">Show</a>
+## Other Modifications 
+
+<a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" aria-controls="other-modifications">Show</a>
 
 ::: {#other-modifications .collapse .multi-collapse}
 
@@ -218,7 +227,9 @@ gf_histogram(~bill_length_mm,
 :::
 :::
 
-## Histograms for Comparisons Across Groups <a class="btn btn-primary" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="comparisons-across-groups">Show</a>
+## Histograms for Comparisons Across Groups 
+
+<a class="btn btn-primary" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="comparisons-across-groups">Show</a>
 
 ::: {.collapse .multi-collapse}
 
