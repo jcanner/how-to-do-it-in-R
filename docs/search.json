@@ -2,9 +2,9 @@
   {
     "objectID": "summary-statistics/summary-stats-overview.html",
     "href": "summary-statistics/summary-stats-overview.html",
-    "title": "Overview for Data Visualization",
+    "title": "Overview for Summary Statistics",
     "section": "",
-    "text": "The package ggformula is built to overlay the Grammar of Graphics used in package ggplot2 with a formula based syntax. The formula based syntax means that all ggformula generated graphics will generally take one of the following forms:\nOne Variable\n\ngf_goal(~ x, data = mydata)\n\nTwo Variable - Relationships\n\ngf_goal(y ~ x, data = mydata)\n\nTwo or More Variables Split by Groups\n\ngf_goal(~ x | z, data = mydata)\ngf_goal(y ~ x | z, data = mydata)\n\nwhere the\n\ngoal will be the specific function for the graph type (e.g. gf_histogram()),\nthe y and x will be the specific variables/columns in the data mapped to the y-axis and x-axis respectively, with | z the feature that facets into different graphs for group values of z, and\nmydata is the object name of your data.\n\n\n\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs\n\n\n\n\nEvery visualization type has some modifications that are specific to that type, but there are some universal modifications that should be added to every graph.\n\n\nEvery visualization should have its axes labelled according to the context of the data. Axis labels should always include\n\nThe variables or cases they represent\n\nAlways include units (e.g. inches, %) for variables\n\n\nThe individual/sample/population represented by data\n\nA descriptive title - this should not be “X vs Y”, but something like “As X increases we see that Y decreases”\n\nHere is how that is added to our gf_goal() function:\n\ngf_goal(formula, #takes many different forms \n        data = mydata,\n        xlab = \"X Variable, Units, and/or Sample\",\n        ylab = \"Y Variable, Units, and/or Sample\",\n        title = \"Title describing relationship\")\n\n\n\n\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic.\nFor example, we can change the theme to a built-in theme or modify other features using + after the ggformula function to add the ggplot2 layers to the graph.\n\ngf_goal(formula, #takes many different forms \n        data = mydata,\n        xlab = \"X Variable, Units, and/or Sample\",\n        ylab = \"Y Variable, Units, and/or Sample\",\n        title = \"Title describing relationship\") +\n  theme_light()",
+    "text": "The package mosaic is built to overlay the existing functions used in base R packages to be easier to use with a formula based syntax. The formula based syntax means that all mosaic generated summary statistics the code will generally take one of the following forms:\nOne Variable\n\ngf_goal(~ x, data = mydata)\n\nTwo Variable - Relationships\n\ngf_goal(y ~ x, data = mydata)\n\nwhere the\n\ngoal will be the specific function for the graph type (e.g. mean()),\nthe y and x will be the specific variables/columns in the data and may be categorical or quantitative depending on the statistic type, and\nmydata is the object name of your data.\n\n\n\nFirst, be sure you have installed mosaic. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(mosaic) #for summary stats",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Overview of `mosaic`"
@@ -13,20 +13,9 @@
   {
     "objectID": "summary-statistics/summary-stats-overview.html#getting-started",
     "href": "summary-statistics/summary-stats-overview.html#getting-started",
-    "title": "Overview for Data Visualization",
+    "title": "Overview for Summary Statistics",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(ggformula) #for graphs",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Overview of `mosaic`"
-    ]
-  },
-  {
-    "objectID": "summary-statistics/summary-stats-overview.html#common-modificationsarguments",
-    "href": "summary-statistics/summary-stats-overview.html#common-modificationsarguments",
-    "title": "Overview for Data Visualization",
-    "section": "",
-    "text": "Every visualization type has some modifications that are specific to that type, but there are some universal modifications that should be added to every graph.\n\n\nEvery visualization should have its axes labelled according to the context of the data. Axis labels should always include\n\nThe variables or cases they represent\n\nAlways include units (e.g. inches, %) for variables\n\n\nThe individual/sample/population represented by data\n\nA descriptive title - this should not be “X vs Y”, but something like “As X increases we see that Y decreases”\n\nHere is how that is added to our gf_goal() function:\n\ngf_goal(formula, #takes many different forms \n        data = mydata,\n        xlab = \"X Variable, Units, and/or Sample\",\n        ylab = \"Y Variable, Units, and/or Sample\",\n        title = \"Title describing relationship\")\n\n\n\n\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic.\nFor example, we can change the theme to a built-in theme or modify other features using + after the ggformula function to add the ggplot2 layers to the graph.\n\ngf_goal(formula, #takes many different forms \n        data = mydata,\n        xlab = \"X Variable, Units, and/or Sample\",\n        ylab = \"Y Variable, Units, and/or Sample\",\n        title = \"Title describing relationship\") +\n  theme_light()",
+    "text": "First, be sure you have installed mosaic. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\nlibrary(mosaic) #for summary stats",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Overview of `mosaic`"
@@ -37,7 +26,7 @@
     "href": "summary-statistics/measures-of-relationship.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n47.5\n16.8\n199\n3900\nfemale\n2008\n\n\nAdelie\nBiscoe\n37.9\n18.6\n193\n2925\nfemale\n2009\n\n\nAdelie\nDream\n41.1\n19.0\n182\n3425\nmale\n2007\n\n\nGentoo\nBiscoe\n47.2\n13.7\n214\n4925\nfemale\n2009\n\n\nGentoo\nBiscoe\n50.5\n15.9\n222\n5550\nmale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n36.7\n18.8\n187\n3800\nfemale\n2008\n\n\nAdelie\nDream\n38.9\n18.8\n190\n3600\nfemale\n2008\n\n\nChinstrap\nDream\n46.4\n17.8\n191\n3700\nfemale\n2008\n\n\nGentoo\nBiscoe\n48.4\n14.6\n213\n5850\nmale\n2007\n\n\nGentoo\nBiscoe\n52.2\n17.1\n228\n5400\nmale\n2009",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Relationship"
@@ -92,7 +81,7 @@
     "href": "summary-statistics/measures-of-center.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n38.9\n17.8\n181\n3625\nfemale\n2007\n\n\nGentoo\nBiscoe\n52.5\n15.6\n221\n5450\nmale\n2009\n\n\nGentoo\nBiscoe\n47.8\n15.0\n215\n5650\nmale\n2007\n\n\nGentoo\nBiscoe\n47.2\n15.5\n215\n4975\nfemale\n2009\n\n\nGentoo\nBiscoe\n49.6\n15.0\n216\n4750\nmale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n41.3\n20.3\n194\n3550\nmale\n2008\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nAdelie\nTorgersen\n34.6\n21.1\n198\n4400\nmale\n2007\n\n\nChinstrap\nDream\n51.3\n18.2\n197\n3750\nmale\n2007\n\n\nGentoo\nBiscoe\n53.4\n15.8\n219\n5500\nmale\n2009",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -103,7 +92,7 @@
     "href": "summary-statistics/measures-of-center.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
+    "text": "Mean\n\n\n\n\n\n\nDefinition: MEAN\n\n\n\n\n\nSometimes called “the average” it is a summary of a quantitative variable observed within a sample. It measures the “fulcrum” or the balancing point of the data values and uses every value within its calculation.\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]\n\n\n\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for calculating a mean in R using the mean() function from the mosaic package.\n\nmean(~x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Missing Values\n\n\n\nNotice the returned value of NA. The function needs to have another argument added that tells R to ignore missing values (NA) in order to calculate the mean, na.rm = TRUE. Add the argument to the code above and rerun it. The warning will disappear and a numeric value (the mean) will be provided.\n\nmean(~x, data = mydata, na.rm = TRUE)\n\n\n\n\n\nMultiple Means Across Groups\nWhen we want to calculate the mean of a quantitative variable (y) measured across the values/groups of a categorical variable (x) it is a simple modification to the single mean code.\n\nmean(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm and species from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm) and/or another categorical variable (e.g., sex).\nRemember to add na.rm = TRUE if you get a warning.",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -114,7 +103,7 @@
     "href": "summary-statistics/measures-of-center.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of a quantitative variable observed within a sample. It measures the “fulcrum” or the balancing point of the data values and uses every value within its calculation.\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -125,7 +114,7 @@
     "href": "summary-statistics/measures-of-center.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
+    "text": "Median\n\n\n\n\n\n\nDefinition: MEDIAN\n\n\n\n\n\nAlso known as the 50th percentile and the 2nd quantile, the median is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it. It is the middle value of the data.\n\n\n\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for calculating a median in R using the median() function from the mosaic package.\n\nmedian(~x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Missing Values\n\n\n\n\n\nNotice the returned value of NA. The function needs to have another argument added that tells R to ignore missing values (NA) in order to calculate the median, na.rm = TRUE. Add the argument to the code above\n\nmedian(~x, data = mydata, na.rm = TRUE)\n\n\n\n\n\n\nMultiple Medians Across Groups\nWhen we want to calculate the median of a quantitative variable (y) measured across the values/groups of a categorical variable (x) it is a simple modification to the single median code.\n\nmedian(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm and species from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm) and/or another categorical variable (e.g., sex).\nRemember to add na.rm = TRUE if you get a warning.",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -136,7 +125,7 @@
     "href": "summary-statistics/measures-of-center.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile and the 2nd quantile, the median is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it. It is the middle value of the data.",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -213,7 +202,7 @@
     "href": "inference/two-means.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nChinstrap\nDream\n50.1\n17.9\n190\n3400\nfemale\n2009\n\n\nAdelie\nTorgersen\n34.4\n18.4\n184\n3325\nfemale\n2007\n\n\nGentoo\nBiscoe\n48.7\n15.7\n208\n5350\nmale\n2008\n\n\nChinstrap\nDream\n40.9\n16.6\n187\n3200\nfemale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nBiscoe\n39.7\n18.9\n184\n3550\nmale\n2009\n\n\nAdelie\nDream\n38.8\n20.0\n190\n3950\nmale\n2007\n\n\nGentoo\nBiscoe\n45.5\n15.0\n220\n5000\nmale\n2008\n\n\nAdelie\nBiscoe\n41.0\n20.0\n203\n4725\nmale\n2009",
     "crumbs": [
       "Inference and Conditions",
       "Independent Two Sample Inference"
@@ -268,7 +257,7 @@
     "href": "inference/paired-mean.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n41.8\n19.4\n198\n4450\nmale\n2008\n\n\nAdelie\nBiscoe\n40.1\n18.9\n188\n4300\nmale\n2008\n\n\nAdelie\nBiscoe\n42.0\n19.5\n200\n4050\nmale\n2008\n\n\nGentoo\nBiscoe\n48.8\n16.2\n222\n6000\nmale\n2009\n\n\nAdelie\nDream\n43.2\n18.5\n192\n4100\nmale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n35.9\n19.2\n189\n3800\nfemale\n2007\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007\n\n\nGentoo\nBiscoe\n48.5\n14.1\n220\n5300\nmale\n2008\n\n\nGentoo\nBiscoe\n46.6\n14.2\n210\n4850\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.7\n15.0\n223\n5550\nmale\n2008",
     "crumbs": [
       "Inference and Conditions",
       "Matched Pairs Inference"
@@ -323,7 +312,7 @@
     "href": "inference/multiple-proportions.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n47.7\n15.0\n216\n4750\nfemale\n2008\n\n\nChinstrap\nDream\n51.3\n19.9\n198\n3700\nmale\n2007\n\n\nAdelie\nDream\n43.2\n18.5\n192\n4100\nmale\n2008\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nGentoo\nBiscoe\n48.2\n15.6\n221\n5100\nmale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n48.5\n15.0\n219\n4850\nfemale\n2009\n\n\nChinstrap\nDream\n51.5\n18.7\n187\n3250\nmale\n2009\n\n\nGentoo\nBiscoe\n46.2\n14.1\n217\n4375\nfemale\n2009\n\n\nAdelie\nBiscoe\n39.6\n17.7\n186\n3500\nfemale\n2008\n\n\nChinstrap\nDream\n49.0\n19.6\n212\n4300\nmale\n2009",
     "crumbs": [
       "Inference and Conditions",
       "Chi-Square Goodness of Fit"
@@ -378,7 +367,7 @@
     "href": "inference/inference-overview.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic and ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic and ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see [Overview of Data Visualization]), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n42.9\n13.1\n215\n5000\nfemale\n2007\n\n\nChinstrap\nDream\n42.5\n16.7\n187\n3350\nfemale\n2008\n\n\nGentoo\nBiscoe\n48.7\n14.1\n210\n4450\nfemale\n2007\n\n\nAdelie\nTorgersen\n38.6\n17.0\n188\n2900\nfemale\n2009\n\n\nGentoo\nBiscoe\n53.4\n15.8\n219\n5500\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic and ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic and ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see [Overview of Data Visualization]), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n35.7\n17.0\n189\n3350\nfemale\n2009\n\n\nAdelie\nDream\n43.2\n18.5\n192\n4100\nmale\n2008\n\n\nChinstrap\nDream\n40.9\n16.6\n187\n3200\nfemale\n2008\n\n\nChinstrap\nDream\n45.2\n17.8\n198\n3950\nfemale\n2007\n\n\nAdelie\nTorgersen\n37.8\n17.3\n180\n3700\nNA\n2007",
     "crumbs": [
       "Inference and Conditions",
       "Overview of `mosaic`"
@@ -477,7 +466,7 @@
     "href": "data-visualization/histograms.html#getting-started",
     "title": "Histograms",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Accessibility\n\n\n\n\n\nPlease note that all images were created with modifications to the defaults to make them digitally accessible. To make these modifications to your own plots, add the following to your plot code:\n\n+ theme_light()\n+ scale_fill_viridis_d()\n\n+ scale_color_viridis_d()\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n52.0\n19.0\n197\n4150\nmale\n2007\n\n\nGentoo\nBiscoe\n47.4\n14.6\n212\n4725\nfemale\n2009\n\n\nAdelie\nTorgersen\n34.6\n17.2\n189\n3200\nfemale\n2008\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nGentoo\nBiscoe\n46.5\n14.8\n217\n5200\nfemale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Accessibility\n\n\n\n\n\nPlease note that all images were created with modifications to the defaults to make them digitally accessible. To make these modifications to your own plots, add the following to your plot code:\n\n+ theme_light()\n+ scale_fill_viridis_d()\n\n+ scale_color_viridis_d()\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n35.9\n19.2\n189\n3800\nfemale\n2007\n\n\nAdelie\nDream\n40.8\n18.4\n195\n3900\nmale\n2007\n\n\nAdelie\nDream\n37.2\n18.1\n178\n3900\nmale\n2007\n\n\nAdelie\nBiscoe\n37.7\n16.0\n183\n3075\nfemale\n2009\n\n\nAdelie\nDream\n38.1\n17.6\n187\n3425\nfemale\n2009",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
@@ -495,22 +484,22 @@
     ]
   },
   {
-    "objectID": "data-visualization/histograms.html#other-modifications",
-    "href": "data-visualization/histograms.html#other-modifications",
+    "objectID": "data-visualization/histograms.html#other-modifications-show",
+    "href": "data-visualization/histograms.html#other-modifications-show",
     "title": "Histograms",
-    "section": "Other Modifications",
-    "text": "Other Modifications\nShow\n\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nOutlining the BarsFilling the Bars with ColorChanging the ThemeTry It Out: Modifications\n\n\nWe can add a color that outlines the bars by telling R to outline the color of the bars in black.\n\ngf_histogram(~x, \n             data = mydata,\n             xlab = \"X Axis Label\",\n             ylab = \"Y Axis Label\",\n             title = \"Descriptive Title\",\n             color = \"black\")\n\n\n\nWe can add a color to fill the bars by telling R to fill the bars with a specified color either using a built in color from R or using a hex code for colors .\n\ngf_histogram(~x, \n             data = mydata,\n             xlab = \"X Axis Label\",\n             ylab = \"Y Axis Label\",\n             title = \"Descriptive Title\",\n             fill = \"darkcyan\")\n\n\n\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic. For example, we can change the theme to a built-in theme.\nTry changing the theme to the following graph:\n\n\n\n\n\n\n\n\n\n\nTry adding some modifications for the histogram of bill_length_mm.",
+    "section": "Other Modifications Show",
+    "text": "Other Modifications Show\n\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nOutlining the BarsFilling the Bars with ColorChanging the ThemeTry It Out: Modifications\n\n\nWe can add a color that outlines the bars by telling R to outline the color of the bars in black.\n\ngf_histogram(~x, \n             data = mydata,\n             xlab = \"X Axis Label\",\n             ylab = \"Y Axis Label\",\n             title = \"Descriptive Title\",\n             color = \"black\")\n\n\n\nWe can add a color to fill the bars by telling R to fill the bars with a specified color either using a built in color from R or using a hex code for colors .\n\ngf_histogram(~x, \n             data = mydata,\n             xlab = \"X Axis Label\",\n             ylab = \"Y Axis Label\",\n             title = \"Descriptive Title\",\n             fill = \"darkcyan\")\n\n\n\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic. For example, we can change the theme to a built-in theme.\nTry changing the theme to the following graph:\n\n\n\n\n\n\n\n\n\n\nTry adding some modifications for the histogram of bill_length_mm.",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
     ]
   },
   {
-    "objectID": "data-visualization/histograms.html#histograms-for-comparisons-across-groups",
-    "href": "data-visualization/histograms.html#histograms-for-comparisons-across-groups",
+    "objectID": "data-visualization/histograms.html#histograms-for-comparisons-across-groups-show",
+    "href": "data-visualization/histograms.html#histograms-for-comparisons-across-groups-show",
     "title": "Histograms",
-    "section": "Histograms for Comparisons Across Groups",
-    "text": "Histograms for Comparisons Across Groups\nShow\n\nWhen we have a quantitative variable that has been measured across multiple groups, we may be interested in comparing histograms across the values/groups of a categorical variable. We can do this using two different features of data visualization:\n\nColor Differences\nFacets\n\n\nAdding Color to GroupsFaceting by GroupsUsing ggplot2 to Control Facets\n\n\nSimilar to changing the color of bars to a single color, we can use the fill = argument but instead specify our categorical variable z.\n\ngf_histogram(~x, \n             data = mydata,\n             fill = ~z) #don't forget the ~ before the variable name\n\nHere is the histogram of bill_length_mm with color varied by species a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as island or sex and see what happens.\n\n\n\n\n\n\n\n\n\n\nFaceting in visualization is a tool that allows you to easily split up data across multiple panels of the same type. To do this in ggformula you add | z after the formula which conditions the graph on the categorical variable z and splits the graph by the groups/values of z.\n\ngf_histogram(~x | z, \n             data = mydata)\n\nHere is the histogram of bill_length_mm with facets based on species, a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the facets to another categorical variable such as island or sex and see what happens. Try adding fill by the facet variable as well.\n\n\n\n\n\n\n\n\n\n\nUnfortunately, the ggformula option for facets does not give you much control on how to organize the facets, so it might be useful to instead of a ggplot2 option such as facet_wrap() or facet_grid. For example, here is an example using facet_wrap() that allows us to stack our facets into one column (ncol = 1). Look up the options for different facet functions and try other modification.",
+    "section": "Histograms for Comparisons Across Groups Show",
+    "text": "Histograms for Comparisons Across Groups Show\n\nWhen we have a quantitative variable that has been measured across multiple groups, we may be interested in comparing histograms across the values/groups of a categorical variable. We can do this using two different features of data visualization:\n\nColor Differences\nFacets\n\n\nAdding Color to GroupsFaceting by GroupsUsing ggplot2 to Control Facets\n\n\nSimilar to changing the color of bars to a single color, we can use the fill = argument but instead specify our categorical variable z.\n\ngf_histogram(~x, \n             data = mydata,\n             fill = ~z) #don't forget the ~ before the variable name\n\nHere is the histogram of bill_length_mm with color varied by species a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as island or sex and see what happens.\n\n\n\n\n\n\n\n\n\n\nFaceting in visualization is a tool that allows you to easily split up data across multiple panels of the same type. To do this in ggformula you add | z after the formula which conditions the graph on the categorical variable z and splits the graph by the groups/values of z.\n\ngf_histogram(~x | z, \n             data = mydata)\n\nHere is the histogram of bill_length_mm with facets based on species, a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the facets to another categorical variable such as island or sex and see what happens. Try adding fill by the facet variable as well.\n\n\n\n\n\n\n\n\n\n\nUnfortunately, the ggformula option for facets does not give you much control on how to organize the facets, so it might be useful to instead of a ggplot2 option such as facet_wrap() or facet_grid. For example, here is an example using facet_wrap() that allows us to stack our facets into one column (ncol = 1). Look up the options for different facet functions and try other modification.",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
@@ -521,7 +510,7 @@
     "href": "data-visualization/barplots.html",
     "title": "Bar Plots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n35.9\n16.6\n190\n3050\nfemale\n2008\n\n\nChinstrap\nDream\n46.9\n16.6\n192\n2700\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.4\n15.3\n224\n5550\nmale\n2008\n\n\nChinstrap\nDream\n49.6\n18.2\n193\n3775\nmale\n2009\n\n\nAdelie\nBiscoe\n38.2\n20.0\n190\n3900\nmale\n2009",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n51.7\n20.3\n194\n3775\nmale\n2007\n\n\nChinstrap\nDream\n42.5\n17.3\n187\n3350\nfemale\n2009\n\n\nAdelie\nDream\n40.3\n18.5\n196\n4350\nmale\n2008\n\n\nAdelie\nTorgersen\n38.6\n21.2\n191\n3800\nmale\n2007\n\n\nChinstrap\nDream\n50.5\n18.4\n200\n3400\nfemale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
@@ -532,29 +521,51 @@
     "href": "data-visualization/barplots.html#getting-started",
     "title": "Bar Plots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n35.9\n16.6\n190\n3050\nfemale\n2008\n\n\nChinstrap\nDream\n46.9\n16.6\n192\n2700\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.4\n15.3\n224\n5550\nmale\n2008\n\n\nChinstrap\nDream\n49.6\n18.2\n193\n3775\nmale\n2009\n\n\nAdelie\nBiscoe\n38.2\n20.0\n190\n3900\nmale\n2009",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n51.7\n20.3\n194\n3775\nmale\n2007\n\n\nChinstrap\nDream\n42.5\n17.3\n187\n3350\nfemale\n2009\n\n\nAdelie\nDream\n40.3\n18.5\n196\n4350\nmale\n2008\n\n\nAdelie\nTorgersen\n38.6\n21.2\n191\n3800\nmale\n2007\n\n\nChinstrap\nDream\n50.5\n18.4\n200\n3400\nfemale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
     ]
   },
   {
-    "objectID": "data-visualization/barplots.html#boxplots-with-one-quantitative-variable",
-    "href": "data-visualization/barplots.html#boxplots-with-one-quantitative-variable",
+    "objectID": "data-visualization/barplots.html#bar-plots-with-one-categorical-variable",
+    "href": "data-visualization/barplots.html#bar-plots-with-one-categorical-variable",
     "title": "Bar Plots",
-    "section": "Boxplots with One Quantitative Variable",
-    "text": "Boxplots with One Quantitative Variable\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for a boxplot.\n\ngf_boxplot(~x, \n           data = mydata)\n\nNotice that a y-axis is added, but it does not have any meaning. We can remove it using the function gf_theme()\n\ngf_boxplot(~x, \n           data = mydata) |&gt; #this is a pipe, another option is %&gt;%\n  gf_theme(axis.ticks.y = element_blank(),  #removes y-axis ticks\n           axis.text.y = element_blank())   #removes y-axis labels\n\nNotice the use of the native pipe |&gt; to connect the two functions from ggformula. Another version of a pipe in R is %&gt;%. Both will work, it is just that %&gt;% relies on another pacakge and |&gt; is built into base R.\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penuins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\nNotice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.\n\n\nAdding Labels\nDescriptive labels are important for any visualization. We can always add them to any visualization by adding xlab = to your function. Notice, for a single variable we do not add a y-axis label.\n\ngf_boxplot(~x, \n           data = mydata,\n           xlab = \"X Axis Label\",\n           title = \"Descriptive Title\") |&gt; \n  gf_theme(axis.ticks.y = element_blank(), \n           axis.text.y = element_blank())\n\nAdd labels and a title to the histogram for bill_length_mm.\n\n\n\n\n\n\n\n\n\n\nOther Modifications\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nAdding the Data Points to the Graph\nBoxplots often hide the amount of data they represent (the number of cases). To combat this, we can add the data points to the boxplot using the gf_jitter() function. You can modify the height = argument to change the distance between points. Notice the 0 which centers the points on the y-axis at 0.\n\ngf_boxplot(~x, \n           data = mydata) |&gt; \n  gf_jitter(0 ~ x, \n           data = mydata,\n           height = 1) |&gt; \n  gf_theme(axis.ticks.y = element_blank(),  \n           axis.text.y = element_blank())   \n\nModify the values for height = agrument and see how they affect the point distribution on the y-axis. Remember, the y-axis has no meaning here, so the heights of the points are random and not representative of any element of the data. Just the position on the x-axis is meaningful.\n\n\n\n\n\n\n\n\n\n\nFilling the Boxes with Color\nWe can add a color to fill the boxes by telling R to fill the bars with a specified color either using a built in color from R or using a hex code for colors .\n\ngf_boxplot(~x, \n           data = mydata,\n           xlab = \"X Axis Label\",\n           title = \"Descriptive Title\",\n           fill = \"darkcyan\") |&gt; \n  gf_theme(axis.ticks.y = element_blank(), \n           axis.text.y = element_blank())\n\n\n\nChanging the Theme\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic. For example, we can change the theme to a built-in theme. To connect ggplot2 functions, we will use a + at the end of the line precedding the function.\nTry changing the theme to the following graph:",
+    "section": "Bar Plots with One Categorical Variable",
+    "text": "Bar Plots with One Categorical Variable\n\nBasic Code for Counts\nFor a single categorical variable, x, here is the general structure for a bar plot for counts.\n\ngf_bar(~x, \n       data = mydata)\n\nRun the code below to see an example using the categorical variable species from the penguins data. Then replace species with another categorical variable from the penguins data (e.g. islands)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMissing Values in R\n\n\n\n\n\nNotice that sometimes an extra bar is added for missing values, or NA, such as for the sex variable. NA simply indicates missing values in a data set. See Other Modifications to learn how to remove bars for missing values on a bar plot.\n\n\n\n\n\nBasic Code for Proportions\nTo modify our plot so that we plot proportions, we will change the goal of our basic bar plot code. For a single categorical variable, x, here is the general structure for a bar plot for proportions.\n\ngf_props(~x , \n         data = mydata)\n\nChange the goal below to modify the bar plot to indicate the proportion instead of the count on the y-axis.\n\n\n\n\n\n\n\n\n\n\nBasic Code for Percentages\nTo modify our plot so that we plot percentages, we will change the goal of our basic bar plot code. For a single categorical variable, x, here is the general structure for a bar plot for percentages.\n\ngf_percents(~x , \n         data = mydata)\n\nChange the goal below to modify the bar plot to indicate the percentage instead of the count on the y-axis.\n\n\n\n\n\n\n\n\n\n\nAdding Labels\nDescriptive labels are important for any visualization. We can always add them to any visualization by adding xlab = to your function. Notice, for a single variable we do not add a y-axis label.\n\ngf_bar(~x, \n       data = mydata,\n       xlab = \"X Axis Label\",\n       title = \"Descriptive Title\")\n\nAdd labels and a title to the bar plot for species.",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
     ]
   },
   {
-    "objectID": "data-visualization/barplots.html#boxplots-for-comparisons-across-groups",
-    "href": "data-visualization/barplots.html#boxplots-for-comparisons-across-groups",
+    "objectID": "data-visualization/barplots.html#other-modifications-show",
+    "href": "data-visualization/barplots.html#other-modifications-show",
     "title": "Bar Plots",
-    "section": "Boxplots for Comparisons Across Groups",
-    "text": "Boxplots for Comparisons Across Groups\nWhen we have a quantitative variable that has been measured across multiple groups, we may be interested in comparing boxplots across the values/groups of a categorical variable. We can do this by adding a y-axis variable that represents the categorical variable.\n\ngf_boxplot(y ~ x, \n           data = mydata) \n#we don't need to do anything to the y-axis now because it represents a variable here \n\nThe variable places in the y position will be on the y-axis and the variable in the x position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the quantitative and categorical variable.\nHere is an example with species on the y-axis. Try modifying the code so that species is on the x-axis and bill_length_mm is on the y-axis. Then modify the axes labels.\n\n\n\n\n\n\n\n\n\nAdding Jitter to Groups\nIt is much easier to add jitter points to the boxplot across groups, we just pipe into the gf_jitter() function. Modify the height = argument to adjust the random position of the points on the y-axis.\n\n\n\n\n\n\n\n\n\n\nAdding Color to Groups\nSimilar to changing the color of boxes to a single color, we can use the fill = argument associated with the categorical variable.\nHere is the boxplot of bill_length_mm with fill color varied by species a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as island or sex and see what happens.\n\n\n\n\n\n\n\n\nIf we want to specify color and add jitter, we can do that too!",
+    "section": "Other Modifications Show",
+    "text": "Other Modifications Show\n\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nRemoving Missing ValuesFilling the Bars with ColorChanging the Theme\n\n\nIf NA, or missing values, are being plotted and are not desired, you can drop the missing values from the variable you are plotting using the drop_na() function from the set of tidyverse packages.\n\nlibrary(tidyverse) #needed to use drop_na() function\ngf_bar(~x, \n       data = drop_na(mydata, x)) \n\nTry this example with sex for the penguins.\n\n\n\n\n\n\n\n\n\n\nWe can add a color to fill the bars by telling R to fill the bars with a specified color either using a built in color from R or using a hex code for colors .\n\ngf_bar(~x, \n       data = mydata,\n       xlab = \"X Axis Label\",\n       title = \"Descriptive Title\",\n       fill = \"darkcyan\") \n\n\n\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic. For example, we can change the theme to a built-in theme. To connect ggplot2 functions, we will use a + at the end of the line preceding the function.\nTry changing the theme to the following graph:",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Bar Plots"
+    ]
+  },
+  {
+    "objectID": "data-visualization/barplots.html#bar-plots-for-comparisons-across-groups",
+    "href": "data-visualization/barplots.html#bar-plots-for-comparisons-across-groups",
+    "title": "Bar Plots",
+    "section": "Bar Plots for Comparisons Across Groups",
+    "text": "Bar Plots for Comparisons Across Groups\nWhen we have a categorical variable that has been measured across multiple groups, we may be interested in comparing bar plots across the values/groups of another categorical variable. We can do this by adding another feature to our plot that represents the other categorical variable, such as a\n\ncolor\nfacet\n\n\ngf_boxplot(y ~ x, \n           data = mydata) \n#we don't need to do anything to the y-axis now because it represents a variable here \n\n\n\n\n\n\n\nSwitching Box Plot Orientation\n\n\n\nThe variable places in the y position will be on the y-axis and the variable in the x position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the quantitative and categorical variable.",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Bar Plots"
+    ]
+  },
+  {
+    "objectID": "data-visualization/barplots.html#other-modifications-for-comparisons-show",
+    "href": "data-visualization/barplots.html#other-modifications-for-comparisons-show",
+    "title": "Bar Plots",
+    "section": "Other Modifications for Comparisons Show",
+    "text": "Other Modifications for Comparisons Show\n\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nConditional ProportionsAdding Color to GroupsAdding Both Color and Jitter\n\n\nIt is much easier to add jitter points to the boxplot across groups, we just pipe into the gf_jitter() function. Modify the height = argument to adjust the random position of the points on the y-axis.\n\n\n\n\n\n\n\n\n\n\nSimilar to changing the color of boxes to a single color, we can use the fill = argument associated with the categorical variable.\nHere is the boxplot of bill_length_mm with fill color varied by species a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as island or sex and see what happens.\n\n\n\n\n\n\n\n\n\n\nIf we want to specify color and add jitter, we can do that too!",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
@@ -565,7 +576,7 @@
     "href": "data-visualization/boxplots.html",
     "title": "Boxplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.8\n14.2\n219\n4700\nfemale\n2008\n\n\nGentoo\nBiscoe\n49.1\n15.0\n228\n5500\nmale\n2009\n\n\nAdelie\nDream\n36.6\n18.4\n184\n3475\nfemale\n2009\n\n\nAdelie\nDream\n40.3\n18.5\n196\n4350\nmale\n2008\n\n\nAdelie\nDream\n39.8\n19.1\n184\n4650\nmale\n2007",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n47.5\n16.8\n199\n3900\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.2\n16.4\n223\n5950\nmale\n2008\n\n\nGentoo\nBiscoe\n48.4\n16.3\n220\n5400\nmale\n2008\n\n\nChinstrap\nDream\n46.7\n17.9\n195\n3300\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.6\n14.2\n210\n4850\nfemale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
@@ -576,7 +587,7 @@
     "href": "data-visualization/boxplots.html#getting-started",
     "title": "Boxplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.8\n14.2\n219\n4700\nfemale\n2008\n\n\nGentoo\nBiscoe\n49.1\n15.0\n228\n5500\nmale\n2009\n\n\nAdelie\nDream\n36.6\n18.4\n184\n3475\nfemale\n2009\n\n\nAdelie\nDream\n40.3\n18.5\n196\n4350\nmale\n2008\n\n\nAdelie\nDream\n39.8\n19.1\n184\n4650\nmale\n2007",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n47.5\n16.8\n199\n3900\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.2\n16.4\n223\n5950\nmale\n2008\n\n\nGentoo\nBiscoe\n48.4\n16.3\n220\n5400\nmale\n2008\n\n\nChinstrap\nDream\n46.7\n17.9\n195\n3300\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.6\n14.2\n210\n4850\nfemale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
@@ -587,7 +598,18 @@
     "href": "data-visualization/boxplots.html#boxplots-with-one-quantitative-variable",
     "title": "Boxplots",
     "section": "Boxplots with One Quantitative Variable",
-    "text": "Boxplots with One Quantitative Variable\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for a boxplot.\n\ngf_boxplot(~x, \n           data = mydata)\n\nNotice that a y-axis is added, but it does not have any meaning. We can remove it using the function gf_theme()\n\ngf_boxplot(~x, \n           data = mydata) |&gt; #this is a pipe, another option is %&gt;%\n  gf_theme(axis.ticks.y = element_blank(),  #removes y-axis ticks\n           axis.text.y = element_blank())   #removes y-axis labels\n\nNotice the use of the native pipe |&gt; to connect the two functions from ggformula. Another version of a pipe in R is %&gt;%. Both will work, it is just that %&gt;% relies on another pacakge and |&gt; is built into base R.\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\nNotice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.\n\n\nAdding Labels\nDescriptive labels are important for any visualization. We can always add them to any visualization by adding xlab = to your function. Notice, for a single variable we do not add a y-axis label.\n\ngf_boxplot(~x, \n           data = mydata,\n           xlab = \"X Axis Label\",\n           title = \"Descriptive Title\") |&gt; \n  gf_theme(axis.ticks.y = element_blank(), \n           axis.text.y = element_blank())\n\nAdd labels and a title to the boxplot for bill_length_mm.\n\n\n\n\n\n\n\n\n\n\nOther Modifications\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nAdding the Data Points to the Graph\nBoxplots often hide the amount of data they represent (the number of cases). To combat this, we can add the data points to the boxplot using the gf_jitter() function. You can modify the height = argument to change the distance between points. Notice the 0 which centers the points on the y-axis at 0.\n\ngf_boxplot(~x, \n           data = mydata) |&gt; \n  gf_jitter(0 ~ x, \n           data = mydata,\n           height = 1) |&gt; \n  gf_theme(axis.ticks.y = element_blank(),  \n           axis.text.y = element_blank())   \n\nModify the values for height = agrument and see how they affect the point distribution on the y-axis. Remember, the y-axis has no meaning here, so the heights of the points are random and not representative of any element of the data. Just the position on the x-axis is meaningful.\n\n\n\n\n\n\n\n\n\n\nFilling the Boxes with Color\nWe can add a color to fill the boxes by telling R to fill the bars with a specified color either using a built in color from R or using a hex code for colors .\n\ngf_boxplot(~x, \n           data = mydata,\n           xlab = \"X Axis Label\",\n           title = \"Descriptive Title\",\n           fill = \"darkcyan\") |&gt; \n  gf_theme(axis.ticks.y = element_blank(), \n           axis.text.y = element_blank())\n\n\n\nChanging the Theme\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic. For example, we can change the theme to a built-in theme. To connect ggplot2 functions, we will use a + at the end of the line precedding the function.\nTry changing the theme to the following graph:",
+    "text": "Boxplots with One Quantitative Variable\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for a boxplot.\n\ngf_boxplot(~x, \n           data = mydata)\n\nNotice that a y-axis is added, but it does not have any meaning. We can remove it using the function gf_theme()\n\ngf_boxplot(~x, \n           data = mydata) |&gt; #this is a pipe, another option is %&gt;%\n  gf_theme(axis.ticks.y = element_blank(),  #removes y-axis ticks\n           axis.text.y = element_blank())   #removes y-axis labels\n\nNotice the use of the native pipe |&gt; to connect the two functions from ggformula. Another version of a pipe in R is %&gt;%. Both will work, it is just that %&gt;% relies on another package and |&gt; is built into base R.\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarnings in R\n\n\n\nNotice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized. A Warning is simply R communicating a decision it made without your consent. The code still works.\n\n\n\n\nAdding Labels\nDescriptive labels are important for any visualization. We can always add them to any visualization by adding xlab = to your function. Notice, for a single variable we do not add a y-axis label.\n\ngf_boxplot(~x, \n           data = mydata,\n           xlab = \"X Axis Label\",\n           title = \"Descriptive Title\") |&gt; \n  gf_theme(axis.ticks.y = element_blank(), \n           axis.text.y = element_blank())\n\nAdd labels and a title to the boxplot for bill_length_mm.",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Boxplots"
+    ]
+  },
+  {
+    "objectID": "data-visualization/boxplots.html#other-modifications-show",
+    "href": "data-visualization/boxplots.html#other-modifications-show",
+    "title": "Boxplots",
+    "section": "Other Modifications Show",
+    "text": "Other Modifications Show\n\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nAdding the Data Points to the GraphFilling the Boxes with ColorChanging the Theme\n\n\nBoxplots often hide the amount of data they represent (the number of cases). To combat this, we can add the data points to the boxplot using the gf_jitter() function. You can modify the height = argument to change the distance between points. Notice the 0 which centers the points on the y-axis at 0.\n\ngf_boxplot(~x, \n           data = mydata) |&gt; \n  gf_jitter(0 ~ x, \n           data = mydata,\n           height = 1) |&gt; \n  gf_theme(axis.ticks.y = element_blank(),  \n           axis.text.y = element_blank())   \n\nModify the values for height = argument and see how they affect the point distribution on the y-axis. Remember, the y-axis has no meaning here, so the heights of the points are random and not representative of any element of the data. Just the position on the x-axis is meaningful.\n\n\n\n\n\n\n\n\n\n\nWe can add a color to fill the boxes by telling R to fill the boxes with a specified color either using a built in color from R or using a hex code for colors .\n\ngf_boxplot(~x, \n           data = mydata,\n           xlab = \"X Axis Label\",\n           title = \"Descriptive Title\",\n           fill = \"darkcyan\") |&gt; \n  gf_theme(axis.ticks.y = element_blank(), \n           axis.text.y = element_blank())\n\n\n\nThe package ggformula is built on top of another package called ggplot2 and so any ggplot2 function can be added to a ggformula generated graphic. For example, we can change the theme to a built-in theme. To connect ggplot2 functions, we will use a + at the end of the line preceding the function.\nTry changing the theme to the following graph:",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
@@ -598,84 +620,62 @@
     "href": "data-visualization/boxplots.html#boxplots-for-comparisons-across-groups",
     "title": "Boxplots",
     "section": "Boxplots for Comparisons Across Groups",
-    "text": "Boxplots for Comparisons Across Groups\nWhen we have a quantitative variable that has been measured across multiple groups, we may be interested in comparing boxplots across the values/groups of a categorical variable. We can do this by adding a y-axis variable that represents the categorical variable.\n\ngf_boxplot(y ~ x, \n           data = mydata) \n#we don't need to do anything to the y-axis now because it represents a variable here \n\nThe variable places in the y position will be on the y-axis and the variable in the x position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the quantitative and categorical variable.\nHere is an example with species on the y-axis. Try modifying the code so that species is on the x-axis and bill_length_mm is on the y-axis. Then modify the axes labels.\n\n\n\n\n\n\n\n\n\nAdding Jitter to Groups\nIt is much easier to add jitter points to the boxplot across groups, we just pipe into the gf_jitter() function. Modify the height = argument to adjust the random position of the points on the y-axis.\n\n\n\n\n\n\n\n\n\n\nAdding Color to Groups\nSimilar to changing the color of boxes to a single color, we can use the fill = argument associated with the categorical variable.\nHere is the boxplot of bill_length_mm with fill color varied by species a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as island or sex and see what happens.\n\n\n\n\n\n\n\n\nIf we want to specify color and add jitter, we can do that too!",
+    "text": "Boxplots for Comparisons Across Groups\nWhen we have a quantitative variable that has been measured across multiple groups, we may be interested in comparing boxplots across the values/groups of a categorical variable. We can do this by adding a y-axis variable that represents the categorical variable.\n\ngf_boxplot(y ~ x, \n           data = mydata) \n#we don't need to do anything to the y-axis now because it represents a variable here \n\n\n\n\n\n\n\nSwitching Box Plot Orientation\n\n\n\nThe variable places in the y position will be on the y-axis and the variable in the x position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the quantitative and categorical variable.\n\n\nHere is an example with species on the y-axis. Try modifying the code so that species is on the x-axis and bill_length_mm is on the y-axis. Then modify the axes labels.",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
     ]
   },
   {
+    "objectID": "data-visualization/boxplots.html#other-modifications-for-comparisons-show",
+    "href": "data-visualization/boxplots.html#other-modifications-for-comparisons-show",
+    "title": "Boxplots",
+    "section": "Other Modifications for Comparisons Show",
+    "text": "Other Modifications for Comparisons Show\n\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nAdding Jitter to GroupsAdding Color to GroupsAdding Both Color and Jitter\n\n\nIt is much easier to add jitter points to the boxplot across groups, we just pipe into the gf_jitter() function. Modify the height = argument to adjust the random position of the points on the y-axis.\n\n\n\n\n\n\n\n\n\n\nSimilar to changing the color of boxes to a single color, we can use the fill = argument associated with the categorical variable.\nHere is the boxplot of bill_length_mm with fill color varied by species a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as island or sex and see what happens.\n\n\n\n\n\n\n\n\n\n\nIf we want to specify color and add jitter, we can do that too!",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Boxplots"
+    ]
+  },
+  {
+    "objectID": "data-visualization/scatterplots.html",
+    "href": "data-visualization/scatterplots.html",
+    "title": "Scatterplots",
+    "section": "",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nGentoo\nBiscoe\n51.5\n16.3\n230\n5500\nmale\n2009\n\n\nChinstrap\nDream\n46.4\n17.8\n191\n3700\nfemale\n2008\n\n\nAdelie\nBiscoe\n42.0\n19.5\n200\n4050\nmale\n2008",
+    "crumbs": [
+      "Data Visualizations with `ggformula`",
+      "Scatterplots"
+    ]
+  },
+  {
     "objectID": "data-visualization/scatterplots.html#getting-started",
     "href": "data-visualization/scatterplots.html#getting-started",
-    "title": "Measures of Center",
-    "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic and ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic and ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n49.1\n14.8\n220\n5150\nfemale\n2008\n\n\nAdelie\nTorgersen\n37.2\n19.4\n184\n3900\nmale\n2008\n\n\nGentoo\nBiscoe\n45.5\n13.9\n210\n4200\nfemale\n2008\n\n\nChinstrap\nDream\n49.0\n19.6\n212\n4300\nmale\n2009\n\n\nGentoo\nBiscoe\n46.2\n14.5\n209\n4800\nfemale\n2007",
+    "title": "Scatterplots",
+    "section": "",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nGentoo\nBiscoe\n51.5\n16.3\n230\n5500\nmale\n2009\n\n\nChinstrap\nDream\n46.4\n17.8\n191\n3700\nfemale\n2008\n\n\nAdelie\nBiscoe\n42.0\n19.5\n200\n4050\nmale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Scatterplots"
     ]
   },
   {
-    "objectID": "data-visualization/scatterplots.html#mean",
-    "href": "data-visualization/scatterplots.html#mean",
-    "title": "Measures of Center",
-    "section": "Mean",
-    "text": "Mean",
+    "objectID": "data-visualization/scatterplots.html#scatterplots",
+    "href": "data-visualization/scatterplots.html#scatterplots",
+    "title": "Scatterplots",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nBasic Code\nFor two quantitative variables, x and y, here is the general structure for a scatterplot.\n\ngf_point(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variables bill_length_mm and bill_depth_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data or switch the order to see what happens.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarnings in R\n\n\n\nNotice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized. A Warning is simply R communicating a decision it made without your consent. The code still works.",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Scatterplots"
     ]
   },
   {
-    "objectID": "data-visualization/scatterplots.html#definition-mean",
-    "href": "data-visualization/scatterplots.html#definition-mean",
-    "title": "Measures of Center",
-    "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Data Visualizations with `ggformula`",
-      "Scatterplots"
-    ]
-  },
-  {
-    "objectID": "data-visualization/scatterplots.html#median",
-    "href": "data-visualization/scatterplots.html#median",
-    "title": "Measures of Center",
-    "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Data Visualizations with `ggformula`",
-      "Scatterplots"
-    ]
-  },
-  {
-    "objectID": "data-visualization/scatterplots.html#definition-median",
-    "href": "data-visualization/scatterplots.html#definition-median",
-    "title": "Measures of Center",
-    "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Data Visualizations with `ggformula`",
-      "Scatterplots"
-    ]
-  },
-  {
-    "objectID": "data-visualization/scatterplots.html#comparing-the-mean-and-median",
-    "href": "data-visualization/scatterplots.html#comparing-the-mean-and-median",
-    "title": "Measures of Center",
-    "section": "Comparing the Mean and Median",
-    "text": "Comparing the Mean and Median",
-    "crumbs": [
-      "Data Visualizations with `ggformula`",
-      "Scatterplots"
-    ]
-  },
-  {
-    "objectID": "data-visualization/scatterplots.html#check-your-understading-histograms",
-    "href": "data-visualization/scatterplots.html#check-your-understading-histograms",
-    "title": "Measures of Center",
-    "section": "Check Your Understading: Histograms",
-    "text": "Check Your Understading: Histograms\n\nQuestion 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?\n\n\n\n\ncenter\n\n\nsymmetry/skew\n\n\nspread\n\n\nmodality\n\n\noutliers\n\n\n\n\n\n\n\n\n\n\n\n\nClick Here for Hint\n\n\n\n\n\n\nQuestion 2: Which of the following can we determine from the y-axis of a histogram?\n\n\n\n\nNumber of individuals in a bin\n\n\nVariance of the variable\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick Here for Hint",
+    "objectID": "data-visualization/scatterplots.html#adding-a-regression-line",
+    "href": "data-visualization/scatterplots.html#adding-a-regression-line",
+    "title": "Scatterplots",
+    "section": "Adding a Regression Line",
+    "text": "Adding a Regression Line",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Scatterplots"
@@ -696,7 +696,7 @@
     "href": "inference/multiple-means.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n44.5\n14.7\n214\n4850\nfemale\n2009\n\n\nAdelie\nTorgersen\n36.2\n16.1\n187\n3550\nfemale\n2008\n\n\nGentoo\nBiscoe\n49.8\n16.8\n230\n5700\nmale\n2008\n\n\nGentoo\nBiscoe\n47.8\n15.0\n215\n5650\nmale\n2007\n\n\nGentoo\nBiscoe\n46.4\n15.0\n216\n4700\nfemale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n49.3\n15.7\n217\n5850\nmale\n2007\n\n\nGentoo\nBiscoe\n43.5\n14.2\n220\n4700\nfemale\n2008\n\n\nAdelie\nDream\n37.0\n16.9\n185\n3000\nfemale\n2007\n\n\nAdelie\nDream\n36.4\n17.0\n195\n3325\nfemale\n2007\n\n\nGentoo\nBiscoe\n53.4\n15.8\n219\n5500\nmale\n2009",
     "crumbs": [
       "Inference and Conditions",
       "Analysis of Variance"
@@ -751,7 +751,7 @@
     "href": "inference/one-mean.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n46.6\n14.2\n210\n4850\nfemale\n2008\n\n\nChinstrap\nDream\n51.3\n18.2\n197\n3750\nmale\n2007\n\n\nChinstrap\nDream\n45.6\n19.4\n194\n3525\nfemale\n2009\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nAdelie\nTorgersen\n42.1\n19.1\n195\n4000\nmale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n37.8\n17.1\n186\n3300\nNA\n2007\n\n\nGentoo\nBiscoe\n50.8\n17.3\n228\n5600\nmale\n2009\n\n\nAdelie\nTorgersen\n38.7\n19.0\n195\n3450\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.9\n14.6\n222\n4875\nfemale\n2009\n\n\nAdelie\nTorgersen\n42.1\n19.1\n195\n4000\nmale\n2008",
     "crumbs": [
       "Inference and Conditions",
       "Confidence Interval - One Mean"
@@ -806,7 +806,7 @@
     "href": "inference/slope.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n44.1\n18.0\n210\n4000\nmale\n2009\n\n\nGentoo\nBiscoe\n42.8\n14.2\n209\n4700\nfemale\n2007\n\n\nGentoo\nBiscoe\n48.2\n15.6\n221\n5100\nmale\n2008\n\n\nChinstrap\nDream\n46.9\n16.6\n192\n2700\nfemale\n2008\n\n\nAdelie\nTorgersen\n40.9\n16.8\n191\n3700\nfemale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n34.0\n17.1\n185\n3400\nfemale\n2008\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nAdelie\nTorgersen\n35.1\n19.4\n193\n4200\nmale\n2008\n\n\nAdelie\nBiscoe\n39.7\n17.7\n193\n3200\nfemale\n2009\n\n\nAdelie\nBiscoe\n37.8\n20.0\n190\n4250\nmale\n2009",
     "crumbs": [
       "Inference and Conditions",
       "Simple Linear Regression"
@@ -868,7 +868,7 @@
     "href": "summary-statistics/generating-multiple-stats.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n48.2\n14.3\n210\n4600\nfemale\n2007\n\n\nChinstrap\nDream\n49.6\n18.2\n193\n3775\nmale\n2009\n\n\nChinstrap\nDream\n51.4\n19.0\n201\n3950\nmale\n2009\n\n\nGentoo\nBiscoe\n45.0\n15.4\n220\n5050\nmale\n2008\n\n\nAdelie\nBiscoe\n37.9\n18.6\n172\n3150\nfemale\n2007",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n43.4\n14.4\n218\n4600\nfemale\n2009\n\n\nChinstrap\nDream\n42.4\n17.3\n181\n3600\nfemale\n2007\n\n\nChinstrap\nDream\n49.6\n18.2\n193\n3775\nmale\n2009\n\n\nGentoo\nBiscoe\n44.0\n13.6\n208\n4350\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.8\n14.2\n219\n4700\nfemale\n2008",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Generating Multiple Statistics (`df_stats`)"
@@ -923,7 +923,7 @@
     "href": "summary-statistics/measures-of-frequency.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n35.1\n19.4\n193\n4200\nmale\n2008\n\n\nGentoo\nBiscoe\n46.2\n14.1\n217\n4375\nfemale\n2009\n\n\nAdelie\nDream\n36.0\n18.5\n186\n3100\nfemale\n2007\n\n\nGentoo\nBiscoe\n51.5\n16.3\n230\n5500\nmale\n2009\n\n\nChinstrap\nDream\n46.4\n18.6\n190\n3450\nfemale\n2007",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n46.2\n14.9\n221\n5300\nmale\n2008\n\n\nChinstrap\nDream\n46.4\n18.6\n190\n3450\nfemale\n2007\n\n\nGentoo\nBiscoe\n40.9\n13.7\n214\n4650\nfemale\n2007\n\n\nAdelie\nTorgersen\n42.0\n20.2\n190\n4250\nNA\n2007\n\n\nChinstrap\nDream\n50.7\n19.7\n203\n4050\nmale\n2009",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Frequency"
@@ -976,53 +976,86 @@
   {
     "objectID": "summary-statistics/measures-of-spread.html#getting-started",
     "href": "summary-statistics/measures-of-spread.html#getting-started",
-    "title": "Measures of Center",
+    "title": "Measures of Spread",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n40.2\n17.1\n193\n3400\nfemale\n2009\n\n\nGentoo\nBiscoe\n45.0\n15.4\n220\n5050\nmale\n2008\n\n\nAdelie\nDream\n39.7\n17.9\n193\n4250\nmale\n2009\n\n\nAdelie\nTorgersen\n41.1\n17.6\n182\n3200\nfemale\n2007\n\n\nChinstrap\nDream\n45.2\n16.6\n191\n3250\nfemale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n50.1\n17.9\n190\n3400\nfemale\n2009\n\n\nAdelie\nDream\n35.6\n17.5\n191\n3175\nfemale\n2009\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007\n\n\nGentoo\nBiscoe\n50.4\n15.7\n222\n5750\nmale\n2009\n\n\nGentoo\nBiscoe\n46.3\n15.8\n215\n5050\nmale\n2007",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"
     ]
   },
   {
-    "objectID": "summary-statistics/measures-of-spread.html#mean",
-    "href": "summary-statistics/measures-of-spread.html#mean",
-    "title": "Measures of Center",
-    "section": "Mean",
-    "text": "Mean",
+    "objectID": "summary-statistics/measures-of-spread.html#variance",
+    "href": "summary-statistics/measures-of-spread.html#variance",
+    "title": "Measures of Spread",
+    "section": "Variance",
+    "text": "Variance\n\n\n\n\n\n\nDefinition: VARIANCE\n\n\n\n\n\nThe average of the distances from each data point in the sample to the sample mean \\(\\bar{x}\\), squared\n\\[s^2=\\frac{\\sum_{i=1}^{n}\\left(\\ x_i-\\bar{x}\\right)^2}{n-1}\\]\nThe variance is one of the most important metrics in statistics. It is the measure of spread around the mean.\n\n\n\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for calculating a variance in R using the var() function from the mosaic package.\n\nvar(~x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Missing Values\n\n\n\nNotice the returned value of NA. The function needs to have another argument added that tells R to ignore missing values (NA) in order to calculate the mean, na.rm = TRUE. Add the argument to the code above\n\nvar(~x, data = mydata, na.rm = TRUE)\n\n\n\nWhen we want to calculate the variance of a quantitative variable (y) measured across the values/groups of a categorical variable (x) it is a simple modification to the single variance code.\n\nvar(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm and species from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm) and/or another categorical variable (e.g., sex).\nRemember to add na.rm = TRUE if you get a warning.",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"
     ]
   },
   {
-    "objectID": "summary-statistics/measures-of-spread.html#definition-mean",
-    "href": "summary-statistics/measures-of-spread.html#definition-mean",
-    "title": "Measures of Center",
-    "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
+    "objectID": "summary-statistics/measures-of-spread.html#definition-variance",
+    "href": "summary-statistics/measures-of-spread.html#definition-variance",
+    "title": "Measures of Spread",
+    "section": "Definition: VARIANCE",
+    "text": "Definition: VARIANCE\nThe average of the distances from each data point in the sample to the sample mean {x}, squared\n\\[s^2=\\frac{\\sum_{i=1}^{n}\\left(\\ x_i-\\bar{x}\\right)^2}{n-1}\\] The variance is one of the most important metrics in statistics. It is the measure of spread around the mean.",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"
     ]
   },
   {
-    "objectID": "summary-statistics/measures-of-spread.html#median",
-    "href": "summary-statistics/measures-of-spread.html#median",
-    "title": "Measures of Center",
-    "section": "Median",
-    "text": "Median",
+    "objectID": "summary-statistics/measures-of-spread.html#standard-deviation",
+    "href": "summary-statistics/measures-of-spread.html#standard-deviation",
+    "title": "Measures of Spread",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\n\n\n\n\n\n\nDefinition: STANDARD DEVIATION\n\n\n\n\n\nThe standard deviation is the square root of the variance. It also measures the spread about the mean, always zero or greater than zero, and is used more often than the variance as it has the same units of measurement as the original observations.\n\\[s= \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}\\left(\\ x_i-\\bar{x}\\right)^2}{n-1}}\\]\n\n\n\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for calculating a standard deviation in R using the sd() function from the mosaic package.\n\nsd(~x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Missing Values\n\n\n\n\n\nNotice the returned value of NA. The function needs to have another argument added that tells R to ignore missing values (NA) in order to calculate the median, na.rm = TRUE. Add the argument to the code above\n\nsd(~x, data = mydata, na.rm = TRUE)\n\n\n\n\n\n\nMultiple Standard Deviations Across Groups\nWhen we want to calculate the standard deviation of a quantitative variable (y) measured across the values/groups of a categorical variable (x) it is a simple modification to the single standard deviation code.\n\nsd(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm and species from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm) and/or another categorical variable (e.g., sex).\nRemember to add na.rm = TRUE if you get a warning.",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"
     ]
   },
   {
-    "objectID": "summary-statistics/measures-of-spread.html#definition-median",
-    "href": "summary-statistics/measures-of-spread.html#definition-median",
-    "title": "Measures of Center",
-    "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
+    "objectID": "summary-statistics/measures-of-spread.html#definition-standard-deviation",
+    "href": "summary-statistics/measures-of-spread.html#definition-standard-deviation",
+    "title": "Measures of Spread",
+    "section": "Definition: STANDARD DEVIATION",
+    "text": "Definition: STANDARD DEVIATION\nThe standard deviation is the square root of the variance. It also measures the spread about the mean, always zero or greater than zero, and is used more often than the variance as it has the same units of measurement as the original observations.\n\\[s= \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}\\left(\\ x_i-\\bar{x}\\right)^2}{n-1}}\\]",
+    "crumbs": [
+      "Summary Statistics with `mosaic`",
+      "Measures of Spread"
+    ]
+  },
+  {
+    "objectID": "summary-statistics/measures-of-spread.html#quartilespercentiles",
+    "href": "summary-statistics/measures-of-spread.html#quartilespercentiles",
+    "title": "Measures of Spread",
+    "section": "Quartiles/Percentiles",
+    "text": "Quartiles/Percentiles",
+    "crumbs": [
+      "Summary Statistics with `mosaic`",
+      "Measures of Spread"
+    ]
+  },
+  {
+    "objectID": "summary-statistics/measures-of-spread.html#interquartile-range-iqr",
+    "href": "summary-statistics/measures-of-spread.html#interquartile-range-iqr",
+    "title": "Measures of Spread",
+    "section": "Interquartile Range (IQR)",
+    "text": "Interquartile Range (IQR)",
+    "crumbs": [
+      "Summary Statistics with `mosaic`",
+      "Measures of Spread"
+    ]
+  },
+  {
+    "objectID": "summary-statistics/measures-of-spread.html#range",
+    "href": "summary-statistics/measures-of-spread.html#range",
+    "title": "Measures of Spread",
+    "section": "Range",
+    "text": "Range",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"

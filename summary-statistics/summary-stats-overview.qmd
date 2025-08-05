@@ -1,14 +1,14 @@
 ---
-title: "Overview for Data Visualization"
+title: "Overview for Summary Statistics"
 format: html
 execute: 
   warning: false
   message: false
 ---
 
-# Making Visualizations with `ggformula`
+# Calculating Summary Statistics with `mosaic`
 
-The package `ggformula` is built to overlay the Grammar of Graphics used in package `ggplot2` with a formula based syntax. The formula based syntax means that all `ggformula` generated graphics will generally take one of the following forms:
+The package `mosaic` is built to overlay the existing functions used in base R packages to be easier to use with a formula based syntax. The formula based syntax means that all `mosaic` generated summary statistics the code will generally take one of the following forms:
 
 **One Variable**
 
@@ -26,30 +26,21 @@ gf_goal(~ x, data = mydata)
 gf_goal(y ~ x, data = mydata)
 ```
 
-**Two or More Variables Split by Groups**
-
-```{r}
-#| label: facet-var-structure
-#| eval: false
-gf_goal(~ x | z, data = mydata)
-gf_goal(y ~ x | z, data = mydata)
-```
-
 where the
 
--   `goal` will be the specific function for the graph type (e.g. `gf_histogram()`),
--   the `y` and `x` will be the specific **variables/columns** in the data mapped to the y-axis and x-axis respectively, with `| z` the feature that facets into different graphs for group values of `z`, and
+-   `goal` will be the specific function for the graph type (e.g. `mean()`),
+-   the `y` and `x` will be the specific **variables/columns** in the data and may be **categorical** or **quantitative** depending on the statistic type, and
 -   `mydata` is the object name of your data.
 
 ## Getting Started
 
-First, be sure you have installed `ggformula`. Remember, you only need to install the package once on your machine.
+First, be sure you have installed `mosaic`. Remember, you only need to install the package once on your machine.
 
-Then, be sure to load the package `ggformula`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.
+Then, be sure to load the package `mosaic`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.
 
 ```{r}
 #| label: setup
-library(ggformula) #for graphs
+library(mosaic) #for summary stats
 ```
 
 ```{r}
@@ -58,47 +49,6 @@ library(ggformula) #for graphs
 library(tidyverse) #for other data management
 ```
 
-## Common Modifications/Arguments
-
-Every visualization type has some modifications that are specific to that type, but there are some universal modifications that should be added to every graph.
-
-### Axis Labels
-
-Every visualization should have its axes labelled according to the context of the data. Axis labels should always include
-
--   The variables or cases they represent
-    -   Always include units (e.g. inches, %) for variables\
--   The individual/sample/population represented by data\
--   A descriptive title - this should not be "X vs Y", but something like "As X increases we see that Y decreases"
-
-Here is how that is added to our `gf_goal()` function:
-
-```{r}
-#| label: two-var-structure-labels
-#| eval: false
-gf_goal(formula, #takes many different forms 
-        data = mydata,
-        xlab = "X Variable, Units, and/or Sample",
-        ylab = "Y Variable, Units, and/or Sample",
-        title = "Title describing relationship")
-```
-
-### Adding `ggplot2` Layers
-
-The package `ggformula` is built on top of another package called `ggplot2` and so any `ggplot2` function can be added to a `ggformula` generated graphic. 
-
-For example, we can change the theme to a [built-in theme](https://ggplot2.tidyverse.org/reference/ggtheme.html) or modify other features using `+` after the `ggformula` function to add the [`ggplot2` layers](https://ggplot2.tidyverse.org/) to the graph.
-
-```{r}
-#| label: ggplot2-layers
-#| eval: false
-gf_goal(formula, #takes many different forms 
-        data = mydata,
-        xlab = "X Variable, Units, and/or Sample",
-        ylab = "Y Variable, Units, and/or Sample",
-        title = "Title describing relationship") +
-  theme_light()
-```
 
 
 # Data Structures

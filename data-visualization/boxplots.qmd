@@ -1,18 +1,36 @@
 ---
 title: "Boxplots"
-format: live-html
-engine: knitr
-webr:
-  packages: ['ggformula', 'palmerpenguins']
+format: 
+  live-html:
+    webr:
+      packages: 
+        - ggformula
+        - palmerpenguins
+      cell-options:
+        warning: false
+        completion: false
 execute: 
   warning: false
   message: false
 code-copy: true
 code-overflow: wrap
 toc: true
+css: ../styles.css
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r}
+#| label: theme
+#| include: false
+#| edit: false
+library(ggplot2)
+theme_set(theme_light())
+options(ggplot2.continuous.color = scale_color_viridis_c, 
+        ggplot2.continuous.fill = scale_fill_viridis_c,
+        ggplot2.discrete.color = scale_color_viridis_d,
+        ggplot2.discrete.fill = scale_fill_viridis_d)
+```
 
 ## Getting Started
 
@@ -25,7 +43,9 @@ Then, be sure to load the package `ggformula`. Remember, you need to do this wit
 library(ggformula) #for graphs
 ```
 
-### Data for Examples
+### Data for Examples <a class="btn btn-primary" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples">Show</a>
+
+::: {#data-for-examples .collapse .multi-collapse}
 
 As a reminder (see [Overview of Data Visualization](visualization-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
@@ -45,6 +65,8 @@ slice_sample(penguins, n = 5) |>
   gt::gt() |> 
   gt::tab_header(title = "Palmer Penguins")
 ```
+:::
+
 
 ## Boxplots with One Quantitative Variable
 
@@ -71,26 +93,35 @@ gf_boxplot(~x,
            axis.text.y = element_blank())   #removes y-axis labels
 ```
 
-Notice the use of the native pipe `|>` to connect the two functions from `ggformula`. Another version of a pipe in R is `%>%`. Both will work, it is just that `%>%` relies on another pacakge and `|>` is built into base R.  
+Notice the use of the native pipe `|>` to connect the two functions from `ggformula`. Another version of a pipe in R is `%>%`. Both will work, it is just that `%>%` relies on another package and `|>` is built into base R.  
 
 
 Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
 
 ```{webr}
 #| label: boxplot-one
+#| warning: true
 gf_boxplot(~bill_length_mm, 
            data = penguins) |> 
   gf_theme(axis.ticks.y = element_blank(), 
            axis.text.y = element_blank())
 ```
 
-**Notice** the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized.
+
+
+::: {.callout-important}
+
+## Warnings in R
+
+Notice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized. A **Warning** is simply R communicating a decision it made without your consent. The code still works.
+
+:::
 
 
 
 ### Adding Labels
 
-Descriptive labels are important for any visualization. We can always add them to any visualization by adding `xlab =` to your function. Notice, for a single variable we do not add a y-axis label.  
+Descriptive labels are important for any visualization. We can always add them to any visualization by adding `xlab =` to your function. **Notice, for a single variable we do not add a y-axis label.** 
 
 ```{r}
 #| label: one-var-structure-labels
@@ -103,21 +134,29 @@ gf_boxplot(~x,
            axis.text.y = element_blank())
 ```
 
+
 Add labels and a title to the boxplot for `bill_length_mm`.
 
 ```{webr}
 #| label: boxplot-add-labels
 gf_boxplot(~bill_length_mm, 
-           data = penguins) |> 
+           data = penguins,
+           xlab = "______________",
+           title = "_____________") |> 
   gf_theme(axis.ticks.y = element_blank(), 
            axis.text.y = element_blank())
 ```
 
-### Other Modifications
+## Other Modifications <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications">Show</a>
+
+::: {#other-modifications .collapse .multi-collapse}
 
 We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.
 
-#### Adding the Data Points to the Graph
+
+::: {.panel-tabset}
+
+### Adding the Data Points to the Graph
 
 Boxplots often hide the amount of data they represent (the number of cases). To combat this, we can add the data points to the boxplot using the `gf_jitter()` function.  You can modify the `height = ` argument to change the distance between points. Notice the `0` which centers the points on the y-axis at 0. 
 
@@ -134,7 +173,7 @@ gf_boxplot(~x,
 ```
 
 
-Modify the values for `height = ` agrument and see how they affect the point distribution on the y-axis. Remember, the y-axis has no meaning here, so the heights of the points are random and not representative of any element of the data. Just the position on the x-axis is meaningful. 
+Modify the values for `height = ` argument and see how they affect the point distribution on the y-axis. Remember, the y-axis has no meaning here, so the heights of the points are random and not representative of any element of the data. Just the position on the x-axis is meaningful. 
 
 ```{webr}
 #| label: boxplot-add-jitter
@@ -148,9 +187,9 @@ gf_boxplot(~bill_length_mm,
 ```
 
 
-#### Filling the Boxes with Color
+### Filling the Boxes with Color
 
-We can add a color to fill the boxes by telling R to fill the bars with a specified color either using a [built in color from R](https://r-charts.com/colors/) or using a [hex code for colors](https://htmlcolorcodes.com/color-picker/) .
+We can add a color to fill the boxes by telling R to fill the boxes with a specified color either using a [built in color from R](https://r-charts.com/colors/) or using a [hex code for colors](https://htmlcolorcodes.com/color-picker/) .
 
 ```{r}
 #| label: one-var-structure-box-fill
@@ -164,9 +203,9 @@ gf_boxplot(~x,
            axis.text.y = element_blank())
 ```
 
-#### Changing the Theme
+### Changing the Theme
 
-The package `ggformula` is built on top of another package called `ggplot2` and so any `ggplot2` function can be added to a `ggformula` generated graphic. For example, we can change the theme to a [built-in theme](https://ggplot2.tidyverse.org/reference/ggtheme.html). To connect `ggplot2` functions, we will use a `+` at the end of the line precedding the function.  
+The package `ggformula` is built on top of another package called `ggplot2` and so any `ggplot2` function can be added to a `ggformula` generated graphic. For example, we can change the theme to a [built-in theme](https://ggplot2.tidyverse.org/reference/ggtheme.html). To connect `ggplot2` functions, we will use a `+` at the end of the line preceding the function.  
 
 Try changing the theme to the following graph:
 
@@ -178,6 +217,10 @@ gf_boxplot(~bill_length_mm,
            axis.text.y = element_blank()) + #notice the plus +
   theme_light() #ggplot2 function
 ```
+
+:::
+
+:::
 
 
 ## Boxplots for Comparisons Across Groups
@@ -192,9 +235,17 @@ gf_boxplot(y ~ x,
 #we don't need to do anything to the y-axis now because it represents a variable here 
 ```
 
+
+::: {.callout-important}
+
+## Switching Box Plot Orientation
+
 The variable places in the `y` position will be on the y-axis and the variable in the `x` position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the **quantitative** and **categorical** variable.  
+:::
+
 
 Here is an example with `species` on the y-axis. Try modifying the code so that `species` is on the x-axis and `bill_length_mm` is on the y-axis. Then modify the axes labels.
+
 ```{webr}
 #| label: two-var-boxplot
 gf_boxplot(species ~ bill_length_mm, 
@@ -202,6 +253,21 @@ gf_boxplot(species ~ bill_length_mm,
            xlab = "Add Variable X Information",
            ylab = "Add Variable Y Information") 
 ```
+
+
+
+
+
+
+## Other Modifications for Comparisons <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications-2" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications-2">Show</a>
+
+::: {#other-modifications-2 .collapse .multi-collapse}
+
+We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.
+
+
+::: {.panel-tabset}
+
 
 ### Adding Jitter to Groups
 
@@ -233,6 +299,7 @@ gf_boxplot(species ~ bill_length_mm,
            show.legend = FALSE) #hides unnecessary legend for fill
 ```
 
+### Adding Both Color and Jitter
 
 If we want to specify color and add jitter, we can do that too!
 
@@ -250,3 +317,7 @@ gf_boxplot(species ~ bill_length_mm,
             show.legend = FALSE) #hides new legend for color
 
 ```
+
+:::
+
+:::

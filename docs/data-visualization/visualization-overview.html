@@ -75,7 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-12c574348b63db2933239543bd592c38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f5e75c72e03438310f9ee440bbb0102d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -103,12 +105,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -323,24 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#making-visualizations-with-ggformula" id="toc-making-visualizations-with-ggformula" class="nav-link active" data-scroll-target="#making-visualizations-with-ggformula">Making Visualizations with <code>ggformula</code></a>
-  <ul class="collapse">
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#common-modificationsarguments" id="toc-common-modificationsarguments" class="nav-link" data-scroll-target="#common-modificationsarguments">Common Modifications/Arguments</a>
-  <ul class="collapse">
-  <li><a href="#axis-labels" id="toc-axis-labels" class="nav-link" data-scroll-target="#axis-labels">Axis Labels</a></li>
-  <li><a href="#adding-ggplot2-layers" id="toc-adding-ggplot2-layers" class="nav-link" data-scroll-target="#adding-ggplot2-layers">Adding <code>ggplot2</code> Layers</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures">Data Structures</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -450,23 +436,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Here is a snippet of the data:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ywgzzpfjwf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ywgzzpfjwf table {
+<div id="xszdorymmt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xszdorymmt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ywgzzpfjwf thead, #ywgzzpfjwf tbody, #ywgzzpfjwf tfoot, #ywgzzpfjwf tr, #ywgzzpfjwf td, #ywgzzpfjwf th {
+#xszdorymmt thead, #xszdorymmt tbody, #xszdorymmt tfoot, #xszdorymmt tr, #xszdorymmt td, #xszdorymmt th {
   border-style: none;
 }
 
-#ywgzzpfjwf p {
+#xszdorymmt p {
   margin: 0;
   padding: 0;
 }
 
-#ywgzzpfjwf .gt_table {
+#xszdorymmt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -492,12 +478,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_caption {
+#xszdorymmt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ywgzzpfjwf .gt_title {
+#xszdorymmt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -509,7 +495,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#ywgzzpfjwf .gt_subtitle {
+#xszdorymmt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -521,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#ywgzzpfjwf .gt_heading {
+#xszdorymmt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -533,13 +519,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_bottom_border {
+#xszdorymmt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_col_headings {
+#xszdorymmt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -554,7 +540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_col_heading {
+#xszdorymmt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -574,7 +560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#ywgzzpfjwf .gt_column_spanner_outer {
+#xszdorymmt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -586,15 +572,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#ywgzzpfjwf .gt_column_spanner_outer:first-child {
+#xszdorymmt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ywgzzpfjwf .gt_column_spanner_outer:last-child {
+#xszdorymmt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ywgzzpfjwf .gt_column_spanner {
+#xszdorymmt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -606,11 +592,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#ywgzzpfjwf .gt_spanner_row {
+#xszdorymmt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ywgzzpfjwf .gt_group_heading {
+#xszdorymmt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -636,7 +622,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#ywgzzpfjwf .gt_empty_group_heading {
+#xszdorymmt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -651,15 +637,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#ywgzzpfjwf .gt_from_md > :first-child {
+#xszdorymmt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ywgzzpfjwf .gt_from_md > :last-child {
+#xszdorymmt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ywgzzpfjwf .gt_row {
+#xszdorymmt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -678,7 +664,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#ywgzzpfjwf .gt_stub {
+#xszdorymmt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -691,7 +677,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ywgzzpfjwf .gt_stub_row_group {
+#xszdorymmt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -705,15 +691,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#ywgzzpfjwf .gt_row_group_first td {
+#xszdorymmt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ywgzzpfjwf .gt_row_group_first th {
+#xszdorymmt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ywgzzpfjwf .gt_summary_row {
+#xszdorymmt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -723,16 +709,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ywgzzpfjwf .gt_first_summary_row {
+#xszdorymmt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_first_summary_row.thick {
+#xszdorymmt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ywgzzpfjwf .gt_last_summary_row {
+#xszdorymmt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -742,7 +728,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_grand_summary_row {
+#xszdorymmt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -752,7 +738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ywgzzpfjwf .gt_first_grand_summary_row {
+#xszdorymmt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -762,7 +748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_last_grand_summary_row_top {
+#xszdorymmt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -772,11 +758,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_striped {
+#xszdorymmt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ywgzzpfjwf .gt_table_body {
+#xszdorymmt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -785,7 +771,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_footnotes {
+#xszdorymmt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -799,7 +785,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_footnote {
+#xszdorymmt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -808,7 +794,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ywgzzpfjwf .gt_sourcenotes {
+#xszdorymmt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -822,7 +808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ywgzzpfjwf .gt_sourcenote {
+#xszdorymmt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -830,72 +816,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ywgzzpfjwf .gt_left {
+#xszdorymmt .gt_left {
   text-align: left;
 }
 
-#ywgzzpfjwf .gt_center {
+#xszdorymmt .gt_center {
   text-align: center;
 }
 
-#ywgzzpfjwf .gt_right {
+#xszdorymmt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ywgzzpfjwf .gt_font_normal {
+#xszdorymmt .gt_font_normal {
   font-weight: normal;
 }
 
-#ywgzzpfjwf .gt_font_bold {
+#xszdorymmt .gt_font_bold {
   font-weight: bold;
 }
 
-#ywgzzpfjwf .gt_font_italic {
+#xszdorymmt .gt_font_italic {
   font-style: italic;
 }
 
-#ywgzzpfjwf .gt_super {
+#xszdorymmt .gt_super {
   font-size: 65%;
 }
 
-#ywgzzpfjwf .gt_footnote_marks {
+#xszdorymmt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ywgzzpfjwf .gt_asterisk {
+#xszdorymmt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ywgzzpfjwf .gt_indent_1 {
+#xszdorymmt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ywgzzpfjwf .gt_indent_2 {
+#xszdorymmt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ywgzzpfjwf .gt_indent_3 {
+#xszdorymmt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ywgzzpfjwf .gt_indent_4 {
+#xszdorymmt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ywgzzpfjwf .gt_indent_5 {
+#xszdorymmt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ywgzzpfjwf .katex-display {
+#xszdorymmt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ywgzzpfjwf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xszdorymmt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -918,102 +904,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Torgersen</td>
-<td class="gt_row gt_right" headers="bill_length_mm">42.9</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">17.6</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">196</td>
-<td class="gt_row gt_right" headers="body_mass_g">4700</td>
-<td class="gt_row gt_center" headers="sex">male</td>
-<td class="gt_row gt_right" headers="year">2008</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_center" headers="species">Gentoo</td>
 <td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">44.5</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">14.3</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">216</td>
-<td class="gt_row gt_right" headers="body_mass_g">4100</td>
-<td class="gt_row gt_center" headers="sex">NA</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Dream</td>
-<td class="gt_row gt_right" headers="bill_length_mm">39.5</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">16.7</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">178</td>
-<td class="gt_row gt_right" headers="body_mass_g">3250</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center" headers="species">Chinstrap</td>
-<td class="gt_row gt_center" headers="island">Dream</td>
-<td class="gt_row gt_right" headers="bill_length_mm">45.6</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">19.4</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">194</td>
-<td class="gt_row gt_right" headers="body_mass_g">3525</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="species">Chinstrap</td>
-<td class="gt_row gt_center" headers="island">Dream</td>
-<td class="gt_row gt_right" headers="bill_length_mm">45.7</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">17.3</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">193</td>
-<td class="gt_row gt_right" headers="body_mass_g">3600</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Torgersen</td>
-<td class="gt_row gt_right" headers="bill_length_mm">35.2</td>
+<td class="gt_row gt_right" headers="bill_length_mm">50.5</td>
 <td class="gt_row gt_right" headers="bill_depth_mm">15.9</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">186</td>
-<td class="gt_row gt_right" headers="body_mass_g">3050</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Torgersen</td>
-<td class="gt_row gt_right" headers="bill_length_mm">35.9</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">16.6</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">190</td>
-<td class="gt_row gt_right" headers="body_mass_g">3050</td>
-<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">222</td>
+<td class="gt_row gt_right" headers="body_mass_g">5550</td>
+<td class="gt_row gt_center" headers="sex">male</td>
 <td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="species">Gentoo</td>
 <td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">41.3</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">21.1</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">195</td>
-<td class="gt_row gt_right" headers="body_mass_g">4400</td>
+<td class="gt_row gt_right" headers="bill_length_mm">49.8</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">15.9</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">229</td>
+<td class="gt_row gt_right" headers="body_mass_g">5950</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2009</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Gentoo</td>
+<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_right" headers="bill_length_mm">49.5</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.2</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">229</td>
+<td class="gt_row gt_right" headers="body_mass_g">5800</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Gentoo</td>
+<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_right" headers="bill_length_mm">53.4</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">15.8</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">219</td>
+<td class="gt_row gt_right" headers="body_mass_g">5500</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2009</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">43.2</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.6</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">187</td>
+<td class="gt_row gt_right" headers="body_mass_g">2900</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">51.0</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.8</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">203</td>
+<td class="gt_row gt_right" headers="body_mass_g">4100</td>
 <td class="gt_row gt_center" headers="sex">male</td>
 <td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="species">Gentoo</td>
 <td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">47.3</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">15.3</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">222</td>
-<td class="gt_row gt_right" headers="body_mass_g">5250</td>
+<td class="gt_row gt_right" headers="bill_length_mm">51.5</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.3</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">230</td>
+<td class="gt_row gt_right" headers="body_mass_g">5500</td>
 <td class="gt_row gt_center" headers="sex">male</td>
-<td class="gt_row gt_right" headers="year">2007</td>
+<td class="gt_row gt_right" headers="year">2009</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Torgersen</td>
-<td class="gt_row gt_right" headers="bill_length_mm">44.1</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">18.0</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">210</td>
-<td class="gt_row gt_right" headers="body_mass_g">4000</td>
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">49.8</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">17.3</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">198</td>
+<td class="gt_row gt_right" headers="body_mass_g">3675</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2009</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Gentoo</td>
+<td class="gt_row gt_center" headers="island">Biscoe</td>
+<td class="gt_row gt_right" headers="bill_length_mm">46.4</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">15.0</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">216</td>
+<td class="gt_row gt_right" headers="body_mass_g">4700</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">50.7</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">19.7</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">203</td>
+<td class="gt_row gt_right" headers="body_mass_g">4050</td>
 <td class="gt_row gt_center" headers="sex">male</td>
 <td class="gt_row gt_right" headers="year">2009</td>
 </tr>
@@ -1034,9 +1020,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We also notice that each <strong>row</strong> represents a single penguin and its characteristics. Each <strong>cell</strong> contains a single value associated with a specific variable measured on a specific penguin.</p>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../data-visualization";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1456,7 +1467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

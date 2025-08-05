@@ -1,11 +1,10 @@
 ---
-title: "Measures of Center"
+title: "Measures of Spread"
 format: 
   live-html:
     webr:
       packages: 
         - mosaic
-        - ggformula
         - palmerpenguins
       cell-options:
         warning: false
@@ -19,7 +18,7 @@ css: ../styles.css
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-{{< include ../_extensions/r-wasm/live/_gradethis.qmd >}}
+
 
 
 ```{webr}
@@ -47,9 +46,11 @@ library(mosaic) #for summary stats
 ```
 
 
-### Data for Examples
+### Data for Examples <a class="btn btn-primary" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples">Show</a>
 
-As a reminder (see [Overview of Data ation](summary-stats-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
+::: {#data-for-examples .collapse .multi-collapse}
+
+As a reminder (see [Overview of Summary Statistics](summary-stats-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -68,80 +69,37 @@ slice_sample(penguins, n = 5) |>
   gt::tab_header(title = "Palmer Penguins")
 ```
 
-## Mean
+:::
 
-::: {.callout-information}
-## Definition: MEAN
-Sometimes called "the average" it is a summary of **quantitative** variables that measures 
 
-$$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \frac{1}{n}\sum_{i = 1}^{n}{x_i} $$
+## Variance 
+
+::: {.callout-note collapse="true"}
+## Definition: VARIANCE
+The average of the distances from each data point in the sample to the sample mean $\bar{x}$, squared
+
+$$s^2=\frac{\sum_{i=1}^{n}\left(\ x_i-\bar{x}\right)^2}{n-1}$$
+
+The variance is one of the most important metrics in statistics. It is the measure of spread around the mean.
 
 :::
 
 
 ### Basic Code
 
-For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
+For a single quantitative variable, `x`, here is the general structure for calculating a variance in R using the `var()` function from the `mosaic` package.
 
 ```{r}
-#| label: one-var-structure-mean
+#| label: one-var-structure-variance
 #| eval: false
-mean(~x, data = mydata)
-```
-
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
-
-```{r}
-#| label: mean-one
-mean(~bill_length_mm, data = penguins)
-```
-
-::: {.callout-warning}
-## Handling Missing Values
-Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
-
-```{r}
-#| label: one-var-structure-na-mean
-#| eval: false
-mean(~x, data = mydata, na.rm = TRUE)
-```
-
-:::
-
-
-### Multiple Means Across Groups
-
-When we want to calculate the mean of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
-
-
-
-## Median
-
-:::{.callout-information}
-## Definition: MEDIAN
-Also known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.
-
-1. Order the data from smallest to largest
-2. 
-
-:::
-
-
-### Basic Code
-
-For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `median()` function from the `mosaic` package.
-
-```{r}
-#| label: one-var-structure-median
-#| eval: false
-median(~x, data = mydata)
+var(~x, data = mydata)
 ```
 
 Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
 
 ```{webr}
-#| label: median-one
-median(~bill_length_mm, data = penguins)
+#| label: var-one
+var(~bill_length_mm, data = penguins)
 ```
 
 ::: {.callout-warning}
@@ -149,21 +107,101 @@ median(~bill_length_mm, data = penguins)
 Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
 
 ```{r}
-#| label: one-var-structure-na-median
+#| label: one-var-structure-na-variance
 #| eval: false
-median(~x, data = mydata, na.rm = TRUE)
+var(~x, data = mydata, na.rm = TRUE)
 ```
 
 :::
 
 
-### Multiple Medians Across Groups
+When we want to calculate the variance of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`) it is a simple modification to the single variance code.
 
-When we want to calculate the median of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
+```{r}
+#| label: two-var-structure-variance
+#| eval: false
+var(y ~ x, data = mydata)
+```
+
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` and `species` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`) and/or another categorical variable (e.g., `sex`). 
+
+Remember to add `na.rm = TRUE` if you get a *warning*. 
+
+```{webr}
+#| label: var-two
+var(bill_length_mm ~ species, data = penguins)
+```
+
+
+## Standard Deviation
+
+:::{.callout-note collapse="true"}
+
+## Definition: STANDARD DEVIATION
+The standard deviation is the square root of the variance. It also measures the spread about the mean, always zero or greater than zero, and is used more often than the variance as it has the same units of measurement as the original observations.
+
+$$s= \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^{n}\left(\ x_i-\bar{x}\right)^2}{n-1}}$$
+:::
+
+
+### Basic Code
+
+For a single quantitative variable, `x`, here is the general structure for calculating a standard deviation in R using the `sd()` function from the `mosaic` package.
+
+```{r}
+#| label: one-var-structure-sd
+#| eval: false
+sd(~x, data = mydata)
+```
+
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
+
+```{webr}
+#| label: sd-one
+sd(~bill_length_mm, data = penguins)
+```
+
+::: {.callout-warning collapse="true"}
+## Handling Missing Values
+Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the median, `na.rm = TRUE`. Add the argument to the code above
+
+```{r}
+#| label: one-var-structure-na-sd
+#| eval: false
+sd(~x, data = mydata, na.rm = TRUE)
+```
+
+:::
+
+
+### Multiple Standard Deviations Across Groups
+
+When we want to calculate the standard deviation of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`) it is a simple modification to the single standard deviation code.
+
+```{r}
+#| label: two-var-structure-sd
+#| eval: false
+sd(y ~ x, data = mydata)
+```
+
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` and `species` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`) and/or another categorical variable (e.g., `sex`). 
+
+Remember to add `na.rm = TRUE` if you get a *warning*. 
+
+```{webr}
+#| label: sd-two
+sd(bill_length_mm ~ species, data = penguins)
+```
+
+
+## Quartiles/Percentiles
 
 
 
 
+## Interquartile Range (IQR)
 
 
 
+
+## Range

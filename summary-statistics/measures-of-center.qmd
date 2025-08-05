@@ -5,7 +5,6 @@ format:
     webr:
       packages: 
         - mosaic
-        - ggformula
         - palmerpenguins
       cell-options:
         warning: false
@@ -19,7 +18,6 @@ css: ../styles.css
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-{{< include ../_extensions/r-wasm/live/_gradethis.qmd >}}
 
 
 ```{webr}
@@ -47,9 +45,11 @@ library(mosaic) #for summary stats
 ```
 
 
-### Data for Examples
+### Data for Examples <a class="btn btn-primary" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples">Show</a>
 
-As a reminder (see [Overview of Data ation](summary-stats-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
+::: {#data-for-examples .collapse .multi-collapse}
+
+As a reminder (see [Overview of Summary Statistics](summary-stats-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -68,11 +68,14 @@ slice_sample(penguins, n = 5) |>
   gt::tab_header(title = "Palmer Penguins")
 ```
 
+:::
+
 ## Mean
 
-::: {.callout-information}
+::: {.callout-note collapse="true"}
+
 ## Definition: MEAN
-Sometimes called "the average" it is a summary of **quantitative** variables that measures 
+Sometimes called "the average" it is a summary of a **quantitative** variable observed within a sample. It measures the "fulcrum" or the balancing point of the data values and uses every value within its calculation.  
 
 $$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \frac{1}{n}\sum_{i = 1}^{n}{x_i} $$
 
@@ -81,7 +84,7 @@ $$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \frac{1}{n}\sum_{i = 1}^{n}{
 
 ### Basic Code
 
-For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
+For a single **quantitative** variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
 
 ```{r}
 #| label: one-var-structure-mean
@@ -89,16 +92,17 @@ For a single quantitative variable, `x`, here is the general structure for calcu
 mean(~x, data = mydata)
 ```
 
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`).
 
-```{r}
+```{webr}
 #| label: mean-one
 mean(~bill_length_mm, data = penguins)
 ```
 
 ::: {.callout-warning}
 ## Handling Missing Values
-Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
+
+Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above and rerun it. The warning will disappear and a numeric value (the mean) will be provided.
 
 ```{r}
 #| label: one-var-structure-na-mean
@@ -111,25 +115,37 @@ mean(~x, data = mydata, na.rm = TRUE)
 
 ### Multiple Means Across Groups
 
-When we want to calculate the mean of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
+When we want to calculate the mean of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`) it is a simple modification to the single mean code.
 
+```{r}
+#| label: two-var-structure-mean
+#| eval: false
+mean(y ~ x, data = mydata)
+```
+
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` and `species` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`) and/or another categorical variable (e.g., `sex`). 
+
+Remember to add `na.rm = TRUE` if you get a *warning*. 
+
+```{webr}
+#| label: mean-two
+mean(bill_length_mm ~ species, data = penguins)
+```
 
 
 ## Median
 
-:::{.callout-information}
-## Definition: MEDIAN
-Also known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.
+:::{.callout-note collapse="true"}
 
-1. Order the data from smallest to largest
-2. 
+## Definition: MEDIAN
+Also known as the 50th percentile and the 2nd quantile, the median is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it. It is the middle value of the data.
 
 :::
 
 
 ### Basic Code
 
-For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `median()` function from the `mosaic` package.
+For a single quantitative variable, `x`, here is the general structure for calculating a median in R using the `median()` function from the `mosaic` package.
 
 ```{r}
 #| label: one-var-structure-median
@@ -144,9 +160,9 @@ Run the code below to see an example using the **quantitative** variable `bill_l
 median(~bill_length_mm, data = penguins)
 ```
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## Handling Missing Values
-Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
+Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the median, `na.rm = TRUE`. Add the argument to the code above
 
 ```{r}
 #| label: one-var-structure-na-median
@@ -159,11 +175,21 @@ median(~x, data = mydata, na.rm = TRUE)
 
 ### Multiple Medians Across Groups
 
-When we want to calculate the median of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
+When we want to calculate the median of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`) it is a simple modification to the single median code.
 
+```{r}
+#| label: two-var-structure-median
+#| eval: false
+median(y ~ x, data = mydata)
+```
 
+Run the code below to see an example using the **quantitative** variable `bill_length_mm` and `species` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`) and/or another categorical variable (e.g., `sex`). 
 
+Remember to add `na.rm = TRUE` if you get a *warning*. 
 
-
+```{webr}
+#| label: median-two
+median(bill_length_mm ~ species, data = penguins)
+```
 
 

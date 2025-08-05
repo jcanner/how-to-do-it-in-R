@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Overview for Data Visualization – How to do it in R</title>
+<title>Overview for Summary Statistics – How to do it in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-12c574348b63db2933239543bd592c38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f5e75c72e03438310f9ee440bbb0102d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -103,12 +105,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -323,30 +326,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#making-visualizations-with-ggformula" id="toc-making-visualizations-with-ggformula" class="nav-link active" data-scroll-target="#making-visualizations-with-ggformula">Making Visualizations with <code>ggformula</code></a>
-  <ul class="collapse">
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#common-modificationsarguments" id="toc-common-modificationsarguments" class="nav-link" data-scroll-target="#common-modificationsarguments">Common Modifications/Arguments</a>
-  <ul class="collapse">
-  <li><a href="#axis-labels" id="toc-axis-labels" class="nav-link" data-scroll-target="#axis-labels">Axis Labels</a></li>
-  <li><a href="#adding-ggplot2-layers" id="toc-adding-ggplot2-layers" class="nav-link" data-scroll-target="#adding-ggplot2-layers">Adding <code>ggplot2</code> Layers</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures">Data Structures</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../summary-statistics/summary-stats-overview.html">Summary Statistics with <code>mosaic</code></a></li><li class="breadcrumb-item"><a href="../summary-statistics/summary-stats-overview.html">Overview of <code>mosaic</code></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Overview for Data Visualization</h1>
+<h1 class="title">Overview for Summary Statistics</h1>
 </div>
 
 
@@ -363,9 +349,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="making-visualizations-with-ggformula" class="level1">
-<h1>Making Visualizations with <code>ggformula</code></h1>
-<p>The package <code>ggformula</code> is built to overlay the Grammar of Graphics used in package <code>ggplot2</code> with a formula based syntax. The formula based syntax means that all <code>ggformula</code> generated graphics will generally take one of the following forms:</p>
+<section id="calculating-summary-statistics-with-mosaic" class="level1">
+<h1>Calculating Summary Statistics with <code>mosaic</code></h1>
+<p>The package <code>mosaic</code> is built to overlay the existing functions used in base R packages to be easier to use with a formula based syntax. The formula based syntax means that all <code>mosaic</code> generated summary statistics the code will generally take one of the following forms:</p>
 <p><strong>One Variable</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(<span class="sc">~</span> x, <span class="at">data =</span> mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -374,63 +360,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(y <span class="sc">~</span> x, <span class="at">data =</span> mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Two or More Variables Split by Groups</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(<span class="sc">~</span> x <span class="sc">|</span> z, <span class="at">data =</span> mydata)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(y <span class="sc">~</span> x <span class="sc">|</span> z, <span class="at">data =</span> mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>where the</p>
 <ul>
-<li><code>goal</code> will be the specific function for the graph type (e.g.&nbsp;<code>gf_histogram()</code>),</li>
-<li>the <code>y</code> and <code>x</code> will be the specific <strong>variables/columns</strong> in the data mapped to the y-axis and x-axis respectively, with <code>| z</code> the feature that facets into different graphs for group values of <code>z</code>, and</li>
+<li><code>goal</code> will be the specific function for the graph type (e.g.&nbsp;<code>mean()</code>),</li>
+<li>the <code>y</code> and <code>x</code> will be the specific <strong>variables/columns</strong> in the data and may be <strong>categorical</strong> or <strong>quantitative</strong> depending on the statistic type, and</li>
 <li><code>mydata</code> is the object name of your data.</li>
 </ul>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>First, be sure you have installed <code>ggformula</code>. Remember, you only need to install the package once on your machine.</p>
-<p>Then, be sure to load the package <code>ggformula</code>. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.</p>
+<p>First, be sure you have installed <code>mosaic</code>. Remember, you only need to install the package once on your machine.</p>
+<p>Then, be sure to load the package <code>mosaic</code>. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggformula) <span class="co">#for graphs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mosaic) <span class="co">#for summary stats</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="common-modificationsarguments" class="level2">
-<h2 class="anchored" data-anchor-id="common-modificationsarguments">Common Modifications/Arguments</h2>
-<p>Every visualization type has some modifications that are specific to that type, but there are some universal modifications that should be added to every graph.</p>
-<section id="axis-labels" class="level3">
-<h3 class="anchored" data-anchor-id="axis-labels">Axis Labels</h3>
-<p>Every visualization should have its axes labelled according to the context of the data. Axis labels should always include</p>
-<ul>
-<li>The variables or cases they represent
-<ul>
-<li>Always include units (e.g.&nbsp;inches, %) for variables<br>
-</li>
-</ul></li>
-<li>The individual/sample/population represented by data<br>
-</li>
-<li>A descriptive title - this should not be “X vs Y”, but something like “As X increases we see that Y decreases”</li>
-</ul>
-<p>Here is how that is added to our <code>gf_goal()</code> function:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(formula, <span class="co">#takes many different forms </span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> mydata,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"X Variable, Units, and/or Sample"</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Y Variable, Units, and/or Sample"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Title describing relationship"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="adding-ggplot2-layers" class="level3">
-<h3 class="anchored" data-anchor-id="adding-ggplot2-layers">Adding <code>ggplot2</code> Layers</h3>
-<p>The package <code>ggformula</code> is built on top of another package called <code>ggplot2</code> and so any <code>ggplot2</code> function can be added to a <code>ggformula</code> generated graphic.</p>
-<p>For example, we can change the theme to a <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">built-in theme</a> or modify other features using <code>+</code> after the <code>ggformula</code> function to add the <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code> layers</a> to the graph.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_goal</span>(formula, <span class="co">#takes many different forms </span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> mydata,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"X Variable, Units, and/or Sample"</span>,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Y Variable, Units, and/or Sample"</span>,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Title describing relationship"</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
 </section>
 </section>
 <section id="data-structures" class="level1">
@@ -445,28 +387,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Here is an example of “tidy” data using data from a package called <code>palmerpenguins</code> (remember to install it!). First, load the package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here is a snippet of the data:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="mjzatymteo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mjzatymteo table {
+<div id="hlqhaeufuo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hlqhaeufuo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mjzatymteo thead, #mjzatymteo tbody, #mjzatymteo tfoot, #mjzatymteo tr, #mjzatymteo td, #mjzatymteo th {
+#hlqhaeufuo thead, #hlqhaeufuo tbody, #hlqhaeufuo tfoot, #hlqhaeufuo tr, #hlqhaeufuo td, #hlqhaeufuo th {
   border-style: none;
 }
 
-#mjzatymteo p {
+#hlqhaeufuo p {
   margin: 0;
   padding: 0;
 }
 
-#mjzatymteo .gt_table {
+#hlqhaeufuo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -492,12 +434,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_caption {
+#hlqhaeufuo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mjzatymteo .gt_title {
+#hlqhaeufuo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -509,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#mjzatymteo .gt_subtitle {
+#hlqhaeufuo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -521,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#mjzatymteo .gt_heading {
+#hlqhaeufuo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -533,13 +475,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_bottom_border {
+#hlqhaeufuo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_col_headings {
+#hlqhaeufuo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -554,7 +496,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_col_heading {
+#hlqhaeufuo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -574,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#mjzatymteo .gt_column_spanner_outer {
+#hlqhaeufuo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -586,15 +528,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#mjzatymteo .gt_column_spanner_outer:first-child {
+#hlqhaeufuo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mjzatymteo .gt_column_spanner_outer:last-child {
+#hlqhaeufuo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mjzatymteo .gt_column_spanner {
+#hlqhaeufuo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -606,11 +548,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#mjzatymteo .gt_spanner_row {
+#hlqhaeufuo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mjzatymteo .gt_group_heading {
+#hlqhaeufuo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -636,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#mjzatymteo .gt_empty_group_heading {
+#hlqhaeufuo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -651,15 +593,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#mjzatymteo .gt_from_md > :first-child {
+#hlqhaeufuo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mjzatymteo .gt_from_md > :last-child {
+#hlqhaeufuo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mjzatymteo .gt_row {
+#hlqhaeufuo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -678,7 +620,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#mjzatymteo .gt_stub {
+#hlqhaeufuo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -691,7 +633,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mjzatymteo .gt_stub_row_group {
+#hlqhaeufuo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -705,15 +647,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#mjzatymteo .gt_row_group_first td {
+#hlqhaeufuo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mjzatymteo .gt_row_group_first th {
+#hlqhaeufuo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mjzatymteo .gt_summary_row {
+#hlqhaeufuo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -723,16 +665,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mjzatymteo .gt_first_summary_row {
+#hlqhaeufuo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_first_summary_row.thick {
+#hlqhaeufuo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mjzatymteo .gt_last_summary_row {
+#hlqhaeufuo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -742,7 +684,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_grand_summary_row {
+#hlqhaeufuo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -752,7 +694,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mjzatymteo .gt_first_grand_summary_row {
+#hlqhaeufuo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -762,7 +704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_last_grand_summary_row_top {
+#hlqhaeufuo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -772,11 +714,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_striped {
+#hlqhaeufuo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mjzatymteo .gt_table_body {
+#hlqhaeufuo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -785,7 +727,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_footnotes {
+#hlqhaeufuo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -799,7 +741,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_footnote {
+#hlqhaeufuo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -808,7 +750,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mjzatymteo .gt_sourcenotes {
+#hlqhaeufuo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -822,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mjzatymteo .gt_sourcenote {
+#hlqhaeufuo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -830,72 +772,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mjzatymteo .gt_left {
+#hlqhaeufuo .gt_left {
   text-align: left;
 }
 
-#mjzatymteo .gt_center {
+#hlqhaeufuo .gt_center {
   text-align: center;
 }
 
-#mjzatymteo .gt_right {
+#hlqhaeufuo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mjzatymteo .gt_font_normal {
+#hlqhaeufuo .gt_font_normal {
   font-weight: normal;
 }
 
-#mjzatymteo .gt_font_bold {
+#hlqhaeufuo .gt_font_bold {
   font-weight: bold;
 }
 
-#mjzatymteo .gt_font_italic {
+#hlqhaeufuo .gt_font_italic {
   font-style: italic;
 }
 
-#mjzatymteo .gt_super {
+#hlqhaeufuo .gt_super {
   font-size: 65%;
 }
 
-#mjzatymteo .gt_footnote_marks {
+#hlqhaeufuo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mjzatymteo .gt_asterisk {
+#hlqhaeufuo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mjzatymteo .gt_indent_1 {
+#hlqhaeufuo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mjzatymteo .gt_indent_2 {
+#hlqhaeufuo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mjzatymteo .gt_indent_3 {
+#hlqhaeufuo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mjzatymteo .gt_indent_4 {
+#hlqhaeufuo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mjzatymteo .gt_indent_5 {
+#hlqhaeufuo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mjzatymteo .katex-display {
+#hlqhaeufuo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mjzatymteo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hlqhaeufuo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -918,103 +860,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">46.2</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">14.1</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">217</td>
-<td class="gt_row gt_right" headers="body_mass_g">4375</td>
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">36.0</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">17.8</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">195</td>
+<td class="gt_row gt_right" headers="body_mass_g">3450</td>
 <td class="gt_row gt_center" headers="sex">female</td>
 <td class="gt_row gt_right" headers="year">2009</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
+<td class="gt_row gt_center" headers="species">Adelie</td>
 <td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">48.7</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">15.1</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">222</td>
-<td class="gt_row gt_right" headers="body_mass_g">5350</td>
-<td class="gt_row gt_center" headers="sex">male</td>
-<td class="gt_row gt_right" headers="year">2007</td>
+<td class="gt_row gt_right" headers="bill_length_mm">35.7</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.9</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">185</td>
+<td class="gt_row gt_right" headers="body_mass_g">3150</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="species">Gentoo</td>
 <td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">48.5</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">15.0</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">219</td>
-<td class="gt_row gt_right" headers="body_mass_g">4850</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2009</td>
+<td class="gt_row gt_right" headers="bill_length_mm">49.5</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.2</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">229</td>
+<td class="gt_row gt_right" headers="body_mass_g">5800</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="species">Gentoo</td>
 <td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">43.3</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">13.4</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">209</td>
-<td class="gt_row gt_right" headers="body_mass_g">4400</td>
+<td class="gt_row gt_right" headers="bill_length_mm">46.2</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">14.9</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">221</td>
+<td class="gt_row gt_right" headers="body_mass_g">5300</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">37.6</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">19.3</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">181</td>
+<td class="gt_row gt_right" headers="body_mass_g">3300</td>
 <td class="gt_row gt_center" headers="sex">female</td>
 <td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Chinstrap</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">47.5</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">16.8</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">199</td>
+<td class="gt_row gt_right" headers="body_mass_g">3900</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="species">Chinstrap</td>
 <td class="gt_row gt_center" headers="island">Dream</td>
-<td class="gt_row gt_right" headers="bill_length_mm">47.0</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">17.3</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">185</td>
-<td class="gt_row gt_right" headers="body_mass_g">3700</td>
+<td class="gt_row gt_right" headers="bill_length_mm">46.1</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.2</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">178</td>
+<td class="gt_row gt_right" headers="body_mass_g">3250</td>
 <td class="gt_row gt_center" headers="sex">female</td>
 <td class="gt_row gt_right" headers="year">2007</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="species">Adelie</td>
 <td class="gt_row gt_center" headers="island">Dream</td>
-<td class="gt_row gt_right" headers="bill_length_mm">41.1</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">18.1</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">205</td>
-<td class="gt_row gt_right" headers="body_mass_g">4300</td>
-<td class="gt_row gt_center" headers="sex">male</td>
-<td class="gt_row gt_right" headers="year">2008</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">43.4</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">14.4</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">218</td>
+<td class="gt_row gt_right" headers="bill_length_mm">39.6</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.8</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">190</td>
 <td class="gt_row gt_right" headers="body_mass_g">4600</td>
-<td class="gt_row gt_center" headers="sex">female</td>
-<td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">49.3</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">15.7</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">217</td>
-<td class="gt_row gt_right" headers="body_mass_g">5850</td>
 <td class="gt_row gt_center" headers="sex">male</td>
 <td class="gt_row gt_right" headers="year">2007</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="species">Adelie</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">37.6</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">19.1</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">194</td>
-<td class="gt_row gt_right" headers="body_mass_g">3750</td>
-<td class="gt_row gt_center" headers="sex">male</td>
-<td class="gt_row gt_right" headers="year">2008</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">36.6</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.4</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">184</td>
+<td class="gt_row gt_right" headers="body_mass_g">3475</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2009</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center" headers="species">Gentoo</td>
-<td class="gt_row gt_center" headers="island">Biscoe</td>
-<td class="gt_row gt_right" headers="bill_length_mm">45.7</td>
-<td class="gt_row gt_right" headers="bill_depth_mm">13.9</td>
-<td class="gt_row gt_right" headers="flipper_length_mm">214</td>
-<td class="gt_row gt_right" headers="body_mass_g">4400</td>
-<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Dream</td>
+<td class="gt_row gt_right" headers="bill_length_mm">43.2</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.5</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">192</td>
+<td class="gt_row gt_right" headers="body_mass_g">4100</td>
+<td class="gt_row gt_center" headers="sex">male</td>
 <td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 </tbody>
@@ -1034,9 +976,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We also notice that each <strong>row</strong> represents a single penguin and its characteristics. Each <strong>cell</strong> contains a single value associated with a specific variable measured on a specific penguin.</p>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../summary-statistics";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1456,7 +1423,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

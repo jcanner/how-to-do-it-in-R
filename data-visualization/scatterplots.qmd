@@ -1,5 +1,5 @@
 ---
-title: "Measures of Center"
+title: "Scatterplots"
 format: 
   live-html:
     webr:
@@ -20,7 +20,6 @@ css: ../styles.css
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-{{< include ../_extensions/r-wasm/live/_gradethis.qmd >}}
 
 
 ```{r}
@@ -28,8 +27,6 @@ css: ../styles.css
 #| include: false
 #| edit: false
 library(ggplot2)
-library(gradethis)
-library(checkdown)
 theme_set(theme_light())
 options(ggplot2.continuous.color = scale_color_viridis_c, 
         ggplot2.continuous.fill = scale_fill_viridis_c,
@@ -40,20 +37,20 @@ options(ggplot2.continuous.color = scale_color_viridis_c,
 
 ## Getting Started
 
-First, be sure you have installed `mosaic` and `ggformula`. Remember, you only need to install each package once on your machine.
+First, be sure you have installed `ggformula`. Remember, you only need to install the package once on your machine.
 
-Then, be sure to load the packages `mosaic` and `ggformula`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.
+Then, be sure to load the package `ggformula`. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.
 
 ```{webr}
 #| label: setup
 library(ggformula) #for graphs
-library(mosaic) #for summary stats
 ```
 
+### Data for Examples <a class="btn btn-primary" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples">Show</a>
 
-### Data for Examples
+::: {#data-for-examples .collapse .multi-collapse}
 
-As a reminder (see [Overview of Data Visualization](visualization-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
+As a reminder (see [Overview of Data Visualization](visualization-overview.qmd), we will be using the `penguins` data from the `palmerpenguins` package:
 
 ```{r}
 #| label: load-penguins
@@ -65,219 +62,47 @@ Here is a snippet of the data:
 ```{r}
 #| label: data-structure 
 #| echo: false
-library(dplyr) #for slice_sample function
-library(gt) #for table formatting
+library(dplyr)
+library(gt)
 slice_sample(penguins, n = 5) |> 
   gt::gt() |> 
   gt::tab_header(title = "Palmer Penguins")
 ```
-
-## Mean
-
-::: {.callout-information}
-## Definition: MEAN
-Sometimes called "the average" it is a summary of **quantitative** variables that measures 
-
-$$\bar{x} = \frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \frac{1}{n}\sum_{i = 1}^{n}{x_i} $$
-
 :::
 
+
+## Scatterplots
 
 ### Basic Code
 
-For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
+For two quantitative variables, `x` and `y`, here is the general structure for a scatterplot.
 
 ```{r}
-#| label: one-var-structure-mean
+#| label: scatterplot-basic
 #| eval: false
-mean(~x, data = mydata)
+gf_point(y ~ x, data = mydata)
 ```
 
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
-
-```{r}
-#| label: mean-one
-mean(~bill_length_mm, data = penguins)
-```
-
-::: {.callout-warning}
-## Handling Missing Values
-Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
-
-```{r}
-#| label: one-var-structure-na-mean
-#| eval: false
-mean(~x, data = mydata, na.rm = TRUE)
-```
-
-:::
-
-
-### Multiple Means Across Groups
-
-When we want to calculate the mean of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
-
-
-
-## Median
-
-:::{.callout-information}
-## Definition: MEDIAN
-Also known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.
-
-1. Order the data from smallest to largest
-2. 
-
-:::
-
-
-### Basic Code
-
-For a single quantitative variable, `x`, here is the general structure for calculating a mean in R using the `mean()` function from the `mosaic` package.
-
-```{r}
-#| label: one-var-structure-median
-#| eval: false
-mean(~x, data = mydata)
-```
-
-Run the code below to see an example using the **quantitative** variable `bill_length_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data (e.g. `bill_depth_mm`)
-
-```{r}
-#| label: median-one
-mean(~bill_length_mm, data = penguins)
-```
-
-::: {.callout-warning}
-## Handling Missing Values
-Notice the returned value of `NA`. The function needs to have another argument added that tells R to ignore missing values (`NA`) in order to calculate the mean, `na.rm = TRUE`. Add the argument to the code above
-
-```{r}
-#| label: one-var-structure-na-median
-#| eval: false
-mean(~x, data = mydata, na.rm = TRUE)
-```
-
-:::
-
-
-### Multiple Means Across Groups
-
-When we want to calculate the mean of a **quantitative** variable (`y`) measured across the values/groups of a **categorical** variable (`x`)
-
-
-
-
-
-
-## Comparing the Mean and Median
-
-
-
-
-
-
-::: {callout-note}
-
-## Check Your Understading: Histograms
-
-#### Question 1. Which of the following characteristics of the distribution of values for a variable can be evaluated using a histogram?
-
-```{r}
-#| label: histogram-characteristics-q1
-#| echo: false
-check_question(answer = c("center", 
-                          "symmetry/skew", 
-                          "spread", 
-                          "modality", 
-                          "outliers"), 
-               options = c("center", 
-                           "symmetry/skew", 
-                           "spread", 
-                           "modality", 
-                           "outliers"),
-               right = "Great Job! Histograms allow us to observe all of these features",
-               wrong = "Are you missing a feature of a distribution we can evaluate?",
-               type = "checkbox", 
-               button_label = "Check Your Answer")
-```
-
-#### 
-
-```{r}
-#| label: histogram-characteristics-q1-hint
-#| echo: false
-check_hint(hint_text = "Take a look at a histogram, is there any distribution feature you could not say something about?",
-           hint_title = "Click Here for Hint",
-           type = "onclick")
-```
-
-#### Question 2: Which of the following can we determine from the **y-axis** of a histogram?
-
-```{r}
-#| label: histogram-characteristics-q2
-#| echo: false
-check_question(answer = c("Number of individuals in a bin"), 
-               options = c("Number of individuals in a bin",
-                           "Variance of the variable",
-                           ""),
-               right = "Great Job!",
-               wrong = "Does the y-axis",
-               type = "checkbox", 
-               button_label = "Check Your Answer")
-```
-
-
-#### 
-
-```{r}
-#| label: histogram-characteristics-q2-hint
-#| echo: false
-check_hint(hint_text = "Does the y-axis represent a variable or a statistic", 
-           hint_title = "Click Here for Hint",
-           type = "onclick")
-```
-
-:::
-
-
-
-
-
-### Test your Knowledge
-
-Create a histogram of the **flipper length** for the penguins.
-```{webr}
-#| exercise: ex_1
-#| setup: true
-library(dplyr)
-exercise.reveal_solution
-```
+Run the code below to see an example using the **quantitative** variables `bill_length_mm` and `bill_depth_mm` from the `penguins` data. Then replace `bill_length_mm` with another quantitative variable from the `penguins` data or switch the order to see what happens. 
 
 ```{webr}
-#| caption: Sample Exercise
-#| exercise: ex_1
-
+#| label: scatterplot-one
+gf_point(bill_length_mm ~ bill_depth_mm, 
+         data = penguins)
 ```
 
-::: {.solution exercise="ex_1"}
+::: {.callout-important}
 
-#### Solution
+## Warnings in R
 
-Use the `gf_histogram()` function from the `{ggformula}` package.
-
-```{webr}
-#| exercise: ex_1
-#| solution: false
-gf_histogram(~flipper_length_mm, data = penguins,
-             xlab = "Flipper Length (mm) of Penguins",
-             ylab = "Number of Penguins")
-```
+Notice the warning produced from running the code. This is just a warning that there were rows (penguins) ignored due to missing data for the variables visualized. A **Warning** is simply R communicating a decision it made without your consent. The code still works.
 
 :::
 
-```{webr}
-#| exercise: ex_1
-#| check: true
-gradethis::grade_this_code()
-```
+## Adding a Regression Line
+
+
+
+
+
+

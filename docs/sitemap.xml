@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/summary-stats-overview.html</loc>
-    <lastmod>2025-07-22T01:18:46.909Z</lastmod>
+    <lastmod>2025-08-04T22:15:11.937Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/measures-of-relationship.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/measures-of-center.html</loc>
-    <lastmod>2025-07-22T01:17:57.368Z</lastmod>
+    <lastmod>2025-08-04T22:26:24.141Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/overview/code-style-guide.html</loc>
@@ -34,27 +34,27 @@
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/visualization-overview.html</loc>
-    <lastmod>2025-06-24T17:27:27.866Z</lastmod>
+    <lastmod>2025-08-04T22:16:02.813Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/histograms.html</loc>
-    <lastmod>2025-07-23T00:56:59.007Z</lastmod>
+    <lastmod>2025-08-04T22:16:06.571Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/barplots.html</loc>
-    <lastmod>2025-06-24T19:02:53.855Z</lastmod>
+    <lastmod>2025-08-04T22:06:16.446Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/boxplots.html</loc>
-    <lastmod>2025-06-26T01:08:21.838Z</lastmod>
+    <lastmod>2025-07-29T23:37:41.899Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/scatterplots.html</loc>
-    <lastmod>2025-07-21T17:55:59.690Z</lastmod>
+    <lastmod>2025-08-04T22:16:17.694Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/index.html</loc>
-    <lastmod>2025-07-22T02:51:16.719Z</lastmod>
+    <lastmod>2025-07-29T23:25:15.621Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/multiple-means.html</loc>
@@ -82,6 +82,6 @@
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/measures-of-spread.html</loc>
-    <lastmod>2025-07-22T01:18:24.065Z</lastmod>
+    <lastmod>2025-08-04T22:28:27.807Z</lastmod>
   </url>
 </urlset>
