@@ -26,7 +26,7 @@
     "href": "summary-statistics/measures-of-relationship.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n36.7\n18.8\n187\n3800\nfemale\n2008\n\n\nAdelie\nDream\n38.9\n18.8\n190\n3600\nfemale\n2008\n\n\nChinstrap\nDream\n46.4\n17.8\n191\n3700\nfemale\n2008\n\n\nGentoo\nBiscoe\n48.4\n14.6\n213\n5850\nmale\n2007\n\n\nGentoo\nBiscoe\n52.2\n17.1\n228\n5400\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n41.7\n14.7\n210\n4700\nfemale\n2009\n\n\nGentoo\nBiscoe\nNA\nNA\nNA\nNA\nNA\n2009\n\n\nChinstrap\nDream\n50.9\n19.1\n196\n3550\nmale\n2008\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nGentoo\nBiscoe\n50.1\n15.0\n225\n5000\nmale\n2008",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Relationship"
@@ -81,7 +81,7 @@
     "href": "summary-statistics/measures-of-center.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n41.3\n20.3\n194\n3550\nmale\n2008\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nAdelie\nTorgersen\n34.6\n21.1\n198\n4400\nmale\n2007\n\n\nChinstrap\nDream\n51.3\n18.2\n197\n3750\nmale\n2007\n\n\nGentoo\nBiscoe\n53.4\n15.8\n219\n5500\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n50.7\n19.7\n203\n4050\nmale\n2009\n\n\nGentoo\nBiscoe\n45.1\n14.4\n210\n4400\nfemale\n2008\n\n\nAdelie\nTorgersen\n33.5\n19.0\n190\n3600\nfemale\n2008\n\n\nGentoo\nBiscoe\n49.1\n14.8\n220\n5150\nfemale\n2008\n\n\nChinstrap\nDream\n45.2\n16.6\n191\n3250\nfemale\n2009",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -99,33 +99,11 @@
     ]
   },
   {
-    "objectID": "summary-statistics/measures-of-center.html#definition-mean",
-    "href": "summary-statistics/measures-of-center.html#definition-mean",
-    "title": "Measures of Center",
-    "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of a quantitative variable observed within a sample. It measures the “fulcrum” or the balancing point of the data values and uses every value within its calculation.\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Center"
-    ]
-  },
-  {
     "objectID": "summary-statistics/measures-of-center.html#median",
     "href": "summary-statistics/measures-of-center.html#median",
     "title": "Measures of Center",
     "section": "Median",
     "text": "Median\n\n\n\n\n\n\nDefinition: MEDIAN\n\n\n\n\n\nAlso known as the 50th percentile and the 2nd quantile, the median is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it. It is the middle value of the data.\n\n\n\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for calculating a median in R using the median() function from the mosaic package.\n\nmedian(~x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Missing Values\n\n\n\n\n\nNotice the returned value of NA. The function needs to have another argument added that tells R to ignore missing values (NA) in order to calculate the median, na.rm = TRUE. Add the argument to the code above\n\nmedian(~x, data = mydata, na.rm = TRUE)\n\n\n\n\n\n\nMultiple Medians Across Groups\nWhen we want to calculate the median of a quantitative variable (y) measured across the values/groups of a categorical variable (x) it is a simple modification to the single median code.\n\nmedian(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm and species from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm) and/or another categorical variable (e.g., sex).\nRemember to add na.rm = TRUE if you get a warning.",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Center"
-    ]
-  },
-  {
-    "objectID": "summary-statistics/measures-of-center.html#definition-median",
-    "href": "summary-statistics/measures-of-center.html#definition-median",
-    "title": "Measures of Center",
-    "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile and the 2nd quantile, the median is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it. It is the middle value of the data.",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -202,7 +180,7 @@
     "href": "inference/two-means.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nBiscoe\n39.7\n18.9\n184\n3550\nmale\n2009\n\n\nAdelie\nDream\n38.8\n20.0\n190\n3950\nmale\n2007\n\n\nGentoo\nBiscoe\n45.5\n15.0\n220\n5000\nmale\n2008\n\n\nAdelie\nBiscoe\n41.0\n20.0\n203\n4725\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n35.1\n19.4\n193\n4200\nmale\n2008\n\n\nGentoo\nBiscoe\n45.8\n14.6\n210\n4200\nfemale\n2007\n\n\nAdelie\nBiscoe\n42.2\n19.5\n197\n4275\nmale\n2009\n\n\nAdelie\nBiscoe\n35.7\n16.9\n185\n3150\nfemale\n2008\n\n\nAdelie\nDream\n38.8\n20.0\n190\n3950\nmale\n2007",
     "crumbs": [
       "Inference and Conditions",
       "Independent Two Sample Inference"
@@ -257,7 +235,7 @@
     "href": "inference/paired-mean.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n35.9\n19.2\n189\n3800\nfemale\n2007\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007\n\n\nGentoo\nBiscoe\n48.5\n14.1\n220\n5300\nmale\n2008\n\n\nGentoo\nBiscoe\n46.6\n14.2\n210\n4850\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.7\n15.0\n223\n5550\nmale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.7\n13.9\n214\n4400\nfemale\n2008\n\n\nChinstrap\nDream\n46.8\n16.5\n189\n3650\nfemale\n2009\n\n\nGentoo\nBiscoe\n53.4\n15.8\n219\n5500\nmale\n2009\n\n\nAdelie\nBiscoe\n36.5\n16.6\n181\n2850\nfemale\n2008\n\n\nAdelie\nTorgersen\n33.5\n19.0\n190\n3600\nfemale\n2008",
     "crumbs": [
       "Inference and Conditions",
       "Matched Pairs Inference"
@@ -312,7 +290,7 @@
     "href": "inference/multiple-proportions.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n48.5\n15.0\n219\n4850\nfemale\n2009\n\n\nChinstrap\nDream\n51.5\n18.7\n187\n3250\nmale\n2009\n\n\nGentoo\nBiscoe\n46.2\n14.1\n217\n4375\nfemale\n2009\n\n\nAdelie\nBiscoe\n39.6\n17.7\n186\n3500\nfemale\n2008\n\n\nChinstrap\nDream\n49.0\n19.6\n212\n4300\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n49.6\n15.0\n216\n4750\nmale\n2008\n\n\nChinstrap\nDream\n47.0\n17.3\n185\n3700\nfemale\n2007\n\n\nAdelie\nDream\n38.1\n17.6\n187\n3425\nfemale\n2009\n\n\nChinstrap\nDream\n49.6\n18.2\n193\n3775\nmale\n2009\n\n\nAdelie\nDream\n37.8\n18.1\n193\n3750\nmale\n2009",
     "crumbs": [
       "Inference and Conditions",
       "Chi-Square Goodness of Fit"
@@ -367,7 +345,7 @@
     "href": "inference/inference-overview.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic and ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic and ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see [Overview of Data Visualization]), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n35.7\n17.0\n189\n3350\nfemale\n2009\n\n\nAdelie\nDream\n43.2\n18.5\n192\n4100\nmale\n2008\n\n\nChinstrap\nDream\n40.9\n16.6\n187\n3200\nfemale\n2008\n\n\nChinstrap\nDream\n45.2\n17.8\n198\n3950\nfemale\n2007\n\n\nAdelie\nTorgersen\n37.8\n17.3\n180\n3700\nNA\n2007",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic and ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic and ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see [Overview of Data Visualization]), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n43.5\n18.1\n202\n3400\nfemale\n2009\n\n\nChinstrap\nDream\n45.6\n19.4\n194\n3525\nfemale\n2009\n\n\nGentoo\nBiscoe\n52.1\n17.0\n230\n5550\nmale\n2009\n\n\nGentoo\nBiscoe\n45.8\n14.2\n219\n4700\nfemale\n2008\n\n\nGentoo\nBiscoe\n44.5\n15.7\n217\n4875\nNA\n2009",
     "crumbs": [
       "Inference and Conditions",
       "Overview of `mosaic`"
@@ -466,7 +444,7 @@
     "href": "data-visualization/histograms.html#getting-started",
     "title": "Histograms",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Accessibility\n\n\n\n\n\nPlease note that all images were created with modifications to the defaults to make them digitally accessible. To make these modifications to your own plots, add the following to your plot code:\n\n+ theme_light()\n+ scale_fill_viridis_d()\n\n+ scale_color_viridis_d()\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n35.9\n19.2\n189\n3800\nfemale\n2007\n\n\nAdelie\nDream\n40.8\n18.4\n195\n3900\nmale\n2007\n\n\nAdelie\nDream\n37.2\n18.1\n178\n3900\nmale\n2007\n\n\nAdelie\nBiscoe\n37.7\n16.0\n183\n3075\nfemale\n2009\n\n\nAdelie\nDream\n38.1\n17.6\n187\n3425\nfemale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Accessibility\n\n\n\n\n\nPlease note that all images were created with modifications to the defaults to make them digitally accessible. To make these modifications to your own plots, add the following to your plot code:\n\n+ theme_light()\n+ scale_fill_viridis_d()\n\n+ scale_color_viridis_d()\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n51.0\n18.8\n203\n4100\nmale\n2008\n\n\nChinstrap\nDream\n45.6\n19.4\n194\n3525\nfemale\n2009\n\n\nAdelie\nBiscoe\n38.2\n20.0\n190\n3900\nmale\n2009\n\n\nGentoo\nBiscoe\n47.8\n15.0\n215\n5650\nmale\n2007\n\n\nAdelie\nTorgersen\n42.8\n18.5\n195\n4250\nmale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
@@ -510,7 +488,7 @@
     "href": "data-visualization/barplots.html",
     "title": "Bar Plots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n51.7\n20.3\n194\n3775\nmale\n2007\n\n\nChinstrap\nDream\n42.5\n17.3\n187\n3350\nfemale\n2009\n\n\nAdelie\nDream\n40.3\n18.5\n196\n4350\nmale\n2008\n\n\nAdelie\nTorgersen\n38.6\n21.2\n191\n3800\nmale\n2007\n\n\nChinstrap\nDream\n50.5\n18.4\n200\n3400\nfemale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n40.9\n13.7\n214\n4650\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.2\n14.1\n217\n4375\nfemale\n2009\n\n\nAdelie\nTorgersen\n41.1\n18.6\n189\n3325\nmale\n2009\n\n\nAdelie\nDream\n36.4\n17.0\n195\n3325\nfemale\n2007\n\n\nGentoo\nBiscoe\n49.3\n15.7\n217\n5850\nmale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
@@ -521,7 +499,7 @@
     "href": "data-visualization/barplots.html#getting-started",
     "title": "Bar Plots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n51.7\n20.3\n194\n3775\nmale\n2007\n\n\nChinstrap\nDream\n42.5\n17.3\n187\n3350\nfemale\n2009\n\n\nAdelie\nDream\n40.3\n18.5\n196\n4350\nmale\n2008\n\n\nAdelie\nTorgersen\n38.6\n21.2\n191\n3800\nmale\n2007\n\n\nChinstrap\nDream\n50.5\n18.4\n200\n3400\nfemale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n40.9\n13.7\n214\n4650\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.2\n14.1\n217\n4375\nfemale\n2009\n\n\nAdelie\nTorgersen\n41.1\n18.6\n189\n3325\nmale\n2009\n\n\nAdelie\nDream\n36.4\n17.0\n195\n3325\nfemale\n2007\n\n\nGentoo\nBiscoe\n49.3\n15.7\n217\n5850\nmale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
@@ -576,7 +554,7 @@
     "href": "data-visualization/boxplots.html",
     "title": "Boxplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n47.5\n16.8\n199\n3900\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.2\n16.4\n223\n5950\nmale\n2008\n\n\nGentoo\nBiscoe\n48.4\n16.3\n220\n5400\nmale\n2008\n\n\nChinstrap\nDream\n46.7\n17.9\n195\n3300\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.6\n14.2\n210\n4850\nfemale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n50.4\n15.3\n224\n5550\nmale\n2008\n\n\nGentoo\nBiscoe\n50.1\n15.0\n225\n5000\nmale\n2008\n\n\nChinstrap\nDream\n49.8\n17.3\n198\n3675\nfemale\n2009\n\n\nChinstrap\nDream\n50.5\n19.6\n201\n4050\nmale\n2007\n\n\nChinstrap\nDream\n54.2\n20.8\n201\n4300\nmale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
@@ -587,7 +565,7 @@
     "href": "data-visualization/boxplots.html#getting-started",
     "title": "Boxplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n47.5\n16.8\n199\n3900\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.2\n16.4\n223\n5950\nmale\n2008\n\n\nGentoo\nBiscoe\n48.4\n16.3\n220\n5400\nmale\n2008\n\n\nChinstrap\nDream\n46.7\n17.9\n195\n3300\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.6\n14.2\n210\n4850\nfemale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n50.4\n15.3\n224\n5550\nmale\n2008\n\n\nGentoo\nBiscoe\n50.1\n15.0\n225\n5000\nmale\n2008\n\n\nChinstrap\nDream\n49.8\n17.3\n198\n3675\nfemale\n2009\n\n\nChinstrap\nDream\n50.5\n19.6\n201\n4050\nmale\n2007\n\n\nChinstrap\nDream\n54.2\n20.8\n201\n4300\nmale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
@@ -642,7 +620,7 @@
     "href": "data-visualization/scatterplots.html",
     "title": "Scatterplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nGentoo\nBiscoe\n51.5\n16.3\n230\n5500\nmale\n2009\n\n\nChinstrap\nDream\n46.4\n17.8\n191\n3700\nfemale\n2008\n\n\nAdelie\nBiscoe\n42.0\n19.5\n200\n4050\nmale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n46.0\n18.9\n195\n4150\nfemale\n2007\n\n\nAdelie\nTorgersen\n38.9\n17.8\n181\n3625\nfemale\n2007\n\n\nChinstrap\nDream\n53.5\n19.9\n205\n4500\nmale\n2008\n\n\nAdelie\nDream\n36.6\n18.4\n184\n3475\nfemale\n2009\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Scatterplots"
@@ -653,7 +631,7 @@
     "href": "data-visualization/scatterplots.html#getting-started",
     "title": "Scatterplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nGentoo\nBiscoe\n51.5\n16.3\n230\n5500\nmale\n2009\n\n\nChinstrap\nDream\n46.4\n17.8\n191\n3700\nfemale\n2008\n\n\nAdelie\nBiscoe\n42.0\n19.5\n200\n4050\nmale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n46.0\n18.9\n195\n4150\nfemale\n2007\n\n\nAdelie\nTorgersen\n38.9\n17.8\n181\n3625\nfemale\n2007\n\n\nChinstrap\nDream\n53.5\n19.9\n205\n4500\nmale\n2008\n\n\nAdelie\nDream\n36.6\n18.4\n184\n3475\nfemale\n2009\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Scatterplots"
@@ -696,7 +674,7 @@
     "href": "inference/multiple-means.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n49.3\n15.7\n217\n5850\nmale\n2007\n\n\nGentoo\nBiscoe\n43.5\n14.2\n220\n4700\nfemale\n2008\n\n\nAdelie\nDream\n37.0\n16.9\n185\n3000\nfemale\n2007\n\n\nAdelie\nDream\n36.4\n17.0\n195\n3325\nfemale\n2007\n\n\nGentoo\nBiscoe\n53.4\n15.8\n219\n5500\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n35.0\n17.9\n190\n3450\nfemale\n2008\n\n\nGentoo\nBiscoe\n46.5\n14.5\n213\n4400\nfemale\n2007\n\n\nGentoo\nBiscoe\n47.3\n15.3\n222\n5250\nmale\n2007\n\n\nAdelie\nDream\n39.7\n17.9\n193\n4250\nmale\n2009\n\n\nAdelie\nBiscoe\n41.3\n21.1\n195\n4400\nmale\n2008",
     "crumbs": [
       "Inference and Conditions",
       "Analysis of Variance"
@@ -751,7 +729,7 @@
     "href": "inference/one-mean.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n37.8\n17.1\n186\n3300\nNA\n2007\n\n\nGentoo\nBiscoe\n50.8\n17.3\n228\n5600\nmale\n2009\n\n\nAdelie\nTorgersen\n38.7\n19.0\n195\n3450\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.9\n14.6\n222\n4875\nfemale\n2009\n\n\nAdelie\nTorgersen\n42.1\n19.1\n195\n4000\nmale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.0\n17.1\n191\n3050\nfemale\n2009\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nChinstrap\nDream\n50.6\n19.4\n193\n3800\nmale\n2007\n\n\nGentoo\nBiscoe\n48.8\n16.2\n222\n6000\nmale\n2009\n\n\nAdelie\nTorgersen\n41.1\n18.6\n189\n3325\nmale\n2009",
     "crumbs": [
       "Inference and Conditions",
       "Confidence Interval - One Mean"
@@ -806,7 +784,7 @@
     "href": "inference/slope.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n34.0\n17.1\n185\n3400\nfemale\n2008\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nAdelie\nTorgersen\n35.1\n19.4\n193\n4200\nmale\n2008\n\n\nAdelie\nBiscoe\n39.7\n17.7\n193\n3200\nfemale\n2009\n\n\nAdelie\nBiscoe\n37.8\n20.0\n190\n4250\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n38.1\n17.0\n181\n3175\nfemale\n2009\n\n\nGentoo\nBiscoe\n49.4\n15.8\n216\n4925\nmale\n2009\n\n\nGentoo\nBiscoe\n42.6\n13.7\n213\n4950\nfemale\n2008\n\n\nAdelie\nTorgersen\n41.8\n19.4\n198\n4450\nmale\n2008\n\n\nGentoo\nBiscoe\n46.3\n15.8\n215\n5050\nmale\n2007",
     "crumbs": [
       "Inference and Conditions",
       "Simple Linear Regression"
@@ -868,7 +846,7 @@
     "href": "summary-statistics/generating-multiple-stats.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n43.4\n14.4\n218\n4600\nfemale\n2009\n\n\nChinstrap\nDream\n42.4\n17.3\n181\n3600\nfemale\n2007\n\n\nChinstrap\nDream\n49.6\n18.2\n193\n3775\nmale\n2009\n\n\nGentoo\nBiscoe\n44.0\n13.6\n208\n4350\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.8\n14.2\n219\n4700\nfemale\n2008",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n36.2\n17.2\n187\n3150\nfemale\n2009\n\n\nChinstrap\nDream\n46.6\n17.8\n193\n3800\nfemale\n2007\n\n\nChinstrap\nDream\n52.8\n20.0\n205\n4550\nmale\n2008\n\n\nGentoo\nBiscoe\n44.4\n17.3\n219\n5250\nmale\n2008\n\n\nAdelie\nTorgersen\n37.2\n19.4\n184\n3900\nmale\n2008",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Generating Multiple Statistics (`df_stats`)"
@@ -923,7 +901,7 @@
     "href": "summary-statistics/measures-of-frequency.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n46.2\n14.9\n221\n5300\nmale\n2008\n\n\nChinstrap\nDream\n46.4\n18.6\n190\n3450\nfemale\n2007\n\n\nGentoo\nBiscoe\n40.9\n13.7\n214\n4650\nfemale\n2007\n\n\nAdelie\nTorgersen\n42.0\n20.2\n190\n4250\nNA\n2007\n\n\nChinstrap\nDream\n50.7\n19.7\n203\n4050\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n46.4\n18.6\n190\n3450\nfemale\n2007\n\n\nAdelie\nBiscoe\n36.5\n16.6\n181\n2850\nfemale\n2008\n\n\nChinstrap\nDream\n46.9\n16.6\n192\n2700\nfemale\n2008\n\n\nChinstrap\nDream\n40.9\n16.6\n187\n3200\nfemale\n2008\n\n\nGentoo\nBiscoe\n53.4\n15.8\n219\n5500\nmale\n2009",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Frequency"
@@ -978,7 +956,7 @@
     "href": "summary-statistics/measures-of-spread.html#getting-started",
     "title": "Measures of Spread",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n50.1\n17.9\n190\n3400\nfemale\n2009\n\n\nAdelie\nDream\n35.6\n17.5\n191\n3175\nfemale\n2009\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007\n\n\nGentoo\nBiscoe\n50.4\n15.7\n222\n5750\nmale\n2009\n\n\nGentoo\nBiscoe\n46.3\n15.8\n215\n5050\nmale\n2007",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n43.3\n13.4\n209\n4400\nfemale\n2007\n\n\nChinstrap\nDream\n50.8\n18.5\n201\n4450\nmale\n2009\n\n\nAdelie\nDream\n43.2\n18.5\n192\n4100\nmale\n2008\n\n\nAdelie\nBiscoe\n41.0\n20.0\n203\n4725\nmale\n2009\n\n\nAdelie\nDream\n33.1\n16.1\n178\n2900\nfemale\n2008",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"
@@ -996,33 +974,11 @@
     ]
   },
   {
-    "objectID": "summary-statistics/measures-of-spread.html#definition-variance",
-    "href": "summary-statistics/measures-of-spread.html#definition-variance",
-    "title": "Measures of Spread",
-    "section": "Definition: VARIANCE",
-    "text": "Definition: VARIANCE\nThe average of the distances from each data point in the sample to the sample mean {x}, squared\n\\[s^2=\\frac{\\sum_{i=1}^{n}\\left(\\ x_i-\\bar{x}\\right)^2}{n-1}\\] The variance is one of the most important metrics in statistics. It is the measure of spread around the mean.",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Spread"
-    ]
-  },
-  {
     "objectID": "summary-statistics/measures-of-spread.html#standard-deviation",
     "href": "summary-statistics/measures-of-spread.html#standard-deviation",
     "title": "Measures of Spread",
     "section": "Standard Deviation",
     "text": "Standard Deviation\n\n\n\n\n\n\nDefinition: STANDARD DEVIATION\n\n\n\n\n\nThe standard deviation is the square root of the variance. It also measures the spread about the mean, always zero or greater than zero, and is used more often than the variance as it has the same units of measurement as the original observations.\n\\[s= \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}\\left(\\ x_i-\\bar{x}\\right)^2}{n-1}}\\]\n\n\n\n\nBasic Code\nFor a single quantitative variable, x, here is the general structure for calculating a standard deviation in R using the sd() function from the mosaic package.\n\nsd(~x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Missing Values\n\n\n\n\n\nNotice the returned value of NA. The function needs to have another argument added that tells R to ignore missing values (NA) in order to calculate the median, na.rm = TRUE. Add the argument to the code above\n\nsd(~x, data = mydata, na.rm = TRUE)\n\n\n\n\n\n\nMultiple Standard Deviations Across Groups\nWhen we want to calculate the standard deviation of a quantitative variable (y) measured across the values/groups of a categorical variable (x) it is a simple modification to the single standard deviation code.\n\nsd(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm and species from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm) and/or another categorical variable (e.g., sex).\nRemember to add na.rm = TRUE if you get a warning.",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Spread"
-    ]
-  },
-  {
-    "objectID": "summary-statistics/measures-of-spread.html#definition-standard-deviation",
-    "href": "summary-statistics/measures-of-spread.html#definition-standard-deviation",
-    "title": "Measures of Spread",
-    "section": "Definition: STANDARD DEVIATION",
-    "text": "Definition: STANDARD DEVIATION\nThe standard deviation is the square root of the variance. It also measures the spread about the mean, always zero or greater than zero, and is used more often than the variance as it has the same units of measurement as the original observations.\n\\[s= \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}\\left(\\ x_i-\\bar{x}\\right)^2}{n-1}}\\]",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"
