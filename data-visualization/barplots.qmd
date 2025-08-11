@@ -12,7 +12,6 @@ format:
         completion: false
 execute: 
   warning: false
-  message: false
 code-copy: true
 code-overflow: wrap
 toc: true

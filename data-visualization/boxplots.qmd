@@ -147,7 +147,7 @@ gf_boxplot(~bill_length_mm,
            axis.text.y = element_blank())
 ```
 
-## Other Modifications <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications">Show</a>
+### Other Modifications <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications">Show</a> {.unnumbered .unlisted}
 
 ::: {#other-modifications .collapse .multi-collapse}
 
@@ -259,7 +259,7 @@ gf_boxplot(species ~ bill_length_mm,
 
 
 
-## Other Modifications for Comparisons <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications-2" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications-2">Show</a>
+### Other Modifications for Comparisons <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications-2" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications-2">Show</a>
 
 ::: {#other-modifications-2 .collapse .multi-collapse}
 

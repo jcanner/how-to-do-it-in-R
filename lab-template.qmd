@@ -1,0 +1,43 @@
+---
+title: "Lab XX: ABCDEFG"
+author: "NAME"
+format: html
+embed-resources: true
+html-math-method: mathml
+execute:
+  echo: true
+  error: false
+editor: visual
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+#include all packages here
+library(tidyverse)
+library(ggformula)
+library(mosaic)
+```
+
+# Section 1
+
+Text Text Text
+
+## Subsection 1.1
+
+$$
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n}{x_i}
+$$
+
+### Subsubsection 1.1.1
+
+```{r}
+#| label: example-plot
+
+plot(iris)
+```
+
+Text Text Text
+
+> Insert Answer Here
