@@ -48,10 +48,9 @@ Then, be sure to load the packages `mosaic`. Remember, you need to do this with 
 library(mosaic) #for summary stats
 ```
 
+<details>
 
-### Data for Examples <a class="btn btn-primary" data-bs-toggle="collapse" href="#data-for-examples" role="button" aria-expanded="false" aria-controls="data-for-examples">Show</a>
-
-::: {#data-for-examples .collapse .multi-collapse}
+<summary> ### Data for Examples </summary>
 
 As a reminder (see [Overview of Summary Statistics](summary-stats-overview.qmd)), we will be using the `penguins` data from the `palmerpenguins` package:
 
@@ -72,7 +71,7 @@ slice_sample(penguins, n = 5) |>
   gt::tab_header(title = "Palmer Penguins")
 ```
 
-:::
+</details>
 
 
 ## Variance 
@@ -198,6 +197,7 @@ sd(bill_length_mm ~ species, data = penguins)
 
 
 ## Quartiles/Percentiles
+
 
 
 

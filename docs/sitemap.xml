@@ -2,90 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/summary-stats-overview.html</loc>
-    <lastmod>2025-08-12T04:14:40.760Z</lastmod>
+    <lastmod>2025-08-04T22:15:11.937Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/measures-of-relationship.html</loc>
-    <lastmod>2025-08-12T04:14:40.752Z</lastmod>
+    <lastmod>2025-07-22T01:18:18.882Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/measures-of-center.html</loc>
-    <lastmod>2025-08-12T04:14:40.752Z</lastmod>
+    <lastmod>2025-08-05T01:33:25.173Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/overview/code-style-guide.html</loc>
-    <lastmod>2025-06-20T20:06:15.239Z</lastmod>
+    <lastmod>2025-06-23T16:20:31.779Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/lab-template.html</loc>
-    <lastmod>2025-08-12T04:14:40.745Z</lastmod>
+    <lastmod>2025-08-06T22:10:41.749Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/slope.html</loc>
-    <lastmod>2025-08-12T04:14:40.743Z</lastmod>
+    <lastmod>2025-07-22T01:20:30.951Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/one-mean.html</loc>
-    <lastmod>2025-08-12T04:14:40.741Z</lastmod>
+    <lastmod>2025-07-22T01:20:32.374Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/multiple-means.html</loc>
-    <lastmod>2025-08-12T04:14:40.737Z</lastmod>
+    <lastmod>2025-07-22T01:20:34.307Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/index.html</loc>
-    <lastmod>2025-08-12T04:14:40.730Z</lastmod>
+    <lastmod>2025-07-29T23:25:15.621Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/scatterplots.html</loc>
-    <lastmod>2025-08-12T04:14:40.566Z</lastmod>
+    <lastmod>2025-08-06T00:28:20.936Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/boxplots.html</loc>
-    <lastmod>2025-08-12T04:14:40.558Z</lastmod>
+    <lastmod>2025-08-06T00:36:05.327Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcanner.github.io/how-to-do-it-in-R/data-management/import-data.html</loc>
+    <lastmod>2025-08-25T20:22:56.322Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/barplots.html</loc>
-    <lastmod>2025-08-12T04:14:40.555Z</lastmod>
+    <lastmod>2025-08-30T20:35:45.901Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/histograms.html</loc>
-    <lastmod>2025-08-12T04:14:40.563Z</lastmod>
+    <lastmod>2025-08-04T22:23:21.814Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/data-visualization/visualization-overview.html</loc>
-    <lastmod>2025-06-28T17:51:30.569Z</lastmod>
+    <lastmod>2025-08-04T22:16:02.813Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/inference-overview.html</loc>
-    <lastmod>2025-08-12T04:14:40.735Z</lastmod>
+    <lastmod>2025-08-11T22:51:55.409Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/multiple-proportions.html</loc>
-    <lastmod>2025-08-12T04:14:40.739Z</lastmod>
+    <lastmod>2025-07-22T01:20:33.343Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/paired-mean.html</loc>
-    <lastmod>2025-08-12T04:14:40.743Z</lastmod>
+    <lastmod>2025-07-22T01:20:31.419Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/inference/two-means.html</loc>
-    <lastmod>2025-08-12T04:14:40.745Z</lastmod>
+    <lastmod>2025-07-22T01:20:28.638Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/overview/about.html</loc>
-    <lastmod>2025-06-20T20:06:15.239Z</lastmod>
+    <lastmod>2025-06-23T16:20:31.763Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/generating-multiple-stats.html</loc>
-    <lastmod>2025-08-12T04:14:40.749Z</lastmod>
+    <lastmod>2025-08-30T21:05:39.839Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/measures-of-frequency.html</loc>
-    <lastmod>2025-08-12T04:14:40.752Z</lastmod>
+    <lastmod>2025-07-22T01:17:04.596Z</lastmod>
   </url>
   <url>
     <loc>https://jcanner.github.io/how-to-do-it-in-R/summary-statistics/measures-of-spread.html</loc>
-    <lastmod>2025-08-12T04:14:40.758Z</lastmod>
+    <lastmod>2025-08-30T21:02:54.348Z</lastmod>
   </url>
 </urlset>

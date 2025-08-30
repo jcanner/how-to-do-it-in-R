@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – How to do it in R</title>
+<title>import-data – How to do it in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -256,15 +256,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#loading-data-into-r" id="toc-loading-data-into-r" class="nav-link active" data-scroll-target="#loading-data-into-r">Loading Data Into R</a>
+  <ul class="collapse">
+  <li><a href="#how-do-i-load-my-data" id="toc-how-do-i-load-my-data" class="nav-link" data-scroll-target="#how-do-i-load-my-data">How do I load my data?</a></li>
+  <li><a href="#where-does-my-data-live" id="toc-where-does-my-data-live" class="nav-link" data-scroll-target="#where-does-my-data-live">Where does my data live?</a></li>
+  </ul></li>
+  <li><a href="#tidy-data" id="toc-tidy-data" class="nav-link" data-scroll-target="#tidy-data">Tidy Data</a>
+  <ul class="collapse">
+  <li><a href="#tidy-data-1" id="toc-tidy-data-1" class="nav-link" data-scroll-target="#tidy-data-1">Tidy Data</a></li>
+  <li><a href="#same-data-different-formats" id="toc-same-data-different-formats" class="nav-link" data-scroll-target="#same-data-different-formats">Same Data, Different Formats</a></li>
+  <li><a href="#connection-to-ggplot" id="toc-connection-to-ggplot" class="nav-link" data-scroll-target="#connection-to-ggplot">Connection to ggplot</a></li>
+  <li><a href="#tidy-data-2" id="toc-tidy-data-2" class="nav-link" data-scroll-target="#tidy-data-2">Tidy Data</a></li>
+  </ul></li>
+  <li><a href="#working-with-external-data" id="toc-working-with-external-data" class="nav-link" data-scroll-target="#working-with-external-data">Working with External Data</a>
+  <ul class="collapse">
+  <li><a href="#common-types-of-data-files" id="toc-common-types-of-data-files" class="nav-link" data-scroll-target="#common-types-of-data-files">Common Types of Data Files</a></li>
+  <li><a href="#common-types-of-data-files-1" id="toc-common-types-of-data-files-1" class="nav-link" data-scroll-target="#common-types-of-data-files-1">Common Types of Data Files</a></li>
+  <li><a href="#loading-external-data" id="toc-loading-external-data" class="nav-link" data-scroll-target="#loading-external-data">Loading External Data</a></li>
+  <li><a href="#loading-external-data-1" id="toc-loading-external-data-1" class="nav-link" data-scroll-target="#loading-external-data-1">Loading External Data</a></li>
+  <li><a href="#whats-the-difference" id="toc-whats-the-difference" class="nav-link" data-scroll-target="#whats-the-difference">What’s the difference?</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">import-data</h1>
 </div>
 
 
@@ -281,15 +306,344 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>About this site</p>
+<section id="loading-data-into-r" class="level1">
+<h1>Loading Data Into R</h1>
+<section id="how-do-i-load-my-data" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-i-load-my-data">How do I load my data?</h2>
+<p><a href="https://r4ds.hadley.nz/data-import.html">Required Reading: Data Import</a></p>
+</section>
+<section id="where-does-my-data-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-does-my-data-live">Where does my data live?</h2>
+<p>For this check-in you are asked to work through reading in different data sets. You are expected to create your own Quarto document to complete this activity.</p>
+<p>The folder Age_Data contains several data sets with the names and ages of five individuals. The data sets are stored as different file types. <a href="Ages_Data.zip">Download Ages_Data.zip here</a>, make sure to unzip the folder, save these in a reasonable place (e.g., <code>STAT210 &gt; Week 5 &gt; Checkins</code> or <code>STAT210 &gt; Checkins &gt; Week 5</code>).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Extracting zip folders
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will need to <strong>extract</strong> the contents of the <code>ages.zip</code> file, that means you will need to uncompress the files from the folder for RStudio to know where to get the data from.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="tidy-data" class="level1">
+<h1>Tidy Data</h1>
+<section id="tidy-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="tidy-data-1">Tidy Data</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/85520b8f-4629-4763-8a2a-9ceff27458bf_rw_1920.jpg?h=21007b20ac00cf37318dca645c215453" class="img-fluid figure-img" alt="An educational graphic explaining 'Tidy Data' with text and a simple table. The main text at the top reads, 'TIDY DATA is a standard way of mapping the meaning of a dataset to its structure,' followed by the attribution to Hadley Wickham. Below, it explains the concept of tidy data: 'In tidy data: each variable forms a column, each observation forms a row, each cell is a single measurement.' To the right, there is a small table with three columns labeled 'id,' 'name,' and 'color,' demonstrating how each column is a variable and each row is an observation. The table contains entries such as 'floof' (gray), 'max' (black), and 'panda' (calico). The image ends with a citation for Hadley Wickham's 2014 paper on Tidy Data."></p>
+<figcaption>Artwork by Allison Horst</figcaption>
+</figure>
+</div>
+</section>
+<section id="same-data-different-formats" class="level2">
+<h2 class="anchored" data-anchor-id="same-data-different-formats">Same Data, Different Formats</h2>
+<p>Different formats of the data are <strong>tidy</strong> in different ways.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Option 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Option 2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Team</th>
+<th style="text-align: right;">Points</th>
+<th style="text-align: right;">Assists</th>
+<th style="text-align: right;">Rebounds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">31</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Team</th>
+<th style="text-align: left;">Statistic</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">Points</td>
+<td style="text-align: right;">88</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">Assists</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">Rebounds</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">Points</td>
+<td style="text-align: right;">91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">Assists</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">Rebounds</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">Points</td>
+<td style="text-align: right;">99</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">Assists</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">Rebounds</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">Points</td>
+<td style="text-align: right;">94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">Assists</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">Rebounds</td>
+<td style="text-align: right;">31</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="connection-to-ggplot" class="level2">
+<h2 class="anchored" data-anchor-id="connection-to-ggplot">Connection to ggplot</h2>
+<p>Let’s make a plot of each team’s statistics!</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Option 1 - Wide Data</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Option 2 - Long Data</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="small">
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bb_wide, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Team)) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> Points, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">color =</span> <span class="st">"Points"</span>), </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> Assists, </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                           <span class="at">color =</span> <span class="st">"Assists"</span>), </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> Rebounds, </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                           <span class="at">color =</span> <span class="st">"Rebounds"</span>), </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkred"</span>, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>               <span class="st">"steelblue"</span>, </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>               <span class="st">"forestgreen"</span>)) <span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">color =</span> <span class="st">"Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="import-data_files/figure-html/plot-with-wide-data-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="small">
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bb_long, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Team, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> Value, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">color =</span> Statistic)) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkred"</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">"steelblue"</span>, </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>               <span class="st">"forestgreen"</span>)) <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">color =</span> <span class="st">"Statistic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="import-data_files/figure-html/plot-with-long-data-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="tidy-data-2" class="level2">
+<h2 class="anchored" data-anchor-id="tidy-data-2">Tidy Data</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/40488240-4609-4dc3-8920-693e078b55ce_rw_1920.jpg?h=2e96a7e21e19c43867546498da026649" class="img-fluid figure-img" alt="An illustration featuring a cute, cartoonish scene with three characters sitting on a bench. In the center, there is a smiling blue rectangular character resembling a tidy data table, holding an ice cream cone. On either side of the table are two round, fluffy creatures: one pink on the left and one green on the right, both also holding ice cream cones. Above the characters, the text reads 'make friends with tidy data.' The overall tone of the image is friendly and inviting, encouraging positive feelings toward tidy data."></p>
+<figcaption>Artwork by Allison Horst</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="working-with-external-data" class="level1">
+<h1>Working with External Data</h1>
+<section id="common-types-of-data-files" class="level2">
+<h2 class="anchored" data-anchor-id="common-types-of-data-files">Common Types of Data Files</h2>
+<p>Look at the <strong>file extension</strong> for the type of data file.</p>
+<p>. . .</p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><code>.csv</code> : “comma-separated values”</p>
+</div><div class="column" style="width:30%;">
+<pre><code>Name, Age
+Bob, 49
+Joe, 40</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<p><code>.xls</code>, <code>.xlsx</code>: Microsoft Excel spreadsheet</p>
+<ul>
+<li>Common approach: save as <code>.csv</code></li>
+<li>Nicer approach: use the <code>readxl</code> package</li>
+</ul>
+<p>. . .</p>
+<p><code>.txt</code>: plain text</p>
+<ul>
+<li>Could have any sort of delimiter…</li>
+<li>Need to let R know what to look for!</li>
+</ul>
+</section>
+<section id="common-types-of-data-files-1" class="level2">
+<h2 class="anchored" data-anchor-id="common-types-of-data-files-1">Common Types of Data Files</h2>
+<p>What is the delimiter (e.g.&nbsp;comma, tab, space, etc.) for each data file?</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">File A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">File B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">File C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">Sources</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><img src="images/week-5/csv_file.png" class="img-fluid"></p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><img src="images/week-5/tsv_file.png" class="img-fluid"></p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p><img src="images/week-5/pipe_file.png" class="img-fluid"></p>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<ul>
+<li><a href="https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html">File A</a></li>
+<li><a href="https://github.com/ccusa/Disaster_Vulnerability_Map/blob/master/sample-data.tsv">File B</a></li>
+<li><a href="https://chadbaldwin.net/2021/03/24/quick-parse-csv-file.html">File C</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="loading-external-data" class="level2">
+<h2 class="anchored" data-anchor-id="loading-external-data">Loading External Data</h2>
+<p>Using <strong>base</strong> <code>R</code> functions:</p>
+<ul>
+<li><p><code>read.csv()</code> is for reading in <code>.csv</code> files.</p></li>
+<li><p><code>read.table()</code> and <code>read.delim()</code> are for any data with “columns” (you specify the separator).</p></li>
+</ul>
+</section>
+<section id="loading-external-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="loading-external-data-1">Loading External Data</h2>
+<p>The <strong>tidyverse</strong> has some cleaned-up versions in the <code>readr</code> and <code>readxl</code> packages:</p>
+<div class="small">
+<ul>
+<li><p><code>readr</code> package is loaded with <code>library(tidyverse)</code></p>
+<ul>
+<li><p><code>read_csv()</code> is for comma-separated data.</p></li>
+<li><p><code>read_tsv()</code> is for tab-separated data.</p></li>
+<li><p><code>read_table()</code> is for white-space-separated data.</p></li>
+<li><p><code>read_delim()</code> is any data with “columns” (you specify the separator). The above are special cases.</p></li>
+</ul></li>
+<li><p><code>readxl</code> will need need to be loaded separately with <code>library(readxl)</code></p>
+<ul>
+<li><code>read_xls()</code> and <code>read_xlsx()</code> are specifically for dealing with Excel files.</li>
+</ul></li>
+</ul>
+</div>
+<p>Remember to load the <code>readr</code> and <code>readxl</code> packages first!</p>
+</section>
+<section id="whats-the-difference" class="level2">
+<h2 class="anchored" data-anchor-id="whats-the-difference">What’s the difference?</h2>
+<p>Compare the two functions <code>read.csv()</code> and <code>read_csv()</code> - what do you notice about the possible arguments you can use in each? Why is <code>read_csv()</code> the better option?</p>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p><img src="images/week-5/read.csv_doc.png" class="img-fluid"></p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:48%;">
+<p><img src="images/week-5/read_csv_doc.png" class="img-fluid"></p>
 </div>
 </div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -717,7 +1071,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jcanner/how-to-do-it-in-R/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

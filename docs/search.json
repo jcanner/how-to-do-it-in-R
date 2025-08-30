@@ -26,62 +26,42 @@
     "href": "summary-statistics/measures-of-relationship.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n49.8\n16.8\n230\n5700\nmale\n2008\n\n\nAdelie\nBiscoe\n37.9\n18.6\n193\n2925\nfemale\n2009\n\n\nGentoo\nBiscoe\n52.5\n15.6\n221\n5450\nmale\n2009\n\n\nGentoo\nBiscoe\n51.1\n16.5\n225\n5250\nmale\n2009\n\n\nAdelie\nTorgersen\n39.0\n17.1\n191\n3050\nfemale\n2009",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Relationship"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n46.6\n17.8\n193\n3800\nfemale\n2007\n\n\nAdelie\nBiscoe\n41.1\n18.2\n192\n4050\nmale\n2008\n\n\nAdelie\nTorgersen\n37.8\n17.3\n180\n3700\nNA\n2007\n\n\nGentoo\nBiscoe\n50.4\n15.3\n224\n5550\nmale\n2008\n\n\nAdelie\nTorgersen\n42.0\n20.2\n190\n4250\nNA\n2007"
   },
   {
     "objectID": "summary-statistics/measures-of-relationship.html#mean",
     "href": "summary-statistics/measures-of-relationship.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Relationship"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "summary-statistics/measures-of-relationship.html#definition-mean",
     "href": "summary-statistics/measures-of-relationship.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Relationship"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "summary-statistics/measures-of-relationship.html#median",
     "href": "summary-statistics/measures-of-relationship.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Relationship"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "summary-statistics/measures-of-relationship.html#definition-median",
     "href": "summary-statistics/measures-of-relationship.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Relationship"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "summary-statistics/measures-of-center.html#getting-started",
     "href": "summary-statistics/measures-of-center.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n35.1\n19.4\n193\n4200\nmale\n2008\n\n\nGentoo\nBiscoe\n48.5\n14.1\n220\n5300\nmale\n2008\n\n\nGentoo\nBiscoe\n40.9\n13.7\n214\n4650\nfemale\n2007\n\n\nChinstrap\nDream\n46.5\n17.9\n192\n3500\nfemale\n2007\n\n\nChinstrap\nDream\n55.8\n19.8\n207\n4000\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.1\n14.5\n207\n5050\nfemale\n2007\n\n\nAdelie\nTorgersen\n36.2\n16.1\n187\n3550\nfemale\n2008\n\n\nAdelie\nDream\n37.0\n16.5\n185\n3400\nfemale\n2009\n\n\nGentoo\nBiscoe\n49.1\n15.0\n228\n5500\nmale\n2009\n\n\nAdelie\nBiscoe\n37.7\n16.0\n183\n3075\nfemale\n2009",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Center"
@@ -194,165 +174,105 @@
     "href": "inference/slope.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n36.0\n17.8\n195\n3450\nfemale\n2009\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nChinstrap\nDream\n50.9\n17.9\n196\n3675\nfemale\n2009\n\n\nChinstrap\nDream\n50.5\n18.4\n200\n3400\nfemale\n2008\n\n\nAdelie\nDream\n35.7\n18.0\n202\n3550\nfemale\n2008",
-    "crumbs": [
-      "Inference and Conditions",
-      "Simple Linear Regression"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n41.1\n17.5\n190\n3900\nmale\n2009\n\n\nAdelie\nTorgersen\n42.5\n20.7\n197\n4500\nmale\n2007\n\n\nAdelie\nDream\n36.3\n19.5\n190\n3800\nmale\n2008\n\n\nGentoo\nBiscoe\n50.2\n14.3\n218\n5700\nmale\n2007\n\n\nAdelie\nDream\n40.3\n18.5\n196\n4350\nmale\n2008"
   },
   {
     "objectID": "inference/slope.html#mean",
     "href": "inference/slope.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Inference and Conditions",
-      "Simple Linear Regression"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "inference/slope.html#definition-mean",
     "href": "inference/slope.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Inference and Conditions",
-      "Simple Linear Regression"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "inference/slope.html#median",
     "href": "inference/slope.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Simple Linear Regression"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "inference/slope.html#definition-median",
     "href": "inference/slope.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Inference and Conditions",
-      "Simple Linear Regression"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "inference/one-mean.html#getting-started",
     "href": "inference/one-mean.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n39.5\n16.7\n178\n3250\nfemale\n2007\n\n\nAdelie\nDream\n41.5\n18.5\n201\n4000\nmale\n2009\n\n\nAdelie\nDream\n38.1\n17.6\n187\n3425\nfemale\n2009\n\n\nAdelie\nTorgersen\n38.9\n17.8\n181\n3625\nfemale\n2007\n\n\nGentoo\nBiscoe\n45.3\n13.8\n208\n4200\nfemale\n2008",
-    "crumbs": [
-      "Inference and Conditions",
-      "Confidence Interval - One Mean"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.3\n13.8\n208\n4200\nfemale\n2008\n\n\nGentoo\nBiscoe\n49.9\n16.1\n213\n5400\nmale\n2009\n\n\nGentoo\nBiscoe\n45.4\n14.6\n211\n4800\nfemale\n2007\n\n\nAdelie\nDream\n34.0\n17.1\n185\n3400\nfemale\n2008\n\n\nAdelie\nTorgersen\n39.7\n18.4\n190\n3900\nmale\n2008"
   },
   {
     "objectID": "inference/one-mean.html#mean",
     "href": "inference/one-mean.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Inference and Conditions",
-      "Confidence Interval - One Mean"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "inference/one-mean.html#definition-mean",
     "href": "inference/one-mean.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Inference and Conditions",
-      "Confidence Interval - One Mean"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "inference/one-mean.html#median",
     "href": "inference/one-mean.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Confidence Interval - One Mean"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "inference/one-mean.html#definition-median",
     "href": "inference/one-mean.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Inference and Conditions",
-      "Confidence Interval - One Mean"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "inference/multiple-means.html#getting-started",
     "href": "inference/multiple-means.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n39.6\n17.7\n186\n3500\nfemale\n2008\n\n\nGentoo\nBiscoe\n47.2\n13.7\n214\n4925\nfemale\n2009\n\n\nAdelie\nTorgersen\n41.1\n18.6\n189\n3325\nmale\n2009\n\n\nChinstrap\nDream\n45.6\n19.4\n194\n3525\nfemale\n2009\n\n\nChinstrap\nDream\n45.2\n17.8\n198\n3950\nfemale\n2007",
-    "crumbs": [
-      "Inference and Conditions",
-      "Analysis of Variance"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n37.9\n18.6\n172\n3150\nfemale\n2007\n\n\nGentoo\nBiscoe\n43.8\n13.9\n208\n4300\nfemale\n2008\n\n\nAdelie\nDream\n41.1\n19.0\n182\n3425\nmale\n2007\n\n\nGentoo\nBiscoe\n44.9\n13.3\n213\n5100\nfemale\n2008\n\n\nAdelie\nTorgersen\n34.6\n21.1\n198\n4400\nmale\n2007"
   },
   {
     "objectID": "inference/multiple-means.html#mean",
     "href": "inference/multiple-means.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Inference and Conditions",
-      "Analysis of Variance"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "inference/multiple-means.html#definition-mean",
     "href": "inference/multiple-means.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Inference and Conditions",
-      "Analysis of Variance"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "inference/multiple-means.html#median",
     "href": "inference/multiple-means.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Analysis of Variance"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "inference/multiple-means.html#definition-median",
     "href": "inference/multiple-means.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Inference and Conditions",
-      "Analysis of Variance"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "index.html",
@@ -369,7 +289,7 @@
     "href": "data-visualization/scatterplots.html",
     "title": "Scatterplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n36.5\n16.6\n181\n2850\nfemale\n2008\n\n\nAdelie\nBiscoe\n37.9\n18.6\n193\n2925\nfemale\n2009\n\n\nGentoo\nBiscoe\n46.2\n14.5\n209\n4800\nfemale\n2007\n\n\nAdelie\nDream\n33.1\n16.1\n178\n2900\nfemale\n2008\n\n\nGentoo\nBiscoe\n48.2\n15.6\n221\n5100\nmale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n51.5\n18.7\n187\n3250\nmale\n2009\n\n\nGentoo\nBiscoe\n46.2\n14.9\n221\n5300\nmale\n2008\n\n\nChinstrap\nDream\n52.8\n20.0\n205\n4550\nmale\n2008\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nGentoo\nBiscoe\n49.6\n15.0\n216\n4750\nmale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Scatterplots"
@@ -380,7 +300,7 @@
     "href": "data-visualization/scatterplots.html#getting-started",
     "title": "Scatterplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n36.5\n16.6\n181\n2850\nfemale\n2008\n\n\nAdelie\nBiscoe\n37.9\n18.6\n193\n2925\nfemale\n2009\n\n\nGentoo\nBiscoe\n46.2\n14.5\n209\n4800\nfemale\n2007\n\n\nAdelie\nDream\n33.1\n16.1\n178\n2900\nfemale\n2008\n\n\nGentoo\nBiscoe\n48.2\n15.6\n221\n5100\nmale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n51.5\n18.7\n187\n3250\nmale\n2009\n\n\nGentoo\nBiscoe\n46.2\n14.9\n221\n5300\nmale\n2008\n\n\nChinstrap\nDream\n52.8\n20.0\n205\n4550\nmale\n2008\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nGentoo\nBiscoe\n49.6\n15.0\n216\n4750\nmale\n2008",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Scatterplots"
@@ -413,7 +333,7 @@
     "href": "data-visualization/boxplots.html",
     "title": "Boxplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nGentoo\nBiscoe\n45.1\n14.4\n210\n4400\nfemale\n2008\n\n\nAdelie\nTorgersen\n36.7\n18.8\n187\n3800\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.1\n15.0\n225\n5000\nmale\n2008\n\n\nGentoo\nBiscoe\n47.3\n13.8\n216\n4725\nNA\n2009",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n42.0\n19.5\n200\n4050\nmale\n2008\n\n\nGentoo\nBiscoe\n43.3\n13.4\n209\n4400\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.6\n19.0\n199\n4000\nmale\n2009\n\n\nChinstrap\nDream\n49.8\n17.3\n198\n3675\nfemale\n2009\n\n\nAdelie\nDream\n37.8\n18.1\n193\n3750\nmale\n2009",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
@@ -424,7 +344,7 @@
     "href": "data-visualization/boxplots.html#getting-started",
     "title": "Boxplots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nGentoo\nBiscoe\n45.1\n14.4\n210\n4400\nfemale\n2008\n\n\nAdelie\nTorgersen\n36.7\n18.8\n187\n3800\nfemale\n2008\n\n\nGentoo\nBiscoe\n50.1\n15.0\n225\n5000\nmale\n2008\n\n\nGentoo\nBiscoe\n47.3\n13.8\n216\n4725\nNA\n2009",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n42.0\n19.5\n200\n4050\nmale\n2008\n\n\nGentoo\nBiscoe\n43.3\n13.4\n209\n4400\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.6\n19.0\n199\n4000\nmale\n2009\n\n\nChinstrap\nDream\n49.8\n17.3\n198\n3675\nfemale\n2009\n\n\nAdelie\nDream\n37.8\n18.1\n193\n3750\nmale\n2009",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Boxplots"
@@ -453,11 +373,95 @@
     ]
   },
   {
+    "objectID": "data-management/import-data.html",
+    "href": "data-management/import-data.html",
+    "title": "import-data",
+    "section": "",
+    "text": "Required Reading: Data Import\n\n\n\nFor this check-in you are asked to work through reading in different data sets. You are expected to create your own Quarto document to complete this activity.\nThe folder Age_Data contains several data sets with the names and ages of five individuals. The data sets are stored as different file types. Download Ages_Data.zip here, make sure to unzip the folder, save these in a reasonable place (e.g., STAT210 &gt; Week 5 &gt; Checkins or STAT210 &gt; Checkins &gt; Week 5).\n\n\n\n\n\n\nExtracting zip folders\n\n\n\nYou will need to extract the contents of the ages.zip file, that means you will need to uncompress the files from the folder for RStudio to know where to get the data from."
+  },
+  {
+    "objectID": "data-management/import-data.html#how-do-i-load-my-data",
+    "href": "data-management/import-data.html#how-do-i-load-my-data",
+    "title": "import-data",
+    "section": "",
+    "text": "Required Reading: Data Import"
+  },
+  {
+    "objectID": "data-management/import-data.html#where-does-my-data-live",
+    "href": "data-management/import-data.html#where-does-my-data-live",
+    "title": "import-data",
+    "section": "",
+    "text": "For this check-in you are asked to work through reading in different data sets. You are expected to create your own Quarto document to complete this activity.\nThe folder Age_Data contains several data sets with the names and ages of five individuals. The data sets are stored as different file types. Download Ages_Data.zip here, make sure to unzip the folder, save these in a reasonable place (e.g., STAT210 &gt; Week 5 &gt; Checkins or STAT210 &gt; Checkins &gt; Week 5).\n\n\n\n\n\n\nExtracting zip folders\n\n\n\nYou will need to extract the contents of the ages.zip file, that means you will need to uncompress the files from the folder for RStudio to know where to get the data from."
+  },
+  {
+    "objectID": "data-management/import-data.html#tidy-data-1",
+    "href": "data-management/import-data.html#tidy-data-1",
+    "title": "import-data",
+    "section": "Tidy Data",
+    "text": "Tidy Data\n\n\n\nArtwork by Allison Horst"
+  },
+  {
+    "objectID": "data-management/import-data.html#same-data-different-formats",
+    "href": "data-management/import-data.html#same-data-different-formats",
+    "title": "import-data",
+    "section": "Same Data, Different Formats",
+    "text": "Same Data, Different Formats\nDifferent formats of the data are tidy in different ways.\n\nOption 1Option 2\n\n\n\n\n\n\n\nTeam\nPoints\nAssists\nRebounds\n\n\n\n\nA\n88\n12\n22\n\n\nB\n91\n17\n28\n\n\nC\n99\n24\n30\n\n\nD\n94\n28\n31\n\n\n\n\n\n\n\n\n\n\n\n\nTeam\nStatistic\nValue\n\n\n\n\nA\nPoints\n88\n\n\nA\nAssists\n12\n\n\nA\nRebounds\n22\n\n\nB\nPoints\n91\n\n\nB\nAssists\n17\n\n\nB\nRebounds\n28\n\n\nC\nPoints\n99\n\n\nC\nAssists\n24\n\n\nC\nRebounds\n30\n\n\nD\nPoints\n94\n\n\nD\nAssists\n28\n\n\nD\nRebounds\n31"
+  },
+  {
+    "objectID": "data-management/import-data.html#connection-to-ggplot",
+    "href": "data-management/import-data.html#connection-to-ggplot",
+    "title": "import-data",
+    "section": "Connection to ggplot",
+    "text": "Connection to ggplot\nLet’s make a plot of each team’s statistics!\n\nOption 1 - Wide DataOption 2 - Long Data\n\n\n\n\n\nCode\nggplot(data = bb_wide, \n       mapping = aes(x = Team)) +\n  geom_point(mapping = aes(y = Points, \n                           color = \"Points\"), \n             size = 4) +\n  geom_point(mapping = aes(y = Assists, \n                           color = \"Assists\"), \n             size = 4) +\n  geom_point(mapping = aes(y = Rebounds, \n                           color = \"Rebounds\"), \n             size = 4) + \n  scale_colour_manual(\n    values = c(\"darkred\", \n               \"steelblue\", \n               \"forestgreen\")) +\n  labs(color = \"Statistic\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nggplot(data = bb_long, \n       mapping = aes(x = Team, \n                     y = Value, \n                     color = Statistic)) +\n  geom_point(size = 4) + \n  scale_colour_manual(\n    values = c(\"darkred\", \n               \"steelblue\", \n               \"forestgreen\")) +\n  labs(color = \"Statistic\")"
+  },
+  {
+    "objectID": "data-management/import-data.html#tidy-data-2",
+    "href": "data-management/import-data.html#tidy-data-2",
+    "title": "import-data",
+    "section": "Tidy Data",
+    "text": "Tidy Data\n\n\n\nArtwork by Allison Horst"
+  },
+  {
+    "objectID": "data-management/import-data.html#common-types-of-data-files",
+    "href": "data-management/import-data.html#common-types-of-data-files",
+    "title": "import-data",
+    "section": "Common Types of Data Files",
+    "text": "Common Types of Data Files\nLook at the file extension for the type of data file.\n. . .\n\n\n.csv : “comma-separated values”\n\nName, Age\nBob, 49\nJoe, 40\n\n\n. . .\n.xls, .xlsx: Microsoft Excel spreadsheet\n\nCommon approach: save as .csv\nNicer approach: use the readxl package\n\n. . .\n.txt: plain text\n\nCould have any sort of delimiter…\nNeed to let R know what to look for!"
+  },
+  {
+    "objectID": "data-management/import-data.html#common-types-of-data-files-1",
+    "href": "data-management/import-data.html#common-types-of-data-files-1",
+    "title": "import-data",
+    "section": "Common Types of Data Files",
+    "text": "Common Types of Data Files\nWhat is the delimiter (e.g. comma, tab, space, etc.) for each data file?\n\nFile AFile BFile CSources\n\n\n\n\n\n\n\n\n\n\n\n\nFile A\nFile B\nFile C"
+  },
+  {
+    "objectID": "data-management/import-data.html#loading-external-data",
+    "href": "data-management/import-data.html#loading-external-data",
+    "title": "import-data",
+    "section": "Loading External Data",
+    "text": "Loading External Data\nUsing base R functions:\n\nread.csv() is for reading in .csv files.\nread.table() and read.delim() are for any data with “columns” (you specify the separator)."
+  },
+  {
+    "objectID": "data-management/import-data.html#loading-external-data-1",
+    "href": "data-management/import-data.html#loading-external-data-1",
+    "title": "import-data",
+    "section": "Loading External Data",
+    "text": "Loading External Data\nThe tidyverse has some cleaned-up versions in the readr and readxl packages:\n\n\nreadr package is loaded with library(tidyverse)\n\nread_csv() is for comma-separated data.\nread_tsv() is for tab-separated data.\nread_table() is for white-space-separated data.\nread_delim() is any data with “columns” (you specify the separator). The above are special cases.\n\nreadxl will need need to be loaded separately with library(readxl)\n\nread_xls() and read_xlsx() are specifically for dealing with Excel files.\n\n\n\nRemember to load the readr and readxl packages first!"
+  },
+  {
+    "objectID": "data-management/import-data.html#whats-the-difference",
+    "href": "data-management/import-data.html#whats-the-difference",
+    "title": "import-data",
+    "section": "What’s the difference?",
+    "text": "What’s the difference?\nCompare the two functions read.csv() and read_csv() - what do you notice about the possible arguments you can use in each? Why is read_csv() the better option?"
+  },
+  {
     "objectID": "data-visualization/barplots.html",
     "href": "data-visualization/barplots.html",
     "title": "Bar Plots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n46.4\n18.6\n190\n3450\nfemale\n2007\n\n\nGentoo\nBiscoe\nNA\nNA\nNA\nNA\nNA\n2009\n\n\nChinstrap\nDream\n52.8\n20.0\n205\n4550\nmale\n2008\n\n\nGentoo\nBiscoe\n46.1\n15.1\n215\n5100\nmale\n2007\n\n\nAdelie\nTorgersen\n42.8\n18.5\n195\n4250\nmale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n43.5\n18.1\n202\n3400\nfemale\n2009\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nAdelie\nBiscoe\n34.5\n18.1\n187\n2900\nfemale\n2008\n\n\nGentoo\nBiscoe\n43.5\n15.2\n213\n4650\nfemale\n2009\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
@@ -468,7 +472,7 @@
     "href": "data-visualization/barplots.html#getting-started",
     "title": "Bar Plots",
     "section": "",
-    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n46.4\n18.6\n190\n3450\nfemale\n2007\n\n\nGentoo\nBiscoe\nNA\nNA\nNA\nNA\nNA\n2009\n\n\nChinstrap\nDream\n52.8\n20.0\n205\n4550\nmale\n2008\n\n\nGentoo\nBiscoe\n46.1\n15.1\n215\n5100\nmale\n2007\n\n\nAdelie\nTorgersen\n42.8\n18.5\n195\n4250\nmale\n2008",
+    "text": "First, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\nAs a reminder (see Overview of Data Visualization, we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n43.5\n18.1\n202\n3400\nfemale\n2009\n\n\nChinstrap\nDream\n49.3\n19.9\n203\n4050\nmale\n2009\n\n\nAdelie\nBiscoe\n34.5\n18.1\n187\n2900\nfemale\n2008\n\n\nGentoo\nBiscoe\n43.5\n15.2\n213\n4650\nfemale\n2009\n\n\nChinstrap\nDream\n52.0\n18.1\n201\n4050\nmale\n2007",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Bar Plots"
@@ -497,33 +501,11 @@
     ]
   },
   {
-    "objectID": "data-visualization/barplots.html#bar-plots-for-comparisons-across-groups",
-    "href": "data-visualization/barplots.html#bar-plots-for-comparisons-across-groups",
-    "title": "Bar Plots",
-    "section": "Bar Plots for Comparisons Across Groups",
-    "text": "Bar Plots for Comparisons Across Groups\nWhen we have a categorical variable that has been measured across multiple groups, we may be interested in comparing bar plots across the values/groups of another categorical variable. We can do this by adding another feature to our plot that represents the other categorical variable, such as a\n\ncolor\nfacet\n\n\ngf_boxplot(y ~ x, \n           data = mydata) \n#we don't need to do anything to the y-axis now because it represents a variable here \n\n\n\n\n\n\n\nSwitching Box Plot Orientation\n\n\n\nThe variable places in the y position will be on the y-axis and the variable in the x position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the quantitative and categorical variable.",
-    "crumbs": [
-      "Data Visualizations with `ggformula`",
-      "Bar Plots"
-    ]
-  },
-  {
-    "objectID": "data-visualization/barplots.html#other-modifications-for-comparisons-show",
-    "href": "data-visualization/barplots.html#other-modifications-for-comparisons-show",
-    "title": "Bar Plots",
-    "section": "Other Modifications for Comparisons Show",
-    "text": "Other Modifications for Comparisons Show\n\nWe can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.\n\nConditional ProportionsAdding Color to GroupsAdding Both Color and Jitter\n\n\nIt is much easier to add jitter points to the boxplot across groups, we just pipe into the gf_jitter() function. Modify the height = argument to adjust the random position of the points on the y-axis.\n\n\n\n\n\n\n\n\n\n\nSimilar to changing the color of boxes to a single color, we can use the fill = argument associated with the categorical variable.\nHere is the boxplot of bill_length_mm with fill color varied by species a categorical variable with values of Adelie, Chinstrap, and Gentoo. Modify the code below to change the fill color to another categorical variable such as island or sex and see what happens.\n\n\n\n\n\n\n\n\n\n\nIf we want to specify color and add jitter, we can do that too!",
-    "crumbs": [
-      "Data Visualizations with `ggformula`",
-      "Bar Plots"
-    ]
-  },
-  {
     "objectID": "data-visualization/histograms.html#getting-started",
     "href": "data-visualization/histograms.html#getting-started",
     "title": "Histograms",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Accessibility\n\n\n\n\n\nPlease note that all images were created with modifications to the defaults to make them digitally accessible. To make these modifications to your own plots, add the following to your plot code:\n\n+ theme_light()\n+ scale_fill_viridis_d()\n\n+ scale_color_viridis_d()\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n42.2\n19.5\n197\n4275\nmale\n2009\n\n\nAdelie\nBiscoe\n37.7\n16.0\n183\n3075\nfemale\n2009\n\n\nGentoo\nBiscoe\n45.7\n13.9\n214\n4400\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.8\n14.6\n210\n4200\nfemale\n2007\n\n\nGentoo\nBiscoe\n51.1\n16.5\n225\n5250\nmale\n2009",
+    "text": "Getting Started\nFirst, be sure you have installed ggformula. Remember, you only need to install the package once on your machine.\nThen, be sure to load the package ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Accessibility\n\n\n\n\n\nPlease note that all images were created with modifications to the defaults to make them digitally accessible. To make these modifications to your own plots, add the following to your plot code:\n\n+ theme_light()\n+ scale_fill_viridis_d()\n\n+ scale_color_viridis_d()\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n44.5\n15.7\n217\n4875\nNA\n2009\n\n\nChinstrap\nDream\n49.8\n17.3\n198\n3675\nfemale\n2009\n\n\nGentoo\nBiscoe\n47.2\n13.7\n214\n4925\nfemale\n2009\n\n\nAdelie\nTorgersen\n41.4\n18.5\n202\n3875\nmale\n2009\n\n\nGentoo\nBiscoe\n47.2\n15.5\n215\n4975\nfemale\n2009",
     "crumbs": [
       "Data Visualizations with `ggformula`",
       "Histograms"
@@ -600,231 +582,147 @@
     "href": "inference/inference-overview.html#getting-started",
     "title": "Overview of Inference",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic and ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic and ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see [Overview of Data Visualization]), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n46.4\n15.6\n221\n5000\nmale\n2008\n\n\nGentoo\nBiscoe\n43.3\n14.0\n208\n4575\nfemale\n2009\n\n\nGentoo\nBiscoe\n49.1\n14.8\n220\n5150\nfemale\n2008\n\n\nChinstrap\nDream\n46.0\n18.9\n195\n4150\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.4\n15.0\n216\n4700\nfemale\n2008",
-    "crumbs": [
-      "Inference and Conditions",
-      "Overview of `mosaic`"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic and ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic and ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see [Overview of Data Visualization]), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n45.3\n13.7\n210\n4300\nfemale\n2008\n\n\nGentoo\nBiscoe\n49.9\n16.1\n213\n5400\nmale\n2009\n\n\nAdelie\nDream\n36.0\n17.1\n187\n3700\nfemale\n2009\n\n\nGentoo\nBiscoe\n48.4\n14.4\n203\n4625\nfemale\n2009\n\n\nAdelie\nBiscoe\n41.0\n20.0\n203\n4725\nmale\n2009"
   },
   {
     "objectID": "inference/inference-overview.html#mean",
     "href": "inference/inference-overview.html#mean",
     "title": "Overview of Inference",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Inference and Conditions",
-      "Overview of `mosaic`"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "inference/inference-overview.html#definition-mean",
     "href": "inference/inference-overview.html#definition-mean",
     "title": "Overview of Inference",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Inference and Conditions",
-      "Overview of `mosaic`"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "inference/inference-overview.html#median",
     "href": "inference/inference-overview.html#median",
     "title": "Overview of Inference",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Overview of `mosaic`"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "inference/inference-overview.html#definition-median",
     "href": "inference/inference-overview.html#definition-median",
     "title": "Overview of Inference",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Inference and Conditions",
-      "Overview of `mosaic`"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "inference/inference-overview.html#comparing-the-mean-and-median",
     "href": "inference/inference-overview.html#comparing-the-mean-and-median",
     "title": "Overview of Inference",
     "section": "Comparing the Mean and Median",
-    "text": "Comparing the Mean and Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Overview of `mosaic`"
-    ]
+    "text": "Comparing the Mean and Median"
   },
   {
     "objectID": "inference/multiple-proportions.html#getting-started",
     "href": "inference/multiple-proportions.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n35.3\n18.9\n187\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n36.2\n17.2\n187\n3150\nfemale\n2009\n\n\nAdelie\nBiscoe\n38.6\n17.2\n199\n3750\nfemale\n2009\n\n\nAdelie\nBiscoe\n37.8\n18.3\n174\n3400\nfemale\n2007\n\n\nAdelie\nDream\n36.0\n18.5\n186\n3100\nfemale\n2007",
-    "crumbs": [
-      "Inference and Conditions",
-      "Chi-Square Goodness of Fit"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n42.9\n17.6\n196\n4700\nmale\n2008\n\n\nGentoo\nBiscoe\n46.8\n14.3\n215\n4850\nfemale\n2009\n\n\nAdelie\nDream\n41.1\n18.1\n205\n4300\nmale\n2008\n\n\nGentoo\nBiscoe\n46.4\n15.0\n216\n4700\nfemale\n2008\n\n\nGentoo\nBiscoe\n43.5\n15.2\n213\n4650\nfemale\n2009"
   },
   {
     "objectID": "inference/multiple-proportions.html#mean",
     "href": "inference/multiple-proportions.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Inference and Conditions",
-      "Chi-Square Goodness of Fit"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "inference/multiple-proportions.html#definition-mean",
     "href": "inference/multiple-proportions.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Inference and Conditions",
-      "Chi-Square Goodness of Fit"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "inference/multiple-proportions.html#median",
     "href": "inference/multiple-proportions.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Chi-Square Goodness of Fit"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "inference/multiple-proportions.html#definition-median",
     "href": "inference/multiple-proportions.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Inference and Conditions",
-      "Chi-Square Goodness of Fit"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "inference/paired-mean.html#getting-started",
     "href": "inference/paired-mean.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n49.1\n15.0\n228\n5500\nmale\n2009\n\n\nAdelie\nDream\n40.8\n18.9\n208\n4300\nmale\n2008\n\n\nGentoo\nBiscoe\n43.4\n14.4\n218\n4600\nfemale\n2009\n\n\nAdelie\nBiscoe\n38.1\n17.0\n181\n3175\nfemale\n2009\n\n\nGentoo\nBiscoe\n45.2\n14.8\n212\n5200\nfemale\n2009",
-    "crumbs": [
-      "Inference and Conditions",
-      "Matched Pairs Inference"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n46.2\n14.5\n209\n4800\nfemale\n2007\n\n\nGentoo\nBiscoe\n45.1\n14.5\n215\n5000\nfemale\n2007\n\n\nChinstrap\nDream\n50.6\n19.4\n193\n3800\nmale\n2007\n\n\nGentoo\nBiscoe\n42.9\n13.1\n215\n5000\nfemale\n2007\n\n\nAdelie\nTorgersen\n37.3\n20.5\n199\n3775\nmale\n2009"
   },
   {
     "objectID": "inference/paired-mean.html#mean",
     "href": "inference/paired-mean.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Inference and Conditions",
-      "Matched Pairs Inference"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "inference/paired-mean.html#definition-mean",
     "href": "inference/paired-mean.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Inference and Conditions",
-      "Matched Pairs Inference"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "inference/paired-mean.html#median",
     "href": "inference/paired-mean.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Matched Pairs Inference"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "inference/paired-mean.html#definition-median",
     "href": "inference/paired-mean.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Inference and Conditions",
-      "Matched Pairs Inference"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "inference/two-means.html#getting-started",
     "href": "inference/two-means.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n40.5\n17.9\n187\n3200\nfemale\n2007\n\n\nGentoo\nBiscoe\n46.8\n16.1\n215\n5500\nmale\n2009\n\n\nAdelie\nDream\n36.0\n17.9\n190\n3450\nfemale\n2007\n\n\nChinstrap\nDream\n50.2\n18.7\n198\n3775\nfemale\n2009\n\n\nAdelie\nTorgersen\n38.7\n19.0\n195\n3450\nfemale\n2007",
-    "crumbs": [
-      "Inference and Conditions",
-      "Independent Two Sample Inference"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n37.3\n20.5\n199\n3775\nmale\n2009\n\n\nGentoo\nBiscoe\n46.8\n14.3\n215\n4850\nfemale\n2009\n\n\nGentoo\nBiscoe\n46.1\n13.2\n211\n4500\nfemale\n2007\n\n\nChinstrap\nDream\n51.4\n19.0\n201\n3950\nmale\n2009\n\n\nAdelie\nTorgersen\n39.2\n19.6\n195\n4675\nmale\n2007"
   },
   {
     "objectID": "inference/two-means.html#mean",
     "href": "inference/two-means.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Inference and Conditions",
-      "Independent Two Sample Inference"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "inference/two-means.html#definition-mean",
     "href": "inference/two-means.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Inference and Conditions",
-      "Independent Two Sample Inference"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "inference/two-means.html#median",
     "href": "inference/two-means.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Inference and Conditions",
-      "Independent Two Sample Inference"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "inference/two-means.html#definition-median",
     "href": "inference/two-means.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Inference and Conditions",
-      "Independent Two Sample Inference"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "overview/about.html",
@@ -836,53 +734,9 @@
   {
     "objectID": "summary-statistics/generating-multiple-stats.html#getting-started",
     "href": "summary-statistics/generating-multiple-stats.html#getting-started",
-    "title": "Measures of Center",
+    "title": "Generating Multiple Summary Statistics",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nChinstrap\nDream\n45.5\n17.0\n196\n3500\nfemale\n2008\n\n\nAdelie\nDream\n37.6\n19.3\n181\n3300\nfemale\n2007\n\n\nGentoo\nBiscoe\n50.8\n17.3\n228\n5600\nmale\n2009\n\n\nGentoo\nBiscoe\n49.4\n15.8\n216\n4925\nmale\n2009\n\n\nGentoo\nBiscoe\n45.1\n14.5\n215\n5000\nfemale\n2007",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Generating Multiple Statistics (`df_stats`)"
-    ]
-  },
-  {
-    "objectID": "summary-statistics/generating-multiple-stats.html#mean",
-    "href": "summary-statistics/generating-multiple-stats.html#mean",
-    "title": "Measures of Center",
-    "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Generating Multiple Statistics (`df_stats`)"
-    ]
-  },
-  {
-    "objectID": "summary-statistics/generating-multiple-stats.html#definition-mean",
-    "href": "summary-statistics/generating-multiple-stats.html#definition-mean",
-    "title": "Measures of Center",
-    "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Generating Multiple Statistics (`df_stats`)"
-    ]
-  },
-  {
-    "objectID": "summary-statistics/generating-multiple-stats.html#median",
-    "href": "summary-statistics/generating-multiple-stats.html#median",
-    "title": "Measures of Center",
-    "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Generating Multiple Statistics (`df_stats`)"
-    ]
-  },
-  {
-    "objectID": "summary-statistics/generating-multiple-stats.html#definition-median",
-    "href": "summary-statistics/generating-multiple-stats.html#definition-median",
-    "title": "Measures of Center",
-    "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
+    "text": "Getting Started\nFirst, be sure you have installed ggformula. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages ggformula. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data ation), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n47.7\n15.0\n216\n4750\nfemale\n2008\n\n\nAdelie\nTorgersen\n42.8\n18.5\n195\n4250\nmale\n2008\n\n\nGentoo\nBiscoe\n49.6\n16.0\n225\n5700\nmale\n2008\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nGentoo\nBiscoe\n45.5\n13.9\n210\n4200\nfemale\n2008\n\n\n\n\n\n\n\n\n\nMultiple Statistics for a Single Variable\nFor a single quantitative variable, x, here is the general structure for calculating a multiple statistics in R using the df_stats() function from the ggformula package.\n\ndf_stats(~x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm)\n\n\n\n\n\n\n\n\n\n\nMultiple Statistics Across Groups\nWhen we want to calculate the multiple summary statistics of a quantitative variable (y) measured across the values/groups of a categorical variable (x)\n\ndf_stats(y ~ x, data = mydata)\n\nRun the code below to see an example using the quantitative variable bill_length_mm and species from the penguins data. Then replace bill_length_mm with another quantitative variable from the penguins data (e.g. bill_depth_mm) and/or another categorical variable (e.g., sex).",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Generating Multiple Statistics (`df_stats`)"
@@ -893,62 +747,42 @@
     "href": "summary-statistics/measures-of-frequency.html#getting-started",
     "title": "Measures of Center",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nGentoo\nBiscoe\n49.2\n15.2\n221\n6300\nmale\n2007\n\n\nAdelie\nDream\n41.1\n19.0\n182\n3425\nmale\n2007\n\n\nAdelie\nTorgersen\n35.1\n19.4\n193\n4200\nmale\n2008\n\n\nAdelie\nDream\n39.0\n18.7\n185\n3650\nmale\n2009\n\n\nGentoo\nBiscoe\n46.8\n14.3\n215\n4850\nfemale\n2009",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Frequency"
-    ]
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Data Visualization), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nBiscoe\n40.6\n18.8\n193\n3800\nmale\n2008\n\n\nAdelie\nDream\n38.1\n18.6\n190\n3700\nfemale\n2008\n\n\nAdelie\nDream\n40.7\n17.0\n190\n3725\nmale\n2009\n\n\nGentoo\nBiscoe\n50.4\n15.3\n224\n5550\nmale\n2008\n\n\nGentoo\nBiscoe\n46.5\n14.5\n213\n4400\nfemale\n2007"
   },
   {
     "objectID": "summary-statistics/measures-of-frequency.html#mean",
     "href": "summary-statistics/measures-of-frequency.html#mean",
     "title": "Measures of Center",
     "section": "Mean",
-    "text": "Mean",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Frequency"
-    ]
+    "text": "Mean"
   },
   {
     "objectID": "summary-statistics/measures-of-frequency.html#definition-mean",
     "href": "summary-statistics/measures-of-frequency.html#definition-mean",
     "title": "Measures of Center",
     "section": "Definition: MEAN",
-    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Frequency"
-    ]
+    "text": "Definition: MEAN\nSometimes called “the average” it is a summary of quantitative variables that measures\n\\[\\bar{x} = \\frac{x_1 + x_2 + x_3 + ... + x_n}{n} = \\frac{1}{n}\\sum_{i = 1}^{n}{x_i} \\]"
   },
   {
     "objectID": "summary-statistics/measures-of-frequency.html#median",
     "href": "summary-statistics/measures-of-frequency.html#median",
     "title": "Measures of Center",
     "section": "Median",
-    "text": "Median",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Frequency"
-    ]
+    "text": "Median"
   },
   {
     "objectID": "summary-statistics/measures-of-frequency.html#definition-median",
     "href": "summary-statistics/measures-of-frequency.html#definition-median",
     "title": "Measures of Center",
     "section": "Definition: MEDIAN",
-    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest",
-    "crumbs": [
-      "Summary Statistics with `mosaic`",
-      "Measures of Frequency"
-    ]
+    "text": "Definition: MEDIAN\nAlso known as the 50th percentile, the 2nd quantile, is the value within the data such that roughly 50% of the other data points have a value greater than it and the other 50% of other data points have a value less than it.\n\nOrder the data from smallest to largest"
   },
   {
     "objectID": "summary-statistics/measures-of-spread.html#getting-started",
     "href": "summary-statistics/measures-of-spread.html#getting-started",
     "title": "Measures of Spread",
     "section": "Getting Started",
-    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\nData for Examples Show\n\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n39.7\n17.9\n193\n4250\nmale\n2009\n\n\nGentoo\nBiscoe\n50.0\n16.3\n230\n5700\nmale\n2007\n\n\nGentoo\nBiscoe\n47.7\n15.0\n216\n4750\nfemale\n2008\n\n\nGentoo\nBiscoe\n45.2\n16.4\n223\n5950\nmale\n2008\n\n\nAdelie\nDream\n42.3\n21.2\n191\n4150\nmale\n2007",
+    "text": "Getting Started\nFirst, be sure you have installed mosaic. Remember, you only need to install each package once on your machine.\nThen, be sure to load the packages mosaic. Remember, you need to do this with each new Quarto/RMarkdown document or R Session.\n\n\n\n\n\n\n\n\n\n\nData for Examples\nAs a reminder (see Overview of Summary Statistics), we will be using the penguins data from the palmerpenguins package:\n\nlibrary(palmerpenguins)\n\nHere is a snippet of the data:\n\n\n\n\n\n\n\n\nPalmer Penguins\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nDream\n36.9\n18.6\n189\n3500\nfemale\n2008\n\n\nAdelie\nTorgersen\n40.6\n19.0\n199\n4000\nmale\n2009\n\n\nAdelie\nDream\n38.1\n18.6\n190\n3700\nfemale\n2008\n\n\nAdelie\nDream\n39.5\n17.8\n188\n3300\nfemale\n2007\n\n\nChinstrap\nDream\n51.4\n19.0\n201\n3950\nmale\n2009",
     "crumbs": [
       "Summary Statistics with `mosaic`",
       "Measures of Spread"

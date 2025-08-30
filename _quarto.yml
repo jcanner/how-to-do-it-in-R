@@ -9,6 +9,8 @@ website:
   site-url: "https://jcanner.github.io/how-to-do-it-in-R"
   repo-url: https://github.com/jcanner/how-to-do-it-in-R
   repo-actions: [issue]
+  drafts: 
+    - /summary-stats/
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
@@ -62,30 +64,30 @@ website:
         text: "Measures of Center"
       - href: summary-statistics/measures-of-spread.qmd
         text: "Measures of Spread"
-      - href: summary-statistics/measures-of-relationship.qmd
-        text: "Measures of Relationship"
-      - href: summary-statistics/measures-of-frequency.qmd
-        text: "Measures of Frequency"
+      # - href: summary-statistics/measures-of-relationship.qmd
+      #   text: "Measures of Relationship"
+      # - href: summary-statistics/measures-of-frequency.qmd
+      #   text: "Measures of Frequency"
       - href: summary-statistics/generating-multiple-stats.qmd
         text: "Generating Multiple Statistics (`df_stats`)"
 
-    - section: "Inference and Conditions"  
-      contents: 
-      - href: inference/inference-overview.qmd
-        text: "Overview of `mosaic`"
-      - href: inference/one-mean.qmd
-        text: "Confidence Interval - One Mean"
-      - href: inference/two-means.qmd
-        text: "Independent Two Sample Inference"
-      - href: inference/paired-mean.qmd
-        text: "Matched Pairs Inference"
-      - href: inference/multiple-means.qmd
-        text: "Analysis of Variance"
-      - href: inference/slope.qmd
-        text: "Simple Linear Regression"
-      - href: inference/multiple-proportions.qmd
-        text: "Chi-Square Goodness of Fit"
-      
+    # - section: "Inference and Conditions"  
+    #   contents: 
+    #   - href: inference/inference-overview.qmd
+    #     text: "Overview of `mosaic`"
+    #   - href: inference/one-mean.qmd
+    #     text: "Confidence Interval - One Mean"
+    #   - href: inference/two-means.qmd
+    #     text: "Independent Two Sample Inference"
+    #   - href: inference/paired-mean.qmd
+    #     text: "Matched Pairs Inference"
+    #   - href: inference/multiple-means.qmd
+    #     text: "Analysis of Variance"
+    #   - href: inference/slope.qmd
+    #     text: "Simple Linear Regression"
+    #   - href: inference/multiple-proportions.qmd
+    #     text: "Chi-Square Goodness of Fit"
+    #   
 format:
   html:
     theme: "minty"

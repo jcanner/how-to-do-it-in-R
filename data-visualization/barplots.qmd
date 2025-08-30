@@ -237,91 +237,91 @@ gf_bar(~species,
 
 
 
-## Bar Plots for Comparisons Across Groups
+<!-- ## Bar Plots for Comparisons Across Groups -->
 
-When we have a **categorical** variable that has been measured across multiple groups, we may be interested in comparing bar plots across the values/groups of another **categorical** variable. We can do this by adding another feature to our plot that represents the other *categorical* variable, such as a  
+<!-- When we have a **categorical** variable that has been measured across multiple groups, we may be interested in comparing bar plots across the values/groups of another **categorical** variable. We can do this by adding another feature to our plot that represents the other *categorical* variable, such as a   -->
 
-- color
-- facet
+<!-- - color -->
+<!-- - facet -->
 
-```{r}
-#| label: two-var-structure
-#| eval: false
-gf_boxplot(y ~ x, 
-           data = mydata) 
-#we don't need to do anything to the y-axis now because it represents a variable here 
-```
-
-
-::: {.callout-important}
-
-## Switching Box Plot Orientation
-
-The variable places in the `y` position will be on the y-axis and the variable in the `x` position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the **quantitative** and **categorical** variable.  
-:::
+<!-- ```{r} -->
+<!-- #| label: two-var-structure -->
+<!-- #| eval: false -->
+<!-- gf_boxplot(y ~ x,  -->
+<!--            data = mydata)  -->
+<!-- #we don't need to do anything to the y-axis now because it represents a variable here  -->
+<!-- ``` -->
 
 
+<!-- ::: {.callout-important} -->
+
+<!-- ## Switching Box Plot Orientation -->
+
+<!-- The variable places in the `y` position will be on the y-axis and the variable in the `x` position will be on the x-axis. So we can change the orientation of our boxplot by switching the position of the **quantitative** and **categorical** variable.   -->
+<!-- ::: -->
 
 
-## Other Modifications for Comparisons <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications-2" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications-2">Show</a>
-
-::: {#other-modifications-2 .collapse .multi-collapse}
-
-We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read.
 
 
-::: {.panel-tabset}
+<!-- ## Other Modifications for Comparisons <a class="btn btn-primary" data-bs-toggle="collapse" href="#other-modifications-2" role="button" aria-expanded="false" style="h4" aria-controls="other-modifications-2">Show</a> -->
+
+<!-- ::: {#other-modifications-2 .collapse .multi-collapse} -->
+
+<!-- We can add a few other modifications that purely aesthetic - just to make our graphs look nicer or easier to read. -->
 
 
-### Conditional Proportions
-
-It is much easier to add jitter points to the boxplot across groups, we just pipe into the `gf_jitter()` function.  Modify the `height =` argument to adjust the random position of the points on the y-axis.
-
-```{webr}
-#| label: two-var-boxplot-jitter
-gf_boxplot(species ~ bill_length_mm, 
-           data = penguins,
-           xlab = "Add Variable X Information",
-           ylab = "Add Variable Y Information") |> 
-  gf_jitter(height = 0.5)
-```
+<!-- ::: {.panel-tabset} -->
 
 
-### Adding Color to Groups  
+<!-- ### Conditional Proportions -->
 
-Similar to changing the color of boxes to a single color, we can use the `fill = ` argument associated with the **categorical variable**. 
+<!-- It is much easier to add jitter points to the boxplot across groups, we just pipe into the `gf_jitter()` function.  Modify the `height =` argument to adjust the random position of the points on the y-axis. -->
 
-Here is the boxplot of `bill_length_mm` with fill color varied by `species` a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the fill color to another categorical variable such as `island` or `sex` and see what happens.  
+<!-- ```{webr} -->
+<!-- #| label: two-var-boxplot-jitter -->
+<!-- gf_boxplot(species ~ bill_length_mm,  -->
+<!--            data = penguins, -->
+<!--            xlab = "Add Variable X Information", -->
+<!--            ylab = "Add Variable Y Information") |>  -->
+<!--   gf_jitter(height = 0.5) -->
+<!-- ``` -->
 
-```{webr}
-#| label: two-var-boxplot-color
-gf_boxplot(species ~ bill_length_mm, 
-           fill = ~species,
-           data = penguins,
-           xlab = "Add Variable X Information",
-           ylab = "Add Variable Y Information",
-           show.legend = FALSE) #hides unnecessary legend for fill
-```
 
-### Adding Both Color and Jitter
+<!-- ### Adding Color to Groups   -->
 
-If we want to specify color and add jitter, we can do that too!
+<!-- Similar to changing the color of boxes to a single color, we can use the `fill = ` argument associated with the **categorical variable**.  -->
 
-```{webr}
-#| label: two-var-boxplot-color-jitter
-gf_boxplot(species ~ bill_length_mm, 
-           fill = ~species,
-           data = penguins,
-           xlab = "Add Variable X Information",
-           ylab = "Add Variable Y Information",
-           show.legend = FALSE,
-           alpha = 0.5) |> #makes the fill more transparent 
-  gf_jitter(color = ~species,
-            height = 0.25,
-            show.legend = FALSE) #hides new legend for color
+<!-- Here is the boxplot of `bill_length_mm` with fill color varied by `species` a categorical variable with values of Adelie, Chinstrap, and Gentoo.  Modify the code below to change the fill color to another categorical variable such as `island` or `sex` and see what happens.   -->
 
-```
+<!-- ```{webr} -->
+<!-- #| label: two-var-boxplot-color -->
+<!-- gf_boxplot(species ~ bill_length_mm,  -->
+<!--            fill = ~species, -->
+<!--            data = penguins, -->
+<!--            xlab = "Add Variable X Information", -->
+<!--            ylab = "Add Variable Y Information", -->
+<!--            show.legend = FALSE) #hides unnecessary legend for fill -->
+<!-- ``` -->
 
-:::
+<!-- ### Adding Both Color and Jitter -->
 
-:::
+<!-- If we want to specify color and add jitter, we can do that too! -->
+
+<!-- ```{webr} -->
+<!-- #| label: two-var-boxplot-color-jitter -->
+<!-- gf_boxplot(species ~ bill_length_mm,  -->
+<!--            fill = ~species, -->
+<!--            data = penguins, -->
+<!--            xlab = "Add Variable X Information", -->
+<!--            ylab = "Add Variable Y Information", -->
+<!--            show.legend = FALSE, -->
+<!--            alpha = 0.5) |> #makes the fill more transparent  -->
+<!--   gf_jitter(color = ~species, -->
+<!--             height = 0.25, -->
+<!--             show.legend = FALSE) #hides new legend for color -->
+
+<!-- ``` -->
+
+<!-- ::: -->
+
+<!-- ::: -->

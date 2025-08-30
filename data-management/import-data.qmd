@@ -5,13 +5,19 @@ format: html
 
 # Loading Data Into R
 
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+```
+
+
 ## How do I load my data?
 
-`r emo::ji("book")` [Required Reading: Data Import](https://r4ds.hadley.nz/data-import.html)
+[Required Reading: Data Import](https://r4ds.hadley.nz/data-import.html)
 
 ## Where does my data live?
 
-`r emo::ji("check")` Check-in: Loading Data
 
 For this check-in you are asked to work through reading in different data sets. You are expected to create your own Quarto document to complete this activity.
 
